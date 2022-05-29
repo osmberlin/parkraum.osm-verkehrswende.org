@@ -1,0 +1,192 @@
+---
+title: Karte aus dem Projekt "Vector Tiles"
+layout: default
+noindex: true
+menu_highlight: project_vector_tiles_map
+menu_scroll: true
+---
+
+<link rel="stylesheet" href="{{ '/css/maplibre-gl.css' | relative_url }}" />
+<script src="{{ 'javascript/maplibre-gl.js' | relative_url }}"></script>
+
+<div class="flex h-full gap-5">
+  <div id="map" class="w-100 relative h-full flex-1">
+    {% include map/buttons.html %}
+  </div>
+
+  <div
+    id="legend"
+    class="vh-100 prose-sm prose-blue absolute inset-x-0 bottom-0 z-1000 hidden h-72 overflow-scroll bg-white px-5 shadow-2xl md:static md:block md:h-auto md:w-60 md:overscroll-auto md:px-0 md:shadow-none"
+    data-show-hide-target="legend"
+  ></div>
+</div>
+
+<script>
+  var map = new maplibregl.Map({
+    container: "map",
+    style:
+      "https://api.maptiler.com/maps/pastel/style.json?key=lh0zCEEmjlKmX91QQEAU",
+    zoom: 16,
+    center: [13.4381, 52.47928],
+  });
+
+  map.on("load", function () {
+    // Add Mapillary sequence layer.
+    // https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
+    map.addSource("vts_pl_tiles", {
+      type: "vector",
+      tiles: [
+        "https://vts.mapwebbing.eu/public.parking_segments/{z}/{x}/{y}.pbf",
+      ],
+      minzoom: 8,
+      maxzoom: 22,
+    });
+
+    map.addLayer({
+      id: "vts_pl",
+      type: "line",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      filter: [
+        "all",
+        [
+          "in",
+          "orientation",
+          "half_on_kerb",
+          "marked",
+          "mixed",
+          "parallel",
+          "perpendicular",
+          "street_side",
+          "yes",
+          "diagonal",
+        ],
+      ],
+      paint: { "line-width": 4, "line-color": "rgba(110, 165, 9, 1)" },
+    });
+    map.addLayer({
+      id: "vts_pl_separate",
+      type: "line",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      filter: ["all", ["in", "orientation", "separate"]],
+      paint: { "line-width": 4, "line-color": "rgba(111, 182, 0, 1)" },
+    });
+    map.addLayer({
+      id: "vts_pl_no",
+      type: "line",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      filter: ["all", ["in", "orientation", "no", "no_parking", "no_stopping"]],
+      paint: { "line-width": 3, "line-color": "rgba(233, 171, 148, 1)" },
+    });
+    map.addLayer({
+      id: "vts_pl_all_other",
+      type: "line",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      filter: [
+        "all",
+        [
+          "!in",
+          "orientation",
+          "no",
+          "no_parking",
+          "no_stopping",
+          "separate",
+          "half_on_kerb",
+          "marked",
+          "mixed",
+          "parallel",
+          "perpendicular",
+          "street_side",
+          "yes",
+          "diagonal",
+        ],
+      ],
+      paint: { "line-width": 3, "line-color": "rgba(153, 164, 241, 1)" },
+    });
+    map.addLayer({
+      id: "vts_pl_label",
+      type: "symbol",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      layout: {
+        "text-field": "{capacity}",
+        "symbol-placement": "line-center",
+      },
+      paint: {
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+      },
+    });
+  });
+
+  map.addControl(new maplibregl.NavigationControl());
+
+  map.on("load", () => {
+    const vts_pl_layers = map
+      .getStyle()
+      .layers.filter((layer) => layer.id.startsWith("vts_pl"));
+
+    // For all `vts_pl_*` layers…
+    vts_pl_layers.forEach((layer) => {
+      // … change the cursor
+      map.on("mouseenter", layer.id, () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", layer.id, () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      // … show features as table in legend
+      map.on("mousemove", layer.id, (event) => {
+        const features = map.queryRenderedFeatures(event.point);
+
+        // Collect key-value data
+        // Will return multiple sets if the mouse hovers more than one…
+        const displayFeatures = features
+          .filter((f) => f.source == "vts_pl_tiles")
+          .map((f) => f.properties);
+
+        // Show legend with table of key-value data
+        if (displayFeatures.length) {
+          const table = displayFeatures
+            .map(
+              (line) => `<table class="w-full prose-sm">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="text-left py-0.5 pl-0.5">key</th>
+                    <th class="text-left py-0.5 pl-1">value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${Object.entries(line)
+                    .map(
+                      ([key, value]) => `
+                    <tr class="border-b border-gray-200">
+                      <td class="break-all w-1/2 p-0"><code>${key}</code></td>
+                      <td class="break-all w-1/2 p-0 pl-1">
+                        <code>${value}</code>
+                        ${
+                          key === "way_id"
+                            ? `<a href="https://www.openstreetmap.org/way/${
+                                value.split(".")[0]
+                              }" target="_blank" class="underline hover:text-blue-500">OSM</a>`
+                            : ""
+                        }
+                      </td>
+                    </tr>
+                  `
+                    )
+                    .join("")}
+                </tbody>
+              </table>`
+            )
+            .join("");
+          document.getElementById("legend").innerHTML = table;
+        }
+      });
+    });
+  });
+</script>
