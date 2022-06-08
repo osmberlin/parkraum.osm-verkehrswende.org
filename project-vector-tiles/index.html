@@ -42,6 +42,30 @@ menu_scroll: true
       maxzoom: 22,
     });
 
+    map.addSource("vts_boundaries_tiles", {
+      type: "vector",
+      tiles: [
+        "https://vts.mapwebbing.eu/public.boundaries/{z}/{x}/{y}.pbf"
+      ],
+      minzoom: 8,
+      maxzoom: 22
+    });
+
+   map.addLayer({
+      id: "vts_boundaries",
+      type: "line",
+      source: "vts_boundaries_tiles",
+      "source-layer": "public.boundaries",
+      "filter": [
+        "all",
+        [">=", "admin_level", "'10'"]
+      ],
+      "paint": {
+        "line-width": 2,
+        "line-color": "rgba(215, 34, 34, 1)"
+      }
+    });
+
     map.addLayer({
       id: "vts_pl",
       type: "line",
