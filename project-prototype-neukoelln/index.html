@@ -50,7 +50,7 @@ menu_scroll: true
   const hash = new L.Hash(map);
 
   const parkingmap = L.tileLayer(
-    "https://supaplex.uber.space/micromap/tiles/parkingmap/{z}/{x}/{y}.jpg",
+    "https://tiles.osm-berlin.org/parkraumkarte/{z}/{x}/{y}.jpg",
     {
       name: "parkingmap",
       maxZoom: 21,
@@ -64,7 +64,7 @@ menu_scroll: true
   parkingmap.addTo(map); // This is the initial basemap
 
   const micromap = L.tileLayer(
-    "https://supaplex.uber.space/micromap/tiles/{z}/{x}/{y}.jpg",
+    "https://tiles.osm-berlin.org/strassenraumkarte/{z}/{x}/{y}.jpg",
     {
       name: "micromap",
       maxZoom: 21,
@@ -77,7 +77,7 @@ menu_scroll: true
   );
 
   const debugmap = L.tileLayer(
-    "https://supaplex.uber.space/micromap/tiles/debug/{z}/{x}/{y}.jpg",
+    "https://tiles.osm-berlin.org/strassenraumkarte-debug/{z}/{x}/{y}.jpg",
     {
       name: "debugmap",
       maxZoom: 21,
