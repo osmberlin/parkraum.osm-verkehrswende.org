@@ -1,6 +1,6 @@
 # URL
 baseurl: "/"
-url: "https://parkraum.osm-verkehrswende.de"
+url: "https://parkraum.osm-verkehrswende.org"
 
 # Content
 # Also used for Social Sharing https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
