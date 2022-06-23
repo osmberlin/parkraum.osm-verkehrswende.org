@@ -5,7 +5,7 @@ description: Methoden- und Ergebnisbericht der Parkraumanalyse der Berliner Open
 image:
   path: images/report/social-sharing.jpg
   alt:
-show_legend: true
+show_toc: true
 menu_highlight: report
 download:
   path: methodenbericht-2021-03.pdf
