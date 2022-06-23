@@ -374,6 +374,24 @@ menu_scroll: true
       afterThisLayer
     );
 
+    map.addSource("parkraumkarte-neukoelln_tiles", {
+      type: "raster",
+      tiles: ["https://tiles.osm-berlin.org/parkraumkarte/{z}/{x}/{y}.jpg"],
+      tileSize: 256,
+      minzoom: 10,
+      maxzoom: 21,
+      attribution:
+        '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>, Bordsteinkanten: OpenStreetMap und Geoportal Berlin / ALKIS.',
+    });
+    map.addLayer(
+      {
+        id: "parkraumkarte-neukoelln",
+        type: "raster",
+        source: "parkraumkarte-neukoelln_tiles",
+      },
+      afterThisLayer
+    );
+
     // Docs https://docs.mapbox.com/api/maps/static-tiles/
     // Edit Style https://studio.mapbox.com/styles/hejco/ckz8bsqbq000t15nz6ok45bid/edit/#15.61/52.495655/13.417375
     // TODO: Lizenz / Attribution
@@ -417,6 +435,7 @@ menu_scroll: true
       "areal2020",
       "areal2019",
       "xhainGutachten",
+      "parkraumkarte-neukoelln",
     ];
 
     // But we only work with those layers, that where added to the map
