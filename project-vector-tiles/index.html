@@ -11,7 +11,8 @@ menu_scroll: true
 
 <div class="flex h-full gap-5">
   <div id="map" class="w-100 relative h-full flex-1">
-    {% include map/buttons.html %}
+    {% include map/buttons.html %} {% include
+    map/vector-tiles-background-buttons.html %}
   </div>
 
   <div
@@ -435,16 +436,18 @@ menu_scroll: true
 
       // Add button:
       const classesShared =
-        "flex items-center justify-center rounded border border-gray-300 bg-white px-1.5 py-0.5 text-xs font-medium !text-gray-700 shadow-sm ring-2 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500";
-      const classesActive = classesShared + " ring-blue-400/40";
-      const classesInactive = classesShared + " ring-gray-400/40";
+        "block px-4 py-2 text-sm text-gray-700 w-full text-left hover:bg-blue-200";
+      const classesActive = classesShared + " bg-gray-100 text-gray-900";
+      const classesInactive = classesShared + " text-gray-700";
 
       // Create a link.
       const link = document.createElement("button");
       link.id = id;
       link.type = "button";
       link.textContent = id;
-      link.className = classesActive;
+      link.className = classesInactive;
+      link.role = "menuitem";
+      link.tabindex = "-1";
 
       // Show or hide layer when the toggle is clicked.
       link.onclick = function (e) {
