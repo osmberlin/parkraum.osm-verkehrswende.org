@@ -296,10 +296,13 @@ menu_scroll: true
       afterThisLayer
     );
 
+    // This is the version from https://github.com/openstreetmap/iD/blob/HEAD/data/manual_imagery.json
+    // More: https://github.com/osmlab/editor-layer-index/issues/1451#issuecomment-1057938706
     map.addSource("maxar_tiles", {
       type: "raster",
+      scheme: "tms", // `{-y}` in Leaflet https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster-scheme
       tiles: [
-        "https://services.digitalglobe.com/earthservice/tmsaccess/tms/1.0.0/DigitalGlobe:ImageryTileService@EPSG:3857@jpg/{z}/{x}/{-y}.jpg?connectId=fa014fbc-6cbe-4b6f-b0ca-fbfb8d1e5b7d",
+        "https://services.digitalglobe.com/earthservice/tmsaccess/tms/1.0.0/DigitalGlobe:ImageryTileService@EPSG:3857@jpg/{z}/{x}/{y}.jpg?connectId=c2cbd3f2-003a-46ec-9e46-26a3996d6484",
       ],
       tileSize: 256,
       minzoom: 10,
