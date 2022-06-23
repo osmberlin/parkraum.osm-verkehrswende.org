@@ -12,7 +12,8 @@ menu_scroll: true
 <div class="flex h-full gap-5">
   <div id="map" class="w-100 relative h-full flex-1">
     {% include map/buttons.html %} {% include
-    map/vector-tiles-background-buttons.html %}
+    map/vector-tiles/background-buttons.html %} {% include
+    map/vector-tiles/sum-by-click.html %}
   </div>
 
   <div
@@ -88,6 +89,18 @@ menu_scroll: true
       paint: { "line-width": 4, "line-color": "rgba(110, 165, 9, 1)" },
     });
 
+    // This is used by the click feature.
+    // By default, the whole layer is filtered. "in id <none>"
+    // on click we update the filter rule.
+    map.addLayer({
+      id: "vts_pl__highlight",
+      type: "line",
+      source: "vts_pl_tiles",
+      "source-layer": "public.parking_segments",
+      filter: ["in", "id", ""],
+      paint: { "line-width": 6, "line-color": "rgba(146, 49, 154, 1)" },
+    });
+
     map.addLayer({
       id: "vts_pl_no",
       type: "line",
@@ -143,12 +156,81 @@ menu_scroll: true
   map.addControl(new maplibregl.NavigationControl());
 
   map.on("load", () => {
+    const layerToIgnore = ["vts_pl_label", "vts_pl__highlight"];
+
+    // When we use `map.queryRenderedFeatures(event.point)` we get all features nearby.
+    // This filters then down to what we want to handle.
+    // Note: We could refactor this to use the `layer` param, see https://docs.mapbox.com/mapbox-gl-js/api/map/#map#queryrenderedfeatures
+    const filterQueriedFeatures = (features) => {
+      return features
+        .filter((f) => f.source === "vts_pl_tiles")
+        .filter((f) => !layerToIgnore.includes(f.layer.id))
+        .map((f) => f.properties);
+    };
+
+    let featuresByClickToSum = [];
+
     const vts_pl_layers = map
       .getStyle()
-      .layers.filter((layer) => layer.id.startsWith("vts_pl"));
+      .layers.filter((l) => l.id.startsWith("vts_pl"))
+      .filter((l) => !layerToIgnore.includes(l.id));
 
     // For all `vts_pl_*` layers…
     vts_pl_layers.forEach((layer) => {
+      // … allow clicking to sum data
+      map.on("click", layer.id, (event) => {
+        const features = map.queryRenderedFeatures(event.point);
+        const displayFeatures = filterQueriedFeatures(features);
+
+        // Add or remove features from the list
+        // Since one click might hold multiple displayFeatures, this is looped.
+        displayFeatures.forEach((f) => {
+          const featureAlreadyAdded =
+            featuresByClickToSum.filter((f2) => f2.id === f.id).length > 0;
+
+          if (featureAlreadyAdded) {
+            featuresByClickToSum = featuresByClickToSum.filter(
+              (f2) => f2.id !== f.id
+            );
+          } else {
+            featuresByClickToSum.push(f);
+          }
+          map.setFilter("vts_pl__highlight", [
+            "in",
+            "id",
+            ...featuresByClickToSum
+              .filter((f) => !!f.capacity)
+              .map((f) => f.id),
+          ]);
+        });
+
+        const div = document.getElementById("sum-by-click");
+        let sum = 0;
+        let html = featuresByClickToSum
+          .map((f) => {
+            if (!f.capacity) {
+              console.log({ MISSING_CAPACITY: f });
+              return;
+            }
+            sum += f.capacity;
+            return `<span title="${JSON.stringify(f)
+              .replaceAll('"', "")
+              .replaceAll(",", ",\n")}" class="cursor-help">${
+              f.capacity
+            }</span>`;
+          })
+          .filter(Boolean)
+          .join('<span class="text-white/80 pl-1 pr-0.5">+</span>');
+
+        html += `<span class="text-white/80 pl-1 pr-1">=</span><span class="font-semibold">${sum}</span>`;
+
+        if (featuresByClickToSum.length === 0) {
+          html = "";
+        }
+
+        div.innerHTML = html;
+      });
+
       // … change the cursor
       map.on("mouseenter", layer.id, () => {
         map.getCanvas().style.cursor = "pointer";
@@ -160,46 +242,45 @@ menu_scroll: true
       // … show features as table in legend
       map.on("mousemove", layer.id, (event) => {
         const features = map.queryRenderedFeatures(event.point);
-
-        // Collect key-value data
-        // Will return multiple sets if the mouse hovers more than one…
-        const displayFeatures = features
-          .filter((f) => f.source == "vts_pl_tiles")
-          .map((f) => f.properties);
+        const displayFeatures = filterQueriedFeatures(features);
 
         // Show legend with table of key-value data
         if (displayFeatures.length) {
           const table = displayFeatures
             .map(
-              (line) => `<table class="w-full prose-sm">
-                <thead>
-                  <tr class="bg-gray-100">
-                    <th class="text-left py-0.5 pl-0.5">key</th>
-                    <th class="text-left py-0.5 pl-1">value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${Object.entries(line)
-                    .map(
-                      ([key, value]) => `
-                    <tr class="border-b border-gray-200">
-                      <td class="break-all w-1/2 p-0"><code>${key}</code></td>
-                      <td class="break-all w-1/2 p-0 pl-1">
-                        <code>${value}</code>
-                        ${
-                          key === "way_id"
-                            ? `<a href="https://www.openstreetmap.org/way/${
-                                value.split(".")[0]
-                              }" target="_blank" class="underline hover:text-blue-500">OSM</a>`
-                            : ""
-                        }
-                      </td>
+              (line) => `<table class="w-full prose-sm mb-5">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="text-left py-0.5 pl-0.5">key</th>
+                      <th class="text-left py-0.5 pl-1 flex justify-between">
+                        <span>value</span>
+                        <span class="text-gray-400 font-light">${
+                          layer.id
+                        }</span></th>
                     </tr>
-                  `
-                    )
-                    .join("")}
-                </tbody>
-              </table>`
+                  </thead>
+                  <tbody>
+                    ${Object.entries(line)
+                      .map(
+                        ([key, value]) => `
+                      <tr class="border-b border-gray-200">
+                        <td class="break-all w-1/2 p-0"><code>${key}</code></td>
+                        <td class="break-all w-1/2 p-0 pl-1">
+                          <code>${value}</code>
+                          ${
+                            key === "way_id"
+                              ? `<a href="https://www.openstreetmap.org/way/${
+                                  value.split(".")[0]
+                                }" target="_blank" class="underline hover:text-blue-500">OSM</a>`
+                              : ""
+                          }
+                        </td>
+                      </tr>
+                    `
+                      )
+                      .join("")}
+                  </tbody>
+                </table>`
             )
             .join("");
           document.getElementById("legend").innerHTML = table;
