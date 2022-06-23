@@ -313,16 +313,7 @@ menu_scroll: true
         type: "raster",
         source: "maxar_tiles",
       },
-      "vts_boundaries"
-    );
-
-    map.addLayer(
-      {
-        id: "esri",
-        type: "raster",
-        source: "esri_tiles",
-      },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("areal2021_tiles", {
