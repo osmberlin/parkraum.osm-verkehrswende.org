@@ -1,9 +1,14 @@
-<nav class="flex w-full prose prose-blue leading-tight print:hidden lg:fixed lg:top-0 pt-5 lg:pt-0 px-4 lg:px-1 z-50">
-  <details class="inline-block bg-blue-50 px-2 rounded-b-sm drop-shadow-lg ring-1 ring-white">
 {% if page.show_toc %}
+<nav
+  class="prose prose-blue z-50 flex w-full px-4 pt-5 leading-tight print:hidden lg:fixed lg:top-0 lg:px-1 lg:pt-0"
+>
+  <details
+    class="inline-block rounded-b-sm bg-blue-50 px-2 ring-1 ring-white drop-shadow-lg"
+  >
     <summary class="text-blue-600">Inhaltsverzeichnis</summary>
     <!-- https://github.com/allejo/jekyll-toc -->
-    {% include toc_generator.html html=content h_min=2 class='dropdown-menu' anchor_class='dropdown-item' %}
+    {% include toc_generator.html html=content h_min=2 class='dropdown-menu'
+    anchor_class='dropdown-item' %}
   </details>
 </nav>
 {% endif %}
