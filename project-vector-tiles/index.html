@@ -213,6 +213,9 @@ menu_scroll: true
     //    https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster
     // Docs .addLayer: https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addlayer
     //    https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#raster
+
+    const afterThisLayer = "vts_boundaries";
+
     map.addSource("strasssenbefahrung_tiles", {
       type: "raster",
       tiles: [
@@ -231,7 +234,7 @@ menu_scroll: true
         source: "strasssenbefahrung_tiles",
         visibility: "none",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("alkis_tiles", {
@@ -252,7 +255,7 @@ menu_scroll: true
         source: "alkis_tiles",
         visibility: "none",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("mapnik_tiles", {
@@ -270,7 +273,7 @@ menu_scroll: true
         type: "raster",
         source: "mapnik_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("esri_tiles", {
@@ -290,7 +293,7 @@ menu_scroll: true
         type: "raster",
         source: "esri_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("maxar_tiles", {
@@ -337,7 +340,7 @@ menu_scroll: true
         type: "raster",
         source: "areal2021_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("areal2020_tiles", {
@@ -355,7 +358,7 @@ menu_scroll: true
         type: "raster",
         source: "areal2020_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     map.addSource("areal2019_tiles", {
@@ -373,7 +376,7 @@ menu_scroll: true
         type: "raster",
         source: "areal2019_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
 
     // Docs https://docs.mapbox.com/api/maps/static-tiles/
@@ -400,7 +403,7 @@ menu_scroll: true
         type: "raster",
         source: "xhainGutachten_tiles",
       },
-      "vts_boundaries"
+      afterThisLayer
     );
   });
 
