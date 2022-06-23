@@ -28,6 +28,7 @@ menu_scroll: true
       "https://api.maptiler.com/maps/pastel/style.json?key=lh0zCEEmjlKmX91QQEAU",
     zoom: 16,
     center: [13.4381, 52.47928],
+    hash: true,
   });
 
   map.on("load", function () {
@@ -64,6 +65,7 @@ menu_scroll: true
       ],
       paint: { "line-width": 4, "line-color": "rgba(110, 165, 9, 1)" },
     });
+
     map.addLayer({
       id: "vts_pl_separate",
       type: "line",
@@ -72,6 +74,7 @@ menu_scroll: true
       filter: ["all", ["in", "orientation", "separate"]],
       paint: { "line-width": 4, "line-color": "rgba(111, 182, 0, 1)" },
     });
+
     map.addLayer({
       id: "vts_pl_no",
       type: "line",
@@ -80,6 +83,7 @@ menu_scroll: true
       filter: ["all", ["in", "orientation", "no", "no_parking", "no_stopping"]],
       paint: { "line-width": 3, "line-color": "rgba(233, 171, 148, 1)" },
     });
+
     map.addLayer({
       id: "vts_pl_all_other",
       type: "line",
@@ -106,6 +110,7 @@ menu_scroll: true
       ],
       paint: { "line-width": 3, "line-color": "rgba(153, 164, 241, 1)" },
     });
+
     map.addLayer({
       id: "vts_pl_label",
       type: "symbol",
