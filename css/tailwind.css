@@ -2230,6 +2230,10 @@ video {
   background-color: rgb(243 232 255 / var(--tw-bg-opacity));
 }
 
+.hover\:z-10:hover {
+  z-index: 10;
+}
+
 .hover\:bg-blue-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
@@ -2262,6 +2266,10 @@ video {
 
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+
+.focus\:z-10:focus {
+  z-index: 10;
 }
 
 .focus\:outline-none:focus {
