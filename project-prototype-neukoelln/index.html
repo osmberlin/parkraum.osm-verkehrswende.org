@@ -16,6 +16,8 @@ menu_scroll: true
 <script src="{{ '/javascript/leaflet.js' | relative_url }}"></script>
 <script src="{{ '/javascript/leaflet-hash.js' | relative_url }}"></script>
 
+<script src="{{ '/javascript/map/updateMapButtonsWithLocation.js' | relative_url }}"></script>
+
 <div class="flex h-full gap-5">
   <div id="map" class="w-100 relative h-full flex-1">
     {% include map/buttons.html %}
@@ -241,40 +243,12 @@ menu_scroll: true
   };
   map.on("baselayerchange", mapParamOnMapMoveOrLayerChange);
 
-  // Update the editOsm Link with current lat/lng
-  const updateEditOsm = (event) => {
-    const editOsmLink = document.querySelector("[data-update-edit-osm]");
-    const center = map.getCenter();
-    const zoom = map.getZoom();
-    const precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
-
-    const lat = center.lat.toFixed(precision);
-    const lng = center.lng.toFixed(precision);
-    // Will pick the default editor based on user preferences. Add ?editor=id to force iD.
-    editOsmLink.href = `https://www.openstreetmap.org/edit#map=${zoom}/${lat}/${lng}`;
-  };
-  updateEditOsm(); // on page load
-  map.on("moveend", updateEditOsm);
-
   // Update the Mapillary Link with current lat/lng
-  const updateShowOnMapStreetLevelImageLinks = (event) => {
-    const mapillaryLink = document.querySelector(
-      "[data-update-mapillary-link]"
-    );
-    const kartaviewLink = document.querySelector(
-      "[data-update-kartaview-link]"
-    );
-    const center = map.getCenter();
-    const zoom = map.getZoom();
-    const precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
-
-    const lat = center.lat.toFixed(precision);
-    const lng = center.lng.toFixed(precision);
-    mapillaryLink.href = `https://www.mapillary.com/app/?z=${zoom}&lat=${lat}&lng=${lng}&focus=map&dateFrom=2020-01-01`;
-    kartaviewLink.href = `https://kartaview.org/map/@${lat},${lng},${zoom}z`;
+  const updateButtonsOnMapWithLocation = (event) => {
+    updateMapButtonsWithLocation(map);
   };
-  updateShowOnMapStreetLevelImageLinks(); // on page load
-  map.on("moveend", updateShowOnMapStreetLevelImageLinks);
+  updateMapButtonsWithLocation(map); // on page load
+  map.on("moveend", updateButtonsOnMapWithLocation);
 
   // Write a css class for Zoom and Layer to the body of our legend modal.
   // We can use CSS to show/hide parts of the layer as needed.

@@ -9,6 +9,8 @@ menu_scroll: true
 <link rel="stylesheet" href="{{ '/css/maplibre-gl.css' | relative_url }}" />
 <script src="{{ 'javascript/maplibre-gl.js' | relative_url }}"></script>
 
+<script src="{{ '/javascript/map/updateMapButtonsWithLocation.js' | relative_url }}"></script>
+
 <div class="flex h-full gap-5">
   <div id="map" class="w-100 relative h-full flex-1">
     {% include map/buttons.html %} {% include
@@ -573,5 +575,12 @@ menu_scroll: true
       const layers = document.getElementById("layer");
       layers.appendChild(link);
     }
+  });
+
+  map.on("moveend", () => {
+    updateMapButtonsWithLocation(map);
+  });
+  map.on("idle", () => {
+    updateMapButtonsWithLocation(map); // on page load
   });
 </script>
