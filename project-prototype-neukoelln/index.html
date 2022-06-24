@@ -257,9 +257,12 @@ menu_scroll: true
   map.on("moveend", updateEditOsm);
 
   // Update the Mapillary Link with current lat/lng
-  const updateShowOnMapillaryLink = (event) => {
+  const updateShowOnMapStreetLevelImageLinks = (event) => {
     const mapillaryLink = document.querySelector(
       "[data-update-mapillary-link]"
+    );
+    const kartaviewLink = document.querySelector(
+      "[data-update-kartaview-link]"
     );
     const center = map.getCenter();
     const zoom = map.getZoom();
@@ -268,9 +271,10 @@ menu_scroll: true
     const lat = center.lat.toFixed(precision);
     const lng = center.lng.toFixed(precision);
     mapillaryLink.href = `https://www.mapillary.com/app/?z=${zoom}&lat=${lat}&lng=${lng}&focus=map&dateFrom=2020-01-01`;
+    kartaviewLink.href = `https://kartaview.org/map/@${lat},${lng},${zoom}z`;
   };
-  updateShowOnMapillaryLink(); // on page load
-  map.on("moveend", updateShowOnMapillaryLink);
+  updateShowOnMapStreetLevelImageLinks(); // on page load
+  map.on("moveend", updateShowOnMapStreetLevelImageLinks);
 
   // Write a css class for Zoom and Layer to the body of our legend modal.
   // We can use CSS to show/hide parts of the layer as needed.
