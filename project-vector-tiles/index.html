@@ -36,7 +36,9 @@ menu_scroll: true
     attributionControl: true,
     customAttribution: "Parkraumdaten auf OSM-Basis",
   });
+  map.addControl(new maplibregl.NavigationControl());
 
+  // ** Layer: Parking Data *****************************************************************
   map.on("load", function () {
     // Add Mapillary sequence layer.
     // https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
@@ -155,8 +157,7 @@ menu_scroll: true
     });
   });
 
-  map.addControl(new maplibregl.NavigationControl());
-
+  // ** OnClick + Sum ***********************************************************************
   map.on("load", () => {
     const layerToIgnore = ["vts_pl_label", "vts_pl__highlight"];
 
@@ -291,6 +292,7 @@ menu_scroll: true
     });
   });
 
+  // ** Layer: Additional background layer **************************************************
   map.on("load", () => {
     // Now for a list of background layers
     // Docs .addSource: https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addsource
@@ -503,8 +505,9 @@ menu_scroll: true
     );
   });
 
-  // Buttons to show/hide layer https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/
-  // After the last frame rendered before the map enters an "idle" state.
+  // ** Buttons to show/hide the additinal background layer *********************************
+  //  https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/
+  //  After the last frame rendered before the map enters an "idle" state.
   map.on("idle", () => {
     // Enumerate ids of the layers.
     const toggleableLayerIds = {
@@ -576,6 +579,7 @@ menu_scroll: true
     }
   });
 
+  // ** Update Edit Buttons *********************************
   map.on("moveend", () => {
     updateMapButtonsWithLocation(map);
   });
