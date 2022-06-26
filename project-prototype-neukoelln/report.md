@@ -16,6 +16,12 @@ download:
 
 Stand: März 2021
 
+<div class="notice">
+
+<strong>Hinweis in 2022:</strong> Sowohl der "Prototyp Neukölln" als auch das neue Projekt "Parkraum Berlin" basieren weiterhin auf den Methoden, die hier beschrieben werden. Beide Projekte haben seit dem aber weitere "Stanzungen" oder "Subtraktionen" eingeführt, also automatisierte Prozesschritte um auf Basis von anderen OpenStreetMap-Daten Bereiche zu erkennen, in denen nicht geparkt werden darf. Mittelfristig wird es daher eine neue Version des Methodenberichtes geben.
+
+</div>
+
 ## Autoren und Hintergrund
 
 Alexander Seidel, M.A.
