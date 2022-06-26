@@ -25,7 +25,8 @@
 
   /* Overwrite defaults, which we cannot to inline since markdow makes that hard. */
   .prose .notice p {
-    @apply m-0;
+    @apply first:mt-0;
+    @apply last:mb-0;
   }
   .prose .notice > h2:first-child {
     @apply mt-0;

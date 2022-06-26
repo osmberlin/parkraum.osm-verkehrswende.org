@@ -1262,8 +1262,12 @@ video {
 
 /* Overwrite defaults, which we cannot to inline since markdow makes that hard. */
 
-.prose .notice p {
-  margin: 0px;
+.prose .notice p:first-child {
+  margin-top: 0px;
+}
+
+.prose .notice p:last-child {
+  margin-bottom: 0px;
 }
 
 .prose .notice > h2:first-child {
@@ -2310,8 +2314,12 @@ video {
   line-height: 1.5;
 }
 
-.prose .target\:notice:target p {
-  margin: 0px;
+.prose .target\:notice:target p:first-child {
+  margin-top: 0px;
+}
+
+.prose .target\:notice:target p:last-child {
+  margin-bottom: 0px;
 }
 
 .prose .target\:notice:target > h2:first-child {
