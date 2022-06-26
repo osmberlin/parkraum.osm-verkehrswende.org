@@ -18,7 +18,7 @@
 
   .notice {
     @apply mb-3 p-4;
-    @apply bg-gray-200;
+    @apply bg-sky-100;
     @apply rounded;
     @apply leading-normal;
   }
@@ -35,5 +35,10 @@
   .menu-active {
     @apply bg-blue-600 text-blue-50 hover:!bg-blue-600;
     @apply cursor-text;
+  }
+
+  /* Based on a TailwindUI Theme Button */
+  .button-outline {
+    @apply inline-flex justify-center rounded-md border border-blue-300 py-[calc(theme(spacing.1)-1px)] px-[calc(theme(spacing.4)-1px)] text-base font-semibold tracking-tight text-blue-600 no-underline hover:border-blue-400 hover:bg-blue-50 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:text-blue-600/70 disabled:opacity-40 disabled:hover:border-blue-300 disabled:hover:bg-transparent;
   }
 }
