@@ -1,6 +1,6 @@
 ---
 title: Kontakt und Impressum
-layout: page
+layout: page_markdown
 menu_highlight: contact
 noindex: true
 ---
@@ -28,12 +28,10 @@ Das Projekt wird gepflegt im Rahmen der ehrenamtlichen Aktivitäten der [Berline
 </div>
 
 # Lizenz
-{: class='!mb-3' }
 
 Die unterschiedlichen Daten dieses Projekten verwenden unterschiedliche Lizenzen. [Mehr zu den Lizenzen für die Karten, OSM-Daten, Texte und Skripte/Code](https://github.com/SupaplexOSM/strassenraumkarte-neukoelln/blob/main/LICENSE.md).
 
 # Datenschutzerklärung
-{: class='!mb-3 !mt-10' }
 
 Bei der Nutzung dieser Website werden von uns keine personenbezogenen Daten erfasst oder gespeichert.
 Es gibt kein Webtracking und keine Cookies.
@@ -58,16 +56,13 @@ Die Website bettet Tabellenüber ein, die über Google Doc als Website zum einbe
 
 ## Eingebettete Videos (media.ccc.de)
 
-
 Die Website bettet Videos als iframe ein, die vom Chaos Computer Club e.V. bereitgestellt werden. Bitte beachtet die [media.ccc.de Datenschutzerklärungen](https://media.ccc.de/about.html#privacy).
 
 # Impressum
-{: class='!mb-3 !mt-10' }
 
 Tobias Jordans, Böhmische Straße 54, 12055 Berlin, [t@tobiasjordans.de](mailto:t@tobiasjordans.de)
 
 # Credits
-{: class='!mb-3 !mt-10' }
 
 * OpenStreetMap Mitwirkende https://www.openstreetmap.org/copyright
 * Bootstrap Icons https://github.com/twbs/icons/blob/main/LICENSE.md

@@ -1,6 +1,6 @@
 ---
 title: Methodenbericht zur Parkraumanalyse für den Berliner Ortsteil Neukölln
-layout: page
+layout: page_markdown
 description: Methoden- und Ergebnisbericht der Parkraumanalyse der Berliner OpenStreetMap Community für den Berliner Ortsteil Neukölln
 image:
   path: images/report/social-sharing.jpg
@@ -18,16 +18,12 @@ Stand: März 2021
 
 ## Autoren und Hintergrund
 
-{: class="mt-5 mb-4" }
-
 Alexander Seidel, M.A.
 und OpenStreetMap-Beitragende
 
 _Diese Parkraumanalyse entstand im Rahmen einer Mobilitäts- und Verkehrswende-Initiative der Berliner OpenStreetMap-Community (OSM) und wurde als ehrenamtliches Projekt durchgeführt. Ein großer Teil der Datenauswertung und Datenerhebung geht auf Alexander Seidel, Sozial- und Stadtgeograf und OSM-Beitragender, zurück und mündete gemeinsam mit den Beiträgen vieler anderer OSM-Beitragender in den hier vorgestellten Ergebnissen._
 
 ## 1. Einführung
-
-{: class="mt-5 mb-4" }
 
 Daten über die Anzahl und Verteilung von Kfz-Parkplätzen im Stadtraum stellen eine wertvolle Ressource dar. So wird der Verkehrsraum im Zuge der Verkehrswende zunehmend neu verteilt oder zumindest politisch darüber gestritten und die Reduzierung des ruhenden Verkehrs in diesem Zusammenhang als wichtiger Ansatzpunkt für mehr Flächengerechtigkeit identifiziert. Gleichzeitig finden Verkehr und Mobilität unter Einbeziehung geographischer Daten immer zielgerichteter statt, sodass beispielsweise unnötige Wege oder innenstädtischer Verkehr verhindert werden können – auch hier können Parkplatz- und Stellplatzdaten einen Beitrag leisten.
 
@@ -45,11 +41,7 @@ Der vorliegende Bericht stellt die Herangehensweise und Methodik der Parkraumana
 
 ## 2. Methodik
 
-{: class="mt-5 mb-4" }
-
 ### 2.1. Allgemeine Herangehensweise
-
-{: class="mt-5 mb-4" }
 
 Die dieser Auswertung zugrunde liegenden Parkplatzdaten wurden systematisch für dieses Projekt in der **OSM-Datenbank** erfasst bzw. vervollständigt, mit offenen Daten aus weiteren Quellen angereichert und mit der Software QGIS ausgewertet. Zwar umfasst OSM immer umfangreichere und zunehmend hochspezialisierte Geoinformationen und bietet insbesondere in Mitteleuropa einen nahezu lückenlosen Datensatz zum Straßennetz, die Detailtiefe der Informationen ist jedoch regional unterschiedlich ausgeprägt und abhängig von den Aktivitäten und Interessen lokaler Communities und ihren Beitragenden. So gehören Daten zu straßenbegleitendem Parken beispielsweise derzeit noch nicht zu den „Standardinformationen" und sind vielerorts lediglich rudimentär erfasst. Eine Übertragung der hier demonstrierten Analyse auf andere Orte wird daher zur Zeit meist an die Bedingung geknüpft sein, die notwendigen Daten zuvor zu erheben bzw. zu vervollständigen. Darüber hinaus stellt die angewandte Methodik hohe Ansprüche an die Präzision und Lagegenauigkeit der Daten, da aus diesen Geometrien weitere Werte wie Stellplatzkapazitäten oder Halteverbote abgeleitet werden. Je genauer und vollständiger die Daten dabei vorliegen, desto präzisere Ergebnisse können anschließend daraus ermittelt werden.[^1]
 
@@ -70,8 +62,6 @@ Die Stellplatzdaten enthalten zusätzliche Attribute wie zu Beschränkungen der 
 
 ### 2.2. Untersuchungsgebiet
 
-{: class="mt-5 mb-4" }
-
 Die vorliegende Parkraumanalyse bezieht sich auf den Berliner Ortsteil Neukölln. Das gesamte Untersuchungsgebiet, für das Parkplatzdaten erhoben wurden, umfasst das Gebiet innerhalb der Ortsteilgrenzen Neuköllns sowie einen Pufferbereich von 500 Metern außerhalb der Ortsteilgrenze, um insbesondere bei Aussagen zur Stellplatzdichte Verzerrungen an den Randbereichen zu vermeiden. Der Ortsteil Neukölln umfasst eine Fläche von 11,7 km² (gesamtes Untersuchungsgebiet: 20,6 km²).
 
 Der Ortsteil Neukölln ist ein überwiegend von Wohnquartieren geprägter, dicht besiedelter und eng bebauter urbaner Raum mit 165.000 Einwohnerinnen und Einwohnern. Er ist durch eine vergleichsweise geringe Motorisierungsquote geprägt: Pro 1.000 Personen sind hier 219 Kraftfahrzeuge zugelassen.[^2] Das Gebiet des Ortsteils umfasst zwei Gewerbegebiete, die bei einigen Auswertungen nicht berücksichtigt wurden. Die in diesem Fall berücksichtigten Wohnquartiere erstrecken sich über eine Fläche von 7,4 km² (Kfz-Quote: 206 pro 1.000 Personen) und können für genauere Datenauswertungen in 16 Teilgebiete untergliedert werden, die den lokalen „Kiezen“ bzw. lebensweltlich orientierten Räumen entsprechen ([vgl. Anhang A](#anhang-a-verfügbare-stellplatzkapazitäten-in-verschiedenen-teilräumen)).
@@ -83,8 +73,6 @@ In Bezug auf die Parkraumsituation spielen zwar tagsüber insbesondere entlang d
 Gewerblich genutzte Parkplätze (z.B. für Transportfahrzeuge des Handwerks) sind in die Auswertungen eingeflossen, da die herangezogenen Vergleichsdaten zum tatsächlichen Fahrzeugbestand auch gewerbliche Fahrzeuge enthalten. Insgesamt spielen Stellplätze dieser Art in den Wohnquartieren – also außerhalb der Gewerbegebiete – aber nur eine geringe Rolle.
 
 ### 2.3. Datenerhebung, Datenquellen und Datensätze
-
-{: class="mt-5 mb-4" }
 
 Der überwiegende Anteil der Park- und Stellplatzdaten wurde durch systematische Begehungen des Untersuchungsgebiets zwischen Frühjahr und Herbst 2020 erfasst. Gegenstand dieser Kartierung war vor allem die Erhebung des Straßenparkens im Verlauf des etwa 170 km umfassenden Straßennetzes (davon 104 km im Ortsteil Neukölln) und die Vervollständigung von etwa 2.200 Gebäude- und Grundstückseinfahrten (davon etwa 1.400 im Ortsteil Neukölln), da vor diesen nicht geparkt werden darf.[^3] Darüber hinaus wurden Daten zu anderen Parkmöglichkeiten wie Garagen und Stellplätzen erhoben, soweit diese erreichbar oder sichtbar waren.
 
@@ -113,8 +101,6 @@ Für die anschließende Analyse wurden weitere Daten aufbereitet und einbezogen:
 Generierung eines Bordsteinkanten- bzw. Fahrbahn-Datensatzes aus OSM- und ALKIS-Daten (Datensatz „Bauwerke, Anlage und Einrichtung in Siedlungsflächen und für den Verkehr"), um eine exakte Lagegenauigkeit der Parkstreifen zu erreichen. Dieser Bordsteinkanten- bzw. Fahrbahndatensatz bildet außerdem eine Grundlage für die Visualisierung der Straßen- und Parkraumkarte.
 
 ### 2.4. Datenverarbeitung zur Modellierung des Straßenparkens
-
-{: class="mt-5 mb-4" }
 
 Das OSM-Datenschema zur Erfassung von Parkstreifen („parking:lane"-Schema) sieht vor, einem Straßensegment jeweils Informationen zum Parken am linken und rechten Fahrbahnrand zuordnen zu können. Dazu gehören in erster Linie:
 
@@ -208,11 +194,7 @@ Die eigentliche Datenverarbeitung fand weitestgehend automatisiert über Python-
 
 ### 2.5. Interpolation von Stellplatzkapazitäten
 
-{: class="mt-5 mb-4" }
-
 #### 2.5.1. Straßenparken
-
-{: class="mt-5 mb-4" }
 
 Für 5,5 Prozent aller Parkstände im Straßenbereich des Untersuchungsgebiets lagen bereits in den OSM-Daten Kapazitätsangaben vor, insbesondere bei markierten Parkständen und Parkbuchten. Die fehlenden Werte mussten aus der Länge der Parkstreifensegmente abgeleitet werden.
 
@@ -227,7 +209,7 @@ Beim Parallelparken sind einzelne Stellplätze meist nicht markiert; die Anzahl 
 
 Die Stellplatzkapazität ergibt sich aus dem Quotienten der Länge eines Parkstreifensegments und dem entsprechenden Abstand, abgerundet auf eine ganze Zahl.
 
-<div class="notice  mt-1 mb-5">
+<div class="notice mt-1 mb-5">
 
 **Ergebnis:**
 
@@ -238,8 +220,6 @@ Die Parkraumkarte stellt die Stellplätze in verschiedenen Zoomstufen in untersc
 </div>
 
 #### 2.5.2. Park- und Stellplätze abseits des Straßenbereichs
-
-{: class="mt-5 mb-4" }
 
 Für die geometrisch flächenhaft vorliegenden Park- und Stellplätze abseits des öffentlichen Straßenraums liegen häufiger genaue Stellplatzangaben vor, da diese oft markiert und abzählbar sind. Für etwa die Hälfte der Parkplätze liegen jedoch keine Angaben vor (vgl. 2); diese Stellplatzkapazitäten werden aus der Grundfläche der geometrischen Objekte abgeleitet (sowie bei mehrgeschossigen Objekten in einigen Fällen aus der Anzahl der Parkebenen). Dies betrifft vor allem Tiefgaragen: Für diese lagen auf Grund der eingeschränkten Zugänglichkeit nur für 36 von 221 einbezogenen Objekten genaue Stellplatzzahlen vor.[^11] Da das Daten- bzw. Interpolationsmodell hier nur an den wenigen realen, bekannten Fällen validiert werden konnte, unterliegen diese Daten auch einer größeren Unsicherheit (vgl. Kapitel 3).
 
@@ -336,8 +316,6 @@ Die Parkraumkarte stellt auch diese Stellplätze abseits des Straßenparkens dar
 
 ### 2.6. Ermittlung von Stellplatzdichten mit gebäudegenauem Bevölkerungsmodell
 
-{: class="mt-5 mb-4" }
-
 Ein Ziel der Auswertung ist es, kleinräumige Stellplatzdichteverteilungen zu berechnen, also die Anzahl von Kfz-Stellplätzen in einem Gebiet mit der Anzahl der Einwohnerinnen und Einwohner bzw. der Anzahl der zugelassenen Kfz zu vergleichen. Dabei wird angenommen, dass die Anzahl der zugelassenen Fahrzeuge an einem Ort ein Indikator für tatsächlich an einem Ort geparkte Fahrzeuge ist, was zumindest für Wohngebiete naheliegt (vgl. Kapitel 3). Das Verhältnis von verfügbaren Stellplätzen zur Anzahl zugelassener Kraftfahrzeuge wird im Folgenden als „Stellplatzdichte" bezeichnet.
 
 Für kleinräumige Aussagen, beispielsweise zur Bestimmung der Stellplatzdichte für einen bestimmten Straßenzug oder im Umfeld eines bestimmten Ortes, sind entsprechend hoch aufgelöste, adress-genaue Kfz-Daten notwendig, die im Rahmen dieses Projekts jedoch nicht zur Verfügung standen. Abhilfe schafft ein eigenes Datenmodell auf Grundlage von Bevölkerungsdaten auf Blockebene (323 Teilräume allein im Ortsteil Neukölln mit durchschnittlich je etwa 500 Einwohnerinnen und Einwohnern) und Kfz-Daten auf LOR-Planungsraumebene (18 Teilräume im Ortsteil Neukölln mit durchschnittlich je knapp 10.000 Einwohnerinnen und Einwohnern; zu den Datensätzen vgl. Kapitel 2.3).
@@ -365,8 +343,6 @@ Bei der Interpretation dieser Darstellung ist zu berücksichtigen, dass Räume u
 
 ### 2.7. Flächenverbrauch
 
-{: class="mt-5 mb-4" }
-
 Aus der Lage und Länge der Parkstreifen im Straßenraum kann -- abhängig von der Ausrichtung der dort geparkten Fahrzeuge -- auf die Fläche geschlossen werden, die direkt von stehenden bzw. geparkten Fahrzeugen in Anspruch genommen wird. Die Breite eines Parkstreifens entspricht dabei:
 
 - 2 Meter bei Längsparken,
@@ -384,8 +360,6 @@ Allein für die Neuköllner Wohnquartiere ergibt sich daraus, dass Parkstreifen 
 </div>
 
 ## 3. Bewertung von Unsicherheitsfaktoren
-
-{: class="mt-5 mb-4" }
 
 Die vorgestellte Parkraumanalyse basiert auf einem interpolativen Datenmodell, also aus geografischen Daten und empirischen Annahmen abgeleiteten Aussagen und Vereinfachungen, um die (komplexe) Realität modellhaft abzubilden und „berechenbar“ zu machen. Viele der zu Grunde liegenden Annahmen und Ergebnisse können in der tatsächlichen Realität überprüft, gezählt oder gemessen werden, andere unterliegen bestimmten Unsicherheiten, die sich kaum oder nur mit erheblichem empirischen Aufwand quantifizieren lassen. Wie viele Garagen werden beispielsweise tatsächlich zum Abstellen von Kfz genutzt, wie viele Falschparker gibt es oder wie viele Dienst- und Mietwagen bleiben in der Kfz-Statistik für das Untersuchungsgebiet unberücksichtigt? Und vor allem: Wie präzise ist die Wiedergabe der Stellplatzzahlen am Straßenrand? Unsicherheitsfaktoren wie diese sollen in diesem Abschnitt einer groben Schätzung unterzogen werden.
 
@@ -442,16 +416,10 @@ Einfahrten bzw. abgesenkte Bordsteine, für die in den OSM-Daten keine Breiten v
 
 ## Anhang A: Verfügbare Stellplatzkapazitäten in verschiedenen Teilräumen
 
-{: class="mt-5 mb-4" }
-
 <iframe style="width: 100%; height: 660px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5p58km0xRVhNBoKrN2U9nmFEawl7fUUrngg1vart29LI6TVVXttqs45gz-pmaRC0btcBIPR4_UMaW/pubhtml?widget=true&amp;headers=false"></iframe>
 
 ## Anhang B: Vergleich interpolierter und gezählter Stellplätze (Straßenparken)
 
-{: class="mt-5 mb-4" }
-
 <iframe style="width: 100%; height: 1450px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTz-b9t4qHgk3yN-n7g1y8f9KszT-77AjJsDgGPi0d3E04hKCcB-GG1rd39LUcHHMErju3lQJSPEt4S/pubhtml?gid=670505529&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 ## Fußnoten
-
-{: class="mt-5 mb-4" }
