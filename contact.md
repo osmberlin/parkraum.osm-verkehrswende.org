@@ -7,29 +7,29 @@ noindex: true
 
 <div class="notice mb-12">
 
-# Kontakt
-{: class='!mb-3' }
+<h1 class="!mt-0 text-sky-700">Kontakt</h1>
 
 <hr class="!border-white !my-6">
 
-Die Straßenraumkarten Neukölln sowie die Parkraumanalyse sind ein Projekt von Alex Seidel (OSM: [Supaplex030](https://www.openstreetmap.org/user/Supaplex030/)) und der OpenStreetMap Community Berlin.
+Alle Informationen zur OSM Verkehrswende Gruppe findest du im Wiki:
 
-* Kontakt zu Alex via [OpenStreetMap-Nachricht](https://www.openstreetmap.org/message/new/Supaplex030) oder [E-Mail](mailto:supaplex@riseup.net)
-* Feature-Request und Bug-Reports gerne als [GitHub Issues erstellen](https://github.com/SupaplexOSM/strassenraumkarte-neukoelln/)
+- [Wiki Seite der OSM Verkehrswende Gruppe](https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende)
+- [Meetup Termine der OSM Verkehrswende Gruppe](https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende#Meetups)
+- Kontakt zur Community ist auch über die die [Telegramgruppe OSM Berlin Verkehrswende Community](<(https://t.me/osmberlinverkehr)>) möglich
 
 <hr class="!border-white !my-6">
 
-Das Projekt wird gepflegt im Rahmen der ehrenamtlichen Aktivitäten der [Berliner OSM-Verkehrswendegruppe](https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende).
+Feature-Request und Bug-Reports zu dieser Webseite gerne als [GitHub Issues erstellen](https://github.com/tordans/www.osm-verkehrswende.org/).
 
-* Besucht unsere [monatlichen Meetups](https://www.meetup.com/de-DE/OSM-Berlin-Brandenburg/)
-* Kontakt über die [Telegramgruppe OSM Berlin Verkehrswende Community]((https://t.me/osmberlinverkehr))
-{: class='!mb-0' }
+<hr class="!border-white !my-6">
+
+Das Projekt wird gepflegt im Rahmen der ehrenamtlichen Aktivitäten der [Berliner OSM Verkehrswende Gruppe](https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende).
 
 </div>
 
 # Lizenz
 
-Die unterschiedlichen Daten dieses Projekten verwenden unterschiedliche Lizenzen. [Mehr zu den Lizenzen für die Karten, OSM-Daten, Texte und Skripte/Code](https://github.com/SupaplexOSM/strassenraumkarte-neukoelln/blob/main/LICENSE.md).
+Die unterschiedlichen Daten dieses Projekten verwenden unterschiedliche Lizenzen. [Mehr zu den Lizenzen für die Karten, OSM-Daten, Texte und Skripte/Code](https://github.com/tordans/parkraum.osm-verkehrswende.org/blob/main/LICENSE.md).
 
 # Datenschutzerklärung
 
@@ -64,6 +64,6 @@ Tobias Jordans, Böhmische Straße 54, 12055 Berlin, [t@tobiasjordans.de](mailto
 
 # Credits
 
-* OpenStreetMap Mitwirkende https://www.openstreetmap.org/copyright
-* Bootstrap Icons https://github.com/twbs/icons/blob/main/LICENSE.md
-* FontAwesome https://fontawesome.com/license
+- OpenStreetMap Mitwirkende https://www.openstreetmap.org/copyright
+- Bootstrap Icons https://github.com/twbs/icons/blob/main/LICENSE.md
+- FontAwesome https://fontawesome.com/license
