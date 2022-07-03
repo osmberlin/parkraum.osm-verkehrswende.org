@@ -5,10 +5,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4283311, 52.4968832]
+        "coordinates": [
+          13.4283311,
+          52.4968832
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4968832&lng=52.4968832&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4968832&lng=52.4968832&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109462023,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109462023",
@@ -25,10 +28,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3169951, 52.48166879999997]
+        "coordinates": [
+          13.3169951,
+          52.48166879999997
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48166879999997&lng=52.48166879999997&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48166879999997&lng=52.48166879999997&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109460886,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109460886",
@@ -45,10 +51,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4598017, 52.5128759]
+        "coordinates": [
+          13.4598017,
+          52.5128759
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5128759&lng=52.5128759&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5128759&lng=52.5128759&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109450887,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109450887",
@@ -65,10 +74,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3921606, 52.4906904]
+        "coordinates": [
+          13.3921606,
+          52.4906904
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4906904&lng=52.4906904&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4906904&lng=52.4906904&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109445018,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109445018",
@@ -85,10 +97,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4268765, 52.495706599999984]
+        "coordinates": [
+          13.4268765,
+          52.495706599999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.495706599999984&lng=52.495706599999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.495706599999984&lng=52.495706599999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109443584,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109443584",
@@ -105,10 +120,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4529794, 52.52549029999997]
+        "coordinates": [
+          13.4529794,
+          52.52549029999997
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52549029999997&lng=52.52549029999997&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52549029999997&lng=52.52549029999997&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109442008,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109442008",
@@ -125,10 +143,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4296437, 52.49371639999998]
+        "coordinates": [
+          13.4296437,
+          52.49371639999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49371639999998&lng=52.49371639999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49371639999998&lng=52.49371639999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109440906,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109440906",
@@ -145,10 +166,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3916873, 52.5000381]
+        "coordinates": [
+          13.3916873,
+          52.5000381
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5000381&lng=52.5000381&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5000381&lng=52.5000381&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109437355,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109437355",
@@ -165,10 +189,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.405789, 52.499452599999984]
+        "coordinates": [
+          13.405789,
+          52.499452599999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.499452599999984&lng=52.499452599999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.499452599999984&lng=52.499452599999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109434722,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109434722",
@@ -185,10 +212,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4241495, 52.496748]
+        "coordinates": [
+          13.4241495,
+          52.496748
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.496748&lng=52.496748&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.496748&lng=52.496748&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109430409,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109430409",
@@ -205,10 +235,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4498441, 52.52104079999998]
+        "coordinates": [
+          13.4498441,
+          52.52104079999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52104079999998&lng=52.52104079999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52104079999998&lng=52.52104079999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109428469,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109428469",
@@ -225,10 +258,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4189039, 52.489053]
+        "coordinates": [
+          13.4189039,
+          52.489053
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.489053&lng=52.489053&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.489053&lng=52.489053&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109427221,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109427221",
@@ -245,10 +281,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4502273, 52.518128399999966]
+        "coordinates": [
+          13.4502273,
+          52.518128399999966
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.518128399999966&lng=52.518128399999966&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.518128399999966&lng=52.518128399999966&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109425644,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109425644",
@@ -265,10 +304,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4433186, 52.49735279999997]
+        "coordinates": [
+          13.4433186,
+          52.49735279999997
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49735279999997&lng=52.49735279999997&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49735279999997&lng=52.49735279999997&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109424403,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109424403",
@@ -285,10 +327,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4544712, 52.5210613]
+        "coordinates": [
+          13.4544712,
+          52.5210613
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5210613&lng=52.5210613&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5210613&lng=52.5210613&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109422092,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109422092",
@@ -305,10 +350,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4465142, 52.520957199999984]
+        "coordinates": [
+          13.4465142,
+          52.520957199999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.520957199999984&lng=52.520957199999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.520957199999984&lng=52.520957199999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109419655,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109419655",
@@ -325,10 +373,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4293259, 52.494324699999986]
+        "coordinates": [
+          13.4293259,
+          52.494324699999986
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.494324699999986&lng=52.494324699999986&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.494324699999986&lng=52.494324699999986&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2109409599,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109409599",
@@ -345,10 +396,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4127142, 52.49101559999998]
+        "coordinates": [
+          13.4127142,
+          52.49101559999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49101559999998&lng=52.49101559999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.49101559999998&lng=52.49101559999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2093420063,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2093420063",
@@ -365,10 +419,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3470649, 52.549305599999975]
+        "coordinates": [
+          13.3470649,
+          52.549305599999975
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.549305599999975&lng=52.549305599999975&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.549305599999975&lng=52.549305599999975&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022842359,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022842359",
@@ -385,10 +442,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3843657, 52.55167489999999]
+        "coordinates": [
+          13.3843657,
+          52.55167489999999
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.55167489999999&lng=52.55167489999999&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.55167489999999&lng=52.55167489999999&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022841539,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022841539",
@@ -405,10 +465,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3776039, 52.552517]
+        "coordinates": [
+          13.3776039,
+          52.552517
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.552517&lng=52.552517&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.552517&lng=52.552517&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022839060,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022839060",
@@ -425,10 +488,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3891513, 52.553540499999976]
+        "coordinates": [
+          13.3891513,
+          52.553540499999976
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.553540499999976&lng=52.553540499999976&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.553540499999976&lng=52.553540499999976&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022838169,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022838169",
@@ -445,10 +511,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3914062, 52.557459]
+        "coordinates": [
+          13.3914062,
+          52.557459
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.557459&lng=52.557459&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.557459&lng=52.557459&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022836959,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022836959",
@@ -465,10 +534,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3528976, 52.548269699999985]
+        "coordinates": [
+          13.3528976,
+          52.548269699999985
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.548269699999985&lng=52.548269699999985&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.548269699999985&lng=52.548269699999985&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022835968,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022835968",
@@ -485,10 +557,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3611181, 52.549621199999976]
+        "coordinates": [
+          13.3611181,
+          52.549621199999976
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.549621199999976&lng=52.549621199999976&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.549621199999976&lng=52.549621199999976&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022832674,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022832674",
@@ -505,10 +580,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3666243, 52.546868899999986]
+        "coordinates": [
+          13.3666243,
+          52.546868899999986
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.546868899999986&lng=52.546868899999986&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.546868899999986&lng=52.546868899999986&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022831988,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022831988",
@@ -525,10 +603,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3876631, 52.55471569999998]
+        "coordinates": [
+          13.3876631,
+          52.55471569999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.55471569999998&lng=52.55471569999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.55471569999998&lng=52.55471569999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022829715,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022829715",
@@ -545,10 +626,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4613589, 52.5067833]
+        "coordinates": [
+          13.4613589,
+          52.5067833
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5067833&lng=52.5067833&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5067833&lng=52.5067833&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022825193,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022825193",
@@ -565,10 +649,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.2995825, 52.51188069999998]
+        "coordinates": [
+          13.2995825,
+          52.51188069999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51188069999998&lng=52.51188069999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51188069999998&lng=52.51188069999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 2022817435,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022817435",
@@ -585,10 +672,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3534103, 52.521695]
+        "coordinates": [
+          13.3534103,
+          52.521695
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.521695&lng=52.521695&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.521695&lng=52.521695&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990311015,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990311015",
@@ -605,10 +695,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3727824, 52.5428594]
+        "coordinates": [
+          13.3727824,
+          52.5428594
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5428594&lng=52.5428594&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5428594&lng=52.5428594&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990309210,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990309210",
@@ -625,10 +718,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3923167, 52.557973699999984]
+        "coordinates": [
+          13.3923167,
+          52.557973699999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.557973699999984&lng=52.557973699999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.557973699999984&lng=52.557973699999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990307877,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990307877",
@@ -645,10 +741,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3547626, 52.541908499999984]
+        "coordinates": [
+          13.3547626,
+          52.541908499999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.541908499999984&lng=52.541908499999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.541908499999984&lng=52.541908499999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990306548,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990306548",
@@ -665,10 +764,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4491439, 52.51450159999998]
+        "coordinates": [
+          13.4491439,
+          52.51450159999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51450159999998&lng=52.51450159999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51450159999998&lng=52.51450159999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990305084,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990305084",
@@ -685,10 +787,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4438793, 52.4968418]
+        "coordinates": [
+          13.4438793,
+          52.4968418
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4968418&lng=52.4968418&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4968418&lng=52.4968418&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990303177,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990303177",
@@ -705,10 +810,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3884926, 52.48723129999998]
+        "coordinates": [
+          13.3884926,
+          52.48723129999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48723129999998&lng=52.48723129999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48723129999998&lng=52.48723129999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990301250,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990301250",
@@ -725,10 +833,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.38849, 52.48687]
+        "coordinates": [
+          13.38849,
+          52.48687
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48687&lng=52.48687&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.48687&lng=52.48687&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990297134,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990297134",
@@ -745,10 +856,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.2996728, 52.51163839999999]
+        "coordinates": [
+          13.2996728,
+          52.51163839999999
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51163839999999&lng=52.51163839999999&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.51163839999999&lng=52.51163839999999&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990294106,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990294106",
@@ -765,10 +879,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3870028, 52.4953116]
+        "coordinates": [
+          13.3870028,
+          52.4953116
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4953116&lng=52.4953116&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4953116&lng=52.4953116&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256747,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256747",
@@ -785,10 +902,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4055844, 52.5004472]
+        "coordinates": [
+          13.4055844,
+          52.5004472
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5004472&lng=52.5004472&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5004472&lng=52.5004472&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256745,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256745",
@@ -805,10 +925,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.433369, 52.504942499999984]
+        "coordinates": [
+          13.433369,
+          52.504942499999984
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.504942499999984&lng=52.504942499999984&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.504942499999984&lng=52.504942499999984&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256744,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256744",
@@ -825,10 +948,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4714559, 52.515061299999985]
+        "coordinates": [
+          13.4714559,
+          52.515061299999985
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.515061299999985&lng=52.515061299999985&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.515061299999985&lng=52.515061299999985&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256742,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256742",
@@ -845,10 +971,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4502124, 52.52564749999998]
+        "coordinates": [
+          13.4502124,
+          52.52564749999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52564749999998&lng=52.52564749999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52564749999998&lng=52.52564749999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256741,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256741",
@@ -865,10 +994,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4201125, 52.503285299999966]
+        "coordinates": [
+          13.4201125,
+          52.503285299999966
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.503285299999966&lng=52.503285299999966&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.503285299999966&lng=52.503285299999966&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256738,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256738",
@@ -885,10 +1017,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4582131, 52.50861459999998]
+        "coordinates": [
+          13.4582131,
+          52.50861459999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50861459999998&lng=52.50861459999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50861459999998&lng=52.50861459999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256737,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256737",
@@ -905,10 +1040,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4640797, 52.50548569999998]
+        "coordinates": [
+          13.4640797,
+          52.50548569999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50548569999998&lng=52.50548569999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50548569999998&lng=52.50548569999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256736,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256736",
@@ -932,10 +1070,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4492138, 52.5222159]
+        "coordinates": [
+          13.4492138,
+          52.5222159
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5222159&lng=52.5222159&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.5222159&lng=52.5222159&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256735,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256735",
@@ -952,10 +1093,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4403767, 52.4970301]
+        "coordinates": [
+          13.4403767,
+          52.4970301
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4970301&lng=52.4970301&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=3053304884925006) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.4970301&lng=52.4970301&z=17&dateFrom=2022-01-01) \n* [Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=3053304884925006) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256734,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256734",
@@ -979,10 +1123,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4671465, 52.515896399999974]
+        "coordinates": [
+          13.4671465,
+          52.515896399999974
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.515896399999974&lng=52.515896399999974&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.515896399999974&lng=52.515896399999974&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256731,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256731",
@@ -999,10 +1146,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4619268, 52.50665749999998]
+        "coordinates": [
+          13.4619268,
+          52.50665749999998
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50665749999998&lng=52.50665749999998&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.50665749999998&lng=52.50665749999998&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256730,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256730",
@@ -1026,10 +1176,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4143225, 52.492860599999965]
+        "coordinates": [
+          13.4143225,
+          52.492860599999965
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.492860599999965&lng=52.492860599999965&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.492860599999965&lng=52.492860599999965&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256726,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256726",
@@ -1046,10 +1199,13 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.4517088, 52.52285709999999]
+        "coordinates": [
+          13.4517088,
+          52.52285709999999
+        ]
       },
       "properties": {
-        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n \n \n**Mapillary:** \n[Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52285709999999&lng=52.52285709999999&z=17&dateFrom=2022-01-01) \n[Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=null) \n \n \n**Mapillary:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "task": "Wir haben im Umkreis kein Parklet oder Planter gefunden. Bitte trage einen ein. \n**Mapillary:** \n* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=52.52285709999999&lng=52.52285709999999&z=17&dateFrom=2022-01-01) \n**Tagging-Empfehlung:** \n* Parklet: Eine Fläche mit `leisure=parket` + `check_date` \n* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
         "externalId": 1990256725,
         "externalWallId": 154419585,
         "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256725",
