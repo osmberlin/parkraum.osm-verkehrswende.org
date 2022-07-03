@@ -1,3 +1,8 @@
+# About
+
+- Parklet Project https://www.berlin.de/parklets/
+- Wiki Seite https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende/Parkraum/Mapping_Kampagne_Xhain/QA-Parklets
+
 # Protocol
 
 ## External Data
@@ -64,6 +69,6 @@ This script will
 
 ## Maproulette
 
-The campaign can be found here: `<TODO>`
+The MapRoulette campaign is liked at https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende/Parkraum/Mapping_Kampagne_Xhain/QA-Parklets.
 
-The geojson that the campaign is based upon is: `<todo>`
+The geojson that the campaign is based upon is https://parkraum.osm-verkehrswende.org/project-quality-assurance/berlin-parklets/gqis-for-maproulette.geojson.
