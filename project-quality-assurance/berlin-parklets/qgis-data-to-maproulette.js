@@ -19,7 +19,7 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
         "",
         "",
         "**Mapillary:**",
-        `* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=${f.geometry.coordinates[1]}&lng=${f.geometry.coordinates[0]}&z=17&dateFrom=2022-01-01)`,
+        `* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=${f.geometry.coordinates[1]}&lng=${f.geometry.coordinates[0]}&z=19&dateFrom=2022-01-01)`,
         f.properties.JOIN_mapillary &&
           `* [Verknüpftes Mapillary-Bild](https://www.mapillary.com/app/?pKey=${f.properties.JOIN_mapillary})`,
       ];
