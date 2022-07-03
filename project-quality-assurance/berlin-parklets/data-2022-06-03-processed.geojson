@@ -1,0 +1,818 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4283311, 52.49688320000001]
+      },
+      "properties": {
+        "externalId": 2109462023,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109462023",
+        "headline": "Lause Lebt e.V. | Lausitzer Straße 10/11, 10997 Berlin",
+        "location_name": "Lausitzer Straße 10/11, 10997 Berlin",
+        "created_at": "2022-03-23T11:06:36.666Z",
+        "updated_at": "2022-05-03T13:52:47.192Z",
+        "content_updated_at": "2022-05-03T13:52:47.192Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.3169951, 52.48166879999999]
+      },
+      "properties": {
+        "externalId": 2109460886,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109460886",
+        "headline": "NaturFreunde Berlin e.V. | Paretzer Str. 7, 10713 Berlin",
+        "location_name": "Paretzer Str. 7, 10713 Berlin",
+        "created_at": "2022-03-23T11:05:48.264Z",
+        "updated_at": "2022-05-03T13:54:17.307Z",
+        "content_updated_at": "2022-05-03T13:54:17.307Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4598017, 52.5128759] },
+      "properties": {
+        "externalId": 2109450887,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109450887",
+        "headline": "Hausgemeinschaft | Kreutzigerstraße 18-19, 10247 Berlin",
+        "location_name": "Kreutzigerstraße 18-19, 10247 Berlin",
+        "created_at": "2022-03-23T10:57:40.316Z",
+        "updated_at": "2022-05-03T13:51:37.571Z",
+        "content_updated_at": "2022-05-03T13:51:37.571Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3921606, 52.4906904] },
+      "properties": {
+        "externalId": 2109445018,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109445018",
+        "headline": "Integrationskinderladen Fidicinis e.V. | Solmsstraße 22, 10961 Berlin",
+        "location_name": "Solmsstraße 22, 10961 Berlin",
+        "created_at": "2022-03-23T10:54:00.957Z",
+        "updated_at": "2022-05-03T13:53:21.860Z",
+        "content_updated_at": "2022-05-03T13:53:21.860Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4268765, 52.4957066] },
+      "properties": {
+        "externalId": 2109443584,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109443584",
+        "headline": "Regenbogenfabrik Block 109 e.V. | Lausitzer Straße 22, 10999 Berlin",
+        "location_name": "Lausitzer Straße 22, Berlin",
+        "created_at": "2022-03-23T10:52:57.719Z",
+        "updated_at": "2022-05-03T13:52:52.351Z",
+        "content_updated_at": "2022-05-03T13:52:52.351Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4529794, 52.52549029999999]
+      },
+      "properties": {
+        "externalId": 2109442008,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109442008",
+        "headline": "Wohngemeinschaft Kochhannstraße | Kochhannstr. 21, 10249 Berlin",
+        "location_name": "Kochhannstraße 21, 10249 Berlin",
+        "created_at": "2022-03-23T10:51:48.255Z",
+        "updated_at": "2022-03-23T11:03:07.584Z",
+        "content_updated_at": "2022-03-23T11:03:07.584Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4296437, 52.4937164] },
+      "properties": {
+        "externalId": 2109440906,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109440906",
+        "headline": "betterplace Umspannwerk | Paul-Lincke-Ufer 21, 10999 Berlin",
+        "location_name": "Paul-Lincke-Ufer 21, 10999 Berlin",
+        "created_at": "2022-03-23T10:50:55.720Z",
+        "updated_at": "2022-05-03T13:52:55.948Z",
+        "content_updated_at": "2022-05-03T13:52:55.948Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3916873, 52.5000381] },
+      "properties": {
+        "externalId": 2109437355,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109437355",
+        "headline": "Bauhütte Kreuzberg e.V. | Friedrichstraße 18/19, 10969 Berlin",
+        "location_name": "Friedrichstraße 18/19, 10969 Berlin",
+        "created_at": "2022-03-23T10:48:12.003Z",
+        "updated_at": "2022-05-03T13:53:18.248Z",
+        "content_updated_at": "2022-05-03T13:53:18.248Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.405789, 52.4994526] },
+      "properties": {
+        "externalId": 2109434722,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109434722",
+        "headline": "Nachbarschaftliche Initiative Moritzstraße | Moritzstraße 6, 10969 Berlin",
+        "location_name": "Moritzstraße 6, 10969 Berlin",
+        "created_at": "2022-03-23T10:46:04.949Z",
+        "updated_at": "2022-05-03T13:53:13.863Z",
+        "content_updated_at": "2022-05-03T13:53:13.863Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4241495, 52.496748] },
+      "properties": {
+        "externalId": 2109430409,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109430409",
+        "headline": "AG Wildblumen | Manteuffelstraße 72, 10999 Berlin",
+        "location_name": "Manteuffelstraße 72, 10999 Berlin",
+        "created_at": "2022-03-23T10:43:09.818Z",
+        "updated_at": "2022-03-23T10:49:48.745Z",
+        "content_updated_at": "2022-03-23T10:49:48.745Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4498441, 52.52104079999999]
+      },
+      "properties": {
+        "externalId": 2109428469,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109428469",
+        "headline": "Schulverein der Evangelischen Schule Berlin-Friedrichshain (ESBF) | Petersburger Platz 5, 10249 Berlin",
+        "location_name": "Petersburger Platz 5, 10249 Berlin",
+        "created_at": "2022-03-23T10:42:01.273Z",
+        "updated_at": "2022-05-02T08:32:09.241Z",
+        "content_updated_at": "2022-05-02T08:32:09.241Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4189039, 52.489053] },
+      "properties": {
+        "externalId": 2109427221,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109427221",
+        "headline": "Gemeinwesenarbeit Graefekiez, Träger: Nachbarschaftshaus Urbanstraße e.V. | Jahnstraße 4, 10967 Berlin",
+        "location_name": "Jahnstraße 4, Berlin",
+        "created_at": "2022-03-23T10:41:04.355Z",
+        "updated_at": "2022-05-03T13:52:59.383Z",
+        "content_updated_at": "2022-05-03T13:52:59.383Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4502273, 52.51812839999999]
+      },
+      "properties": {
+        "externalId": 2109425644,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109425644",
+        "headline": "Parklet Weidenweg | Weidenweg 35/37, 10249 Berlin",
+        "location_name": "Weidenweg 35/37, 10249 Berlin",
+        "created_at": "2022-03-23T10:39:53.306Z",
+        "updated_at": "2022-05-03T13:51:29.242Z",
+        "content_updated_at": "2022-05-03T13:51:29.242Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4433186, 52.49735279999999]
+      },
+      "properties": {
+        "externalId": 2109424403,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109424403",
+        "headline": "Kinderladen Cuvrybande e.V. | Cuvrystraße 21, 10997 Berlin",
+        "location_name": "Cuvrystraße 21, 10997 Berlin",
+        "created_at": "2022-03-23T10:38:56.057Z",
+        "updated_at": "2022-05-03T13:53:02.848Z",
+        "content_updated_at": "2022-05-03T13:53:02.848Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4544712, 52.52106130000001]
+      },
+      "properties": {
+        "externalId": 2109422092,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109422092",
+        "headline": "Die Arche Kinderstiftung | Mühsamstraße 74, 10249 Berlin",
+        "location_name": "Mühsamstraße 74, 10249 Berlin",
+        "created_at": "2022-03-23T10:37:02.956Z",
+        "updated_at": "2022-03-23T10:37:29.287Z",
+        "content_updated_at": "2022-03-23T10:37:29.287Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4465142, 52.5209572] },
+      "properties": {
+        "externalId": 2109419655,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109419655",
+        "headline": "Temporäre Spielstrasse Richard-Sorge-Viertel | Richard-Sorge-Straße 69, 10249 Berlin",
+        "location_name": "Richard-Sorge-Straße 69, 10249 Berlin",
+        "created_at": "2022-03-23T10:35:03.139Z",
+        "updated_at": "2022-05-03T13:51:25.731Z",
+        "content_updated_at": "2022-05-03T13:51:25.731Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4293259, 52.4943247] },
+      "properties": {
+        "externalId": 2109409599,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2109409599",
+        "headline": " Expedition Metropolis e.V.  & Initiative Reichenberger Kiez | Ohlauer Straße 41, 10999 Berlin",
+        "location_name": "Ohlauer Straße 41, Berlin",
+        "created_at": "2022-03-23T10:27:32.221Z",
+        "updated_at": "2022-03-23T10:28:06.100Z",
+        "content_updated_at": "2022-03-23T10:28:06.100Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4127142, 52.4910156] },
+      "properties": {
+        "externalId": 2093420063,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2093420063",
+        "headline": "ium-Institut | Fichtestraße 2, 10967 Berlin",
+        "location_name": "Fichtestraße 2, Berlin",
+        "created_at": "2022-03-14T09:00:34.951Z",
+        "updated_at": "2022-03-23T10:27:01.361Z",
+        "content_updated_at": "2022-03-23T10:27:01.361Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3470649, 52.5493056] },
+      "properties": {
+        "externalId": 2022842359,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022842359",
+        "headline": "Initiative Togostraße 78, Berlin",
+        "location_name": "Togostraße 78, Berlin",
+        "created_at": "2022-02-01T08:04:35.824Z",
+        "updated_at": "2022-05-03T13:51:08.786Z",
+        "content_updated_at": "2022-05-03T13:51:08.786Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3843657, 52.5516749] },
+      "properties": {
+        "externalId": 2022841539,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022841539",
+        "headline": " Quatiersmanagement Badstraße | Stettiner Str. 4, 13357 Berlin",
+        "location_name": "Stettiner Str. 4, 13357 Berlin",
+        "created_at": "2022-02-01T08:03:57.763Z",
+        "updated_at": "2022-03-23T10:04:34.267Z",
+        "content_updated_at": "2022-03-23T10:04:34.267Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.3776039, 52.55251699999999]
+      },
+      "properties": {
+        "externalId": 2022839060,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022839060",
+        "headline": "Nachbarschaft Gropiusstraße 5, Berlin",
+        "location_name": "Gropiusstraße 5, Berlin",
+        "created_at": "2022-02-01T08:01:48.661Z",
+        "updated_at": "2022-05-03T13:55:58.547Z",
+        "content_updated_at": "2022-05-03T13:55:58.547Z",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3891513, 52.5535405] },
+      "properties": {
+        "externalId": 2022838169,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022838169",
+        "headline": "MÄDEA-Stiftung SPI | Grüntaler Straße 21, Berlin",
+        "location_name": "Grüntaler Straße 21, Berlin",
+        "created_at": "2022-02-01T08:01:02.661Z",
+        "updated_at": "2022-03-14T09:09:52.107Z",
+        "content_updated_at": "2022-03-14T09:09:52.107Z",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.3914062, 52.55745899999999]
+      },
+      "properties": {
+        "externalId": 2022836959,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022836959",
+        "headline": "blumig.berlin | Freienwalder Straße 27, Berlin",
+        "location_name": "Freienwalder Straße 27, Berlin",
+        "created_at": "2022-02-01T08:00:00.946Z",
+        "updated_at": "2022-03-14T09:10:20.158Z",
+        "content_updated_at": "2022-03-14T09:10:20.158Z",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3528976, 52.5482697] },
+      "properties": {
+        "externalId": 2022835968,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022835968",
+        "headline": "CU.Office Berlin / Get Change Done e.V. | Genter Straße 56, 13353 Berlin",
+        "location_name": "Genter Straße 56, Berlin",
+        "created_at": "2022-02-01T07:59:18.071Z",
+        "updated_at": "2022-03-23T10:09:47.576Z",
+        "content_updated_at": "2022-03-23T10:09:47.576Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3611181, 52.5496212] },
+      "properties": {
+        "externalId": 2022832674,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022832674",
+        "headline": "Initiative Grüne Malplaquetstraße | Malplaquetstraße 41, 13347 Berlin",
+        "location_name": "Malplaquetstraße 41, Berlin",
+        "created_at": "2022-02-01T07:56:41.991Z",
+        "updated_at": "2022-03-23T10:08:45.647Z",
+        "content_updated_at": "2022-03-23T10:08:45.647Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3666243, 52.5468689] },
+      "properties": {
+        "externalId": 2022831988,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022831988",
+        "headline": "Gemeinsam Grün in der Adolfstraße | Adolfstraße 27A, Berlin",
+        "location_name": "Adolfstraße 27A, Berlin",
+        "created_at": "2022-02-01T07:56:11.294Z",
+        "updated_at": "2022-03-23T10:09:55.661Z",
+        "content_updated_at": "2022-03-23T10:09:55.661Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3876631, 52.5547157] },
+      "properties": {
+        "externalId": 2022829715,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022829715",
+        "headline": "Quartiersmanagement Badstraße | Stettiner Straße 38, Berlin",
+        "location_name": "Stettiner Straße 38, Berlin",
+        "created_at": "2022-02-01T07:54:25.433Z",
+        "updated_at": "2022-03-23T10:02:37.768Z",
+        "content_updated_at": "2022-03-23T10:02:37.768Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4613589, 52.5067833] },
+      "properties": {
+        "externalId": 2022825193,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022825193",
+        "headline": "Lovelite e.V.  | Haasestraße 2, Berlin",
+        "location_name": "Haasestraße 2, Berlin",
+        "created_at": "2022-02-01T07:50:53.744Z",
+        "updated_at": "2022-05-03T13:52:37.138Z",
+        "content_updated_at": "2022-05-03T13:52:37.138Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.2995825, 52.5118807] },
+      "properties": {
+        "externalId": 2022817435,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/2022817435",
+        "headline": "Nachbarinnen und Nachbarn der Fritschestraße 29A, Berlin",
+        "location_name": "Fritschestraße 29A, Berlin",
+        "created_at": "2022-02-01T07:45:19.080Z",
+        "updated_at": "2022-03-23T08:56:41.244Z",
+        "content_updated_at": "2022-03-23T08:56:41.244Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3534103, 52.521695] },
+      "properties": {
+        "externalId": 1990311015,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990311015",
+        "headline": "Nachbarschaftsinitiative Spenerstr. 28 | Spenerstraße 28, Berlin",
+        "location_name": "Spenerstraße 28, Berlin",
+        "created_at": "2022-01-13T13:21:48.238Z",
+        "updated_at": "2022-05-03T13:50:15.097Z",
+        "content_updated_at": "2022-05-03T13:50:15.097Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3727824, 52.5428594] },
+      "properties": {
+        "externalId": 1990309210,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990309210",
+        "headline": "Pankonauten e.V. | Ravenéstraße 10, Berlin",
+        "location_name": "Ravenéstraße 10, Berlin",
+        "created_at": "2022-01-13T13:20:55.684Z",
+        "updated_at": "2022-05-03T13:51:05.229Z",
+        "content_updated_at": "2022-05-03T13:51:05.229Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3923167, 52.5579737] },
+      "properties": {
+        "externalId": 1990307877,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990307877",
+        "headline": "blumig.berlin (Umweltinitiative/ nachbarschaftliches Kunstprojekt) | Freienwalder Straße 17, Berlin",
+        "location_name": "Freienwalder Straße 17, 13359 Berlin",
+        "created_at": "2022-01-13T13:20:13.568Z",
+        "updated_at": "2022-05-03T13:51:17.804Z",
+        "content_updated_at": "2022-05-03T13:51:17.804Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3547626, 52.5419085] },
+      "properties": {
+        "externalId": 1990306548,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990306548",
+        "headline": "Klima und Kiez AG | Sprengelstraße 15, Berlin",
+        "location_name": "Sprengelstraße 15, Berlin",
+        "created_at": "2022-01-13T13:19:32.068Z",
+        "updated_at": "2022-05-03T13:50:08.455Z",
+        "content_updated_at": "2022-05-03T13:50:08.455Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4491439, 52.5145016] },
+      "properties": {
+        "externalId": 1990305084,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990305084",
+        "headline": "Temple Grandin Schule | Lasdehner Straße 17, 10243 Berlin",
+        "location_name": "Lasdehner Straße 17, Berlin",
+        "created_at": "2022-01-13T13:18:45.801Z",
+        "updated_at": "2022-05-03T13:51:33.672Z",
+        "content_updated_at": "2022-05-03T13:51:33.672Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4438793, 52.4968418] },
+      "properties": {
+        "externalId": 1990303177,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990303177",
+        "headline": "Förderverein der Evangelischen Kita Tabor e.V. | Cuvrystraße 36, Berlin",
+        "location_name": "Cuvrystraße 36, Berlin",
+        "created_at": "2022-01-13T13:17:50.599Z",
+        "updated_at": "2022-05-03T13:53:08.495Z",
+        "content_updated_at": "2022-05-03T13:53:08.495Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3884926, 52.4872313] },
+      "properties": {
+        "externalId": 1990301250,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990301250",
+        "headline": "Gesprächs-Kultur Fidicin | Fidicinstraße 40, Berlin",
+        "location_name": "Fidicinstraße 40, Berlin",
+        "created_at": "2022-01-13T13:17:00.724Z",
+        "updated_at": "2022-05-03T13:53:27.496Z",
+        "content_updated_at": "2022-05-03T13:53:27.496Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.38849, 52.48687] },
+      "properties": {
+        "externalId": 1990297134,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990297134",
+        "headline": "Gesprächs-Kultur Fidicin | Fidicinstraße 4, Berlin",
+        "location_name": "Fidicinstraße 4, Berlin",
+        "created_at": "2022-01-13T13:14:59.876Z",
+        "updated_at": "2022-05-03T13:53:33.580Z",
+        "content_updated_at": "2022-05-03T13:53:33.580Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.2996728, 52.5116384] },
+      "properties": {
+        "externalId": 1990294106,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990294106",
+        "headline": "Nachbarinnen & Nachbarn der Fritschestrasse (Nord) | Fritschestraße 31, Berlin",
+        "location_name": "Fritschestraße 31, Berlin",
+        "created_at": "2022-01-13T13:13:23.809Z",
+        "updated_at": "2022-01-13T13:15:33.675Z",
+        "content_updated_at": "2022-01-13T13:15:33.675Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.3870028, 52.4953116] },
+      "properties": {
+        "externalId": 1990256747,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256747",
+        "headline": "Adlerhalle, Materiallager | Mehringdamm 20, Berlin",
+        "location_name": "Mehringdamm 20, Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-01-13T13:15:22.891Z",
+        "content_updated_at": "2022-01-13T13:15:22.891Z",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4055844, 52.5004472] },
+      "properties": {
+        "externalId": 1990256745,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256745",
+        "headline": "Wassertor e.V. | Wassertorstraße 48, 10969 Berlin",
+        "location_name": "Wassertorstraße 48, 10969 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:05:21.165Z",
+        "content_updated_at": "2022-03-14T09:05:21.165Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.433369, 52.5049425] },
+      "properties": {
+        "externalId": 1990256744,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256744",
+        "headline": "Mietergemeinschaft Pücklerstraße 51, Pücklerstraße 51, 10997 Berlin",
+        "location_name": "Pücklerstraße 51, 10997 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:04:24.308Z",
+        "content_updated_at": "2022-03-14T09:04:24.308Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4714559, 52.5150613] },
+      "properties": {
+        "externalId": 1990256742,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256742",
+        "headline": "Initiative Waldeyerstr, | Waldeyerstraße 9, 10247 Berlin",
+        "location_name": "Waldeyerstraße 9, 10247 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T08:55:41.246Z",
+        "content_updated_at": "2022-03-14T08:55:41.246Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4502124, 52.5256475] },
+      "properties": {
+        "externalId": 1990256741,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256741",
+        "headline": "Heidenfeld4Alle, Heidenfeldstraße 6, 10249 Berlin",
+        "location_name": "Heidenfeldstraße 6, 10249 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T08:55:16.418Z",
+        "content_updated_at": "2022-03-14T08:55:16.418Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4201125, 52.50328529999999]
+      },
+      "properties": {
+        "externalId": 1990256738,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256738",
+        "headline": "Waldemar 44  | Waldemarstraße 44, 10999 Berlin",
+        "location_name": "Waldemarstraße 44, 10999 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:07:26.659Z",
+        "content_updated_at": "2022-03-14T09:07:26.659Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.4582131, 52.50861459999999]
+      },
+      "properties": {
+        "externalId": 1990256737,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256737",
+        "headline": "Hausgemeinschaft Simplonstraße | Simplonstraße 16, 10245 Berlin",
+        "location_name": "Simplonstraße 16, 10245 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-23T10:58:42.498Z",
+        "content_updated_at": "2022-03-23T10:58:42.498Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4640797, 52.5054857] },
+      "properties": {
+        "externalId": 1990256736,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256736",
+        "headline": "Kiez für alle | Simplonstraße 54, 10245 Berlin",
+        "location_name": "Simplonstraße 54, 10245 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:03:55.201Z",
+        "content_updated_at": "2022-03-14T09:03:55.201Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4492138, 52.5222159] },
+      "properties": {
+        "externalId": 1990256735,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256735",
+        "headline": "KommRum e.V. | Straßmannstraße 17, 10249 Berlin",
+        "location_name": "Straßmannstraße 17, 10249 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-23T08:53:59.183Z",
+        "content_updated_at": "2022-03-23T08:53:59.183Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4403767, 52.4970301] },
+      "properties": {
+        "externalId": 1990256734,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256734",
+        "headline": "Falckengärtner*innen | Falckensteinstraße 22, 10997 Berlin",
+        "location_name": "Falckensteinstraße 22, 10997 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:06:04.299Z",
+        "content_updated_at": "2022-03-14T09:06:04.299Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4671465, 52.5158964] },
+      "properties": {
+        "externalId": 1990256731,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256731",
+        "headline": "Stiftung SPI | Rigaer Straße 41, 10247 Berlin",
+        "location_name": "Rigaer Straße 41, 10247 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:06:48.702Z",
+        "content_updated_at": "2022-03-14T09:06:48.702Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4619268, 52.5066575] },
+      "properties": {
+        "externalId": 1990256730,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256730",
+        "headline": "Lovelite e.V. | Simplonstraße 38, 10245 Berlin",
+        "location_name": "Simplonstraße 38, 10245 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-05-03T15:05:39.334Z",
+        "content_updated_at": "2022-05-03T15:05:39.334Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4143225, 52.4928606] },
+      "properties": {
+        "externalId": 1990256726,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256726",
+        "headline": "Klimawandel Kiez-Graefe | Grimmstraße 20, 10967 Berlin",
+        "location_name": "Grimmstraße 20, 10967 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-14T09:05:50.208Z",
+        "content_updated_at": "2022-03-14T09:05:50.208Z",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.4517088, 52.5228571] },
+      "properties": {
+        "externalId": 1990256725,
+        "externalWallId": 154419585,
+        "externalLink": "https://padlet.com/parklets/Parklets13012022/wish/1990256725",
+        "headline": "Strassmanstr. Queerbeet | Straßmannstraße 29, 10249 Berlin",
+        "location_name": "Straßmannstraße 29, 10249 Berlin",
+        "created_at": "2022-01-13T12:52:52.957Z",
+        "updated_at": "2022-03-23T08:51:19.628Z",
+        "content_updated_at": "2022-03-23T08:51:19.628Z",
+        "color": "green"
+      }
+    }
+  ]
+}
