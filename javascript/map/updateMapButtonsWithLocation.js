@@ -11,15 +11,24 @@ const updateMapButtonsWithLocation = (map) => {
     const defaultDateFilterDate = "2020-01-01"; // So we only show nice and new data by default
     mapillaryLink.href = `https://www.mapillary.com/app/?z=${zoom}&lat=${lat}&lng=${lng}&focus=map&dateFrom=${defaultDateFilterDate}`;
   }
+
   /** @type HTMLAnchorElement | null */
   const kartaviewLink = document.querySelector("[data-update-kartaview-link]");
   if (kartaviewLink) {
     kartaviewLink.href = `https://kartaview.org/map/@${lat},${lng},${zoom}z`;
   }
+
   /** @type HTMLAnchorElement | null */
   const editOsmLink = document.querySelector("[data-update-edit-osm]");
   if (editOsmLink) {
     // Will pick the default editor based on user preferences. Add ?editor=id to force iD.
     editOsmLink.href = `https://www.openstreetmap.org/edit#map=${zoom}/${lat}/${lng}`;
+  }
+
+  /** @type HTMLAnchorElement | null */
+  const editParkingLink = document.querySelector("[data-update-edit-parking]");
+  if (editParkingLink) {
+    // Will pick the default editor based on user preferences. Add ?editor=id to force iD.
+    editParkingLink.href = `https://tordans.github.io/parking-lanes/#${zoom}/${lat}/${lng}`;
   }
 };

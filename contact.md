@@ -67,3 +67,4 @@ Tobias Jordans, Böhmische Straße 54, 12055 Berlin, [t@tobiasjordans.de](mailto
 - OpenStreetMap Mitwirkende https://www.openstreetmap.org/copyright
 - Bootstrap Icons https://github.com/twbs/icons/blob/main/LICENSE.md
 - FontAwesome https://fontawesome.com/license
+- Heroicon https://heroicons.com/
