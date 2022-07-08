@@ -1235,8 +1235,11 @@ video {
   --tw-aspect-h: 1;
 }
 
-/* https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-     https://lukechannings.com/blog/2021-06-09-does-safari-15-fix-the-vh-bug/ */
+/*
+    https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+    https://lukechannings.com/blog/2021-06-09-does-safari-15-fix-the-vh-bug/
+    However, we need to overwrite this with `lg:!h-full` for desktop.
+  */
 
 .computed-h-screen {
   height: 100vh;
@@ -1270,7 +1273,8 @@ video {
   margin-bottom: 0px;
 }
 
-.prose .notice > h2:first-child {
+.prose .notice > h1:first-child, 
+  .prose .notice > h2:first-child {
   margin-top: 0px;
 }
 
@@ -1476,10 +1480,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.\!mt-0 {
-  margin-top: 0px !important;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1518,6 +1518,10 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.\!mt-0 {
+  margin-top: 0px !important;
 }
 
 .mt-1 {
@@ -1592,10 +1596,6 @@ video {
   display: none;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -1612,16 +1612,16 @@ video {
   height: 0.5rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-72 {
   height: 18rem;
 }
 
 .h-7 {
   height: 1.75rem;
-}
-
-.h-3 {
-  height: 0.75rem;
 }
 
 .w-full {
@@ -1646,10 +1646,6 @@ video {
 
 .w-12 {
   width: 3rem;
-}
-
-.w-3 {
-  width: 0.75rem;
 }
 
 .w-56 {
@@ -2037,10 +2033,6 @@ video {
   text-align: justify;
 }
 
-.align-baseline {
-  vertical-align: baseline;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2322,7 +2314,8 @@ video {
   margin-bottom: 0px;
 }
 
-.prose .target\:notice:target > h2:first-child {
+.prose .target\:notice:target > h1:first-child, 
+  .prose .target\:notice:target > h2:first-child {
   margin-top: 0px;
 }
 
@@ -2575,6 +2568,14 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:\!h-full {
+    height: 100% !important;
   }
 
   .lg\:w-64 {
