@@ -7,7 +7,7 @@ noindex: true
 
 <div class="notice mb-12">
 
-<h1 class="!mt-0 text-sky-700">Kontakt</h1>
+<h1 class="text-sky-700">Kontakt</h1>
 
 <hr class="!border-white !my-6">
 

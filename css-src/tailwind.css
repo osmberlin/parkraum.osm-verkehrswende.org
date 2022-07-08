@@ -31,6 +31,7 @@
     @apply first:mt-0;
     @apply last:mb-0;
   }
+  .prose .notice > h1:first-child,
   .prose .notice > h2:first-child {
     @apply mt-0;
   }
