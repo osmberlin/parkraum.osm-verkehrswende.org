@@ -3,9 +3,9 @@ module.exports = {
   content: [
     "./_includes/**/*.html",
     "./_layouts/*.html",
-    "./posts/*.{md,html}",
+    "./_posts/*.{md,html}",
     "./javascript/**/*.js",
-    "./posts/**/*.{md,html}",
+    "./_posts/**/*.{md,html}",
     "./project-prototype-neukoelln/**/*.{md,html}",
     "./project-vector-tiles/**/*.{md,html}",
     "./*.{md,html}",
