@@ -9,6 +9,7 @@
   .layer-parkingmap,
   .zoom-15 .layer-parkingmap .legende-stellplatzdichte,
   .zoom-16 .layer-parkingmap .legende-stellplatzdichte,
+  .zoom-15 .layer-parkingmap .legende-sammelanlagen,
   .zoom-16 .layer-parkingmap .legende-flaechenverbrauch,
   .zoom-16 .layer-parkingmap .legende-park-stellplatztypen,
   .zoom-17 .layer-parkingmap .legende-park-stellplatztypen,
@@ -90,6 +91,17 @@
             <img src="{{ 'images/legend/street_parking/capacity.png' | relative_url }}" class="h-7 w-12 !m-0" alt="" />
             <div class="leading-tight">Straßenabschnitt mit Parkmöglichkeit am Fahrbahnrand mit Anzahl
               verfügbarer Stellplätze</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legende-sammelanlagen">
+        <div class="mb-3">
+          <h3 class="text-md font-semibold !leading-tight">Sammelanlagen</h3>
+
+          <div class="flex gap-2 mb-2">
+            <img src="{{ 'images/legend/buildings/building_parking.png' | relative_url }}" class="h-7 w-12 !m-0" alt="" />
+            <div class="leading-tight">Große Parkhäuser mit Stellplatzzahl</div>
           </div>
         </div>
       </div>
