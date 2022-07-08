@@ -5,7 +5,3 @@ _site
 vendor
 .DS_Store
 node_modules
-
-# FOR NOW…
-project-prototype-neukoelln/IGNORE_scripts/**/*
-project-prototype-neukoelln/IGNORE_data/**/*
