@@ -10,8 +10,14 @@ image:
 menu_title: Data quality
 # canonical_url:
 language: "en"
-in_menu: true
+in_menu: false
 ---
+
+<div class="notice mb-12 bg-green-100 text-xl">
+
+**Update:** This task is done. Read more at [Einflussfaktoren auf die Datenqualität von OSM-Parkraumanalysen mit dem „Subtraktiven Modell“](./2022-07-15-einflussfaktoren-datenqualitaet)
+
+</div>
 
 ![Parking map (OSM) with debugging circles to show different cutoff areas.](../images/posts/parkstreifen-generieren.png){: class='img-thumbnail' }
 
