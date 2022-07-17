@@ -34,6 +34,12 @@
   class="mb-7 flex flex-col overflow-hidden rounded border border-b-0 border-gray-200"
 >
   <a
+    href="{{ 'project-vector-tiles/dashboard' | relative_url }}"
+    class="{% if page.menu_highlight == 'project_vector_tiles_dashboard' %}menu-active{% else %}hover:bg-blue-50{% endif %} border-b border-gray-200 py-2 px-4"
+  >
+    Statistik
+  </a>
+  <a
     href="{{ 'project-vector-tiles' | relative_url }}"
     class="{% if page.menu_highlight == 'project_vector_tiles_map' %}menu-active{% else %}hover:bg-blue-50{% endif %} border-b border-gray-200 py-2 px-4"
   >
