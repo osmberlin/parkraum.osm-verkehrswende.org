@@ -60,9 +60,9 @@ map_full_heigth_menu_scroll: true
 
     map.addLayer({
       id: "vts_boundaries",
-      type: "line",
       source: "vts_boundaries_tiles",
       "source-layer": "public.boundaries",
+      type: "line",
       filter: ["all", [">=", "admin_level", "'10'"]],
       paint: {
         "line-width": 2,
@@ -72,9 +72,9 @@ map_full_heigth_menu_scroll: true
 
     map.addLayer({
       id: "vts_pl",
-      type: "line",
       source: "vts_pl_tiles",
       "source-layer": "public.parking_segments",
+      type: "line",
       filter: [
         "all",
         [
@@ -98,27 +98,27 @@ map_full_heigth_menu_scroll: true
     // on click we update the filter rule.
     map.addLayer({
       id: "vts_pl__highlight",
-      type: "line",
       source: "vts_pl_tiles",
       "source-layer": "public.parking_segments",
+      type: "line",
       filter: ["in", "id", ""],
       paint: { "line-width": 6, "line-color": "rgba(146, 49, 154, 1)" },
     });
 
     map.addLayer({
       id: "vts_pl_no",
-      type: "line",
       source: "vts_pl_tiles",
       "source-layer": "public.parking_segments",
+      type: "line",
       filter: ["all", ["in", "orientation", "no", "no_parking", "no_stopping"]],
       paint: { "line-width": 2, "line-color": "rgba(233, 171, 148, 1)" },
     });
 
     map.addLayer({
       id: "vts_pl_all_other",
-      type: "line",
       source: "vts_pl_tiles",
       "source-layer": "public.parking_segments",
+      type: "line",
       filter: [
         "all",
         [
@@ -143,9 +143,9 @@ map_full_heigth_menu_scroll: true
 
     map.addLayer({
       id: "vts_pl_label",
-      type: "symbol",
       source: "vts_pl_tiles",
       "source-layer": "public.parking_segments",
+      type: "symbol",
       layout: {
         "text-field": "{capacity}",
         "symbol-placement": "line-center",
