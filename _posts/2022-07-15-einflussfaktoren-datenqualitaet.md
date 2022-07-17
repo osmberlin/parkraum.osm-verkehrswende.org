@@ -6,6 +6,7 @@ layout: post
 menu_title: Einflussfaktoren auf die Datenqualität
 #canonical_url:
 in_menu: true
+show_toc: true
 ---
 
 <div class="notice mb-12 bg-yellow-100">
