@@ -106,12 +106,12 @@ Aus den Modellrechnungen ergeben sich die folgenden wichtigsten Aussagen (vgl. i
 
 _Daten: Ortsteil Neuk&ouml;lln, Scriptversion 25.6.2022_
 
+Als Referenz für die Berechnung wurden die detailliert gemappten OSM-Daten in Neukölln herangezogen sowie die Berechnung des <code>parking_lanes</code>-Scripts[^3]. Für das zugrunde liegende Testgebiet kann eine "sehr hohe Datenqualität" (vgl. Gruppe "Mapping-Szenarien") und "kleinteilig differenzierte Parkstreifen" (vgl. Gruppe "Parkstreifen­genauigkeit") angenommen werden.
+
+Die Spalten _Parallel-, Schräg-, Querparken_ erlaubt eine Bewertung, welchen Einfluss die Faktoren auf die Parkausrichtung haben. Die Spalten sind immer eine Untermenge von "alle Stellplätze".
+
 {% include /_posts/2022-07-15/table.html %}
 
-&nbsp;
-&nbsp;
-
-- <strong class="font-semibold font-mono py-0 px-1 rounded bg-stone-200">1</strong> Abweichung zum Ergebnis des <code>parking_lanes</code>-Scripts, wobei im Testgebiet eine sehr hohe Datenqualität und kleinteilig differenzierte Parkstreifen angenommen werden kann.
 - <strong class="font-semibold font-mono py-0 px-1 rounded bg-stone-200">2</strong> Die Werte sind ähnlich, wenn grob differenzierte Parkstreifen als Referenz und Modell-Berechnungsgrundlage herangezogen werden.
 - <strong class="font-semibold font-mono py-0 px-1 rounded bg-stone-200">3</strong> Diese Abweichung ist größer als die Summe der Abweichungen der einzelnen Features, da ein durch ein bestimmtes Feature vom Parken „freigehaltener“ Bereich auch von anderen Features umfasst sein kann.
 - <strong class="font-semibold font-mono py-0 px-1 rounded bg-stone-200">4</strong> Werden nur die separat gemappten Linienabschnitte allein betrachtet, würde ohne separate Kartierweise eine Überschätzung von 32% der Stellplätze entstehen (1.312 Stellplätze mit, 1.738 ohne separates Mapping).
@@ -134,4 +134,5 @@ Ein sehr detailliertes, aufwendiges Parkstreifenmapping ist nicht notwendig, um 
 ## Fußnoten
 
 [^1]: Eine genaue Erfassung von Parkbeschränkungen (temporäre Parkverbote, Ladezonen, Stellplätze für mobilitätseingeschränkte Personen etc.) sind ohne kleinteilig differenzierte Parkstreifen ebenfalls oft schwer umzusetzen.
+[^3]: Die Ergebnissen wären jedoch ähnlich, wenn die Berechnungen stattdessen auf Grundlage der manuell erzeugten, künstlich "verschlechterten", grob differenzierten Parkstreifen basieren würden.
 [^2]: Vergleichsgrundlage ist stets die nicht-ordnungswidrige Parksituation, also die Anzahl der Stellplätze, die es an einem Ort gibt, wenn alle juristischen Vorgaben (insbesondere die Straßenverkehrsordnung) eingehalten werden (würden). Allein bei der Auslegung dieser Regeln gibt es signifikante Grauzonen und Unsicherheiten.

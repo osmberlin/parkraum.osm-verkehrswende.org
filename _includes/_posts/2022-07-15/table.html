@@ -1,24 +1,19 @@
 <div
-  class="-mx-4 overflow-scroll md:-mr-[8rem] md:overflow-clip md:rounded-md md:border lg:-ml-[13rem] xl:-mr-[13rem] 2xl:-mr-[18rem]"
+  class="-mx-4 mb-10 overflow-scroll md:-mr-[8rem] md:overflow-clip md:rounded-md md:border lg:-ml-[13rem] xl:-mr-[13rem] 2xl:-mr-[18rem]"
 >
   <table class="md:mt-0">
-    <thead class="bg-emerald-100">
-      <tr class="bg-emerald-200">
+    <thead>
+      <tr class="sr-only">
         <th class="py-2 leading-tight"></th>
         <th class="py-2 leading-tight">Anzahl</th>
-        <th class="py-2 text-xs font-normal leading-4">
-          Abwei&shy;chung
-          <span class="rounded bg-stone-100 py-0 px-1 font-mono font-semibold"
-            >1</span
-          >
-        </th>
+        <th class="py-2 text-xs font-normal leading-4">Abwei&shy;chung</th>
         <th class="py-2 leading-tight">Anzahl</th>
         <th class="py-2 text-xs font-normal leading-4">Abwei&shy;chung</th>
         <th class="py-2 leading-tight">Anzahl</th>
         <th class="py-2 text-xs font-normal leading-4">Abwei&shy;chung</th>
         <th class="py-2 leading-tight">Anzahl</th>
         <th class="py-2 text-xs font-normal leading-4">Abwei&shy;chung</th>
-        <th class="py-2 leading-tight">Beschreibung</th>
+        <th class="py-2 leading-tight"></th>
       </tr>
       <tr class="bg-emerald-100">
         <th class="py-3 leading-tight"></th>
@@ -26,27 +21,10 @@
         <th class="py-3 leading-tight" colspan="2">Parallelparken</th>
         <th class="py-3 leading-tight" colspan="2">Schr&auml;gparken</th>
         <th class="py-3 leading-tight" colspan="2">Querparken</th>
-        <th class="py-3 leading-tight"></th>
+        <th class="py-3 leading-tight">Beschreibung</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th class="py-2 pl-3 align-baseline leading-tight">
-          Ergebnis Parkraumkarte
-        </th>
-        <td class="text-right">27.103</td>
-        <td class="text-left">-2,1%</td>
-        <td class="text-right">21.387</td>
-        <td class="text-left">-2,5%</td>
-        <td class="text-right">3.311</td>
-        <td class="text-left">-1,6%</td>
-        <td class="text-right">2.405</td>
-        <td class="text-left">1,6%</td>
-        <td class="align-middle text-xs leading-tight">
-          Manuell nachbearbeitete Parkstreifendaten, &auml;u&szlig;erst hohe
-          Genauigkeit.
-        </td>
-      </tr>
       <tr>
         <th class="py-2 pl-3 align-baseline leading-tight">
           Ergebnis <code>parking_lanes</code>-Script
@@ -59,17 +37,31 @@
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
         <td class="text-right">2.367</td>
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Ergebnis des Scripts unter Annahme aller Einflussfaktoren.
+        </td>
+      </tr>
+      <tr>
+        <th class="py-2 pl-3 align-baseline leading-tight">
+          Ergebnis Parkraumkarte
+        </th>
+        <td class="text-right">27.103</td>
+        <td class="text-left">-2,1%</td>
+        <td class="text-right">21.387</td>
+        <td class="text-left">-2,5%</td>
+        <td class="text-right">3.311</td>
+        <td class="text-left">-1,6%</td>
+        <td class="text-right">2.405</td>
+        <td class="text-left">1,6%</td>
+        <td class="align-baseline text-xs leading-tight">
+          Manuell nachbearbeitete Parkstreifendaten; das entspricht der höchsten
+          Genauigkeit, die uns vorliegt.
         </td>
       </tr>
       <tr class="border-b-0">
         <th class="bg-emerald-50 py-2 pt-6 pl-3 leading-tight" colspan="10">
           Einfluss einzelner Faktoren:
           <strong class="underline">R&auml;umliche Features</strong>
-          <span class="rounded bg-stone-100 py-0 px-1 font-mono font-semibold"
-            >2</span
-          >
         </th>
       </tr>
       <tr class="bg-emerald-50">
@@ -103,14 +95,14 @@
       <tr>
         <th class="py-2 pl-3 align-baseline leading-tight">Einfahrten</th>
         <td class="text-right">29.239</td>
-        <td class="text-left">5,6%</td>
+        <td class="bg-stone-100 text-left"><strong>5,6%</strong></td>
         <td class="text-right">23.341</td>
         <td class="text-left">6,4%</td>
         <td class="text-right">3.472</td>
         <td class="text-left">3,2%</td>
         <td class="text-right">2.426</td>
         <td class="text-left">2,5%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Grundst&uuml;cks- und Geb&auml;udezufahrten
           (<code>service=driveway</code>).
         </td>
@@ -127,7 +119,7 @@
         <td class="text-left text-stone-300">0,2%</td>
         <td class="text-right">2.370</td>
         <td class="text-left text-stone-300">0,1%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Ampeln separat an der Haltelinie erfasst. (Anmerkung: Halteverbot vor
           Ampeln rechtlich unscharf.)
         </td>
@@ -144,7 +136,7 @@
         <td class="text-left text-stone-300">0,0%</td>
         <td class="text-right">2.373</td>
         <td class="text-left text-stone-300">0,3%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Markierte Querungsstellen wie Zebrastreifen und Ampelkreuzungen.
         </td>
       </tr>
@@ -160,9 +152,9 @@
         <td class="text-left">1,5%</td>
         <td class="text-right">2.383</td>
         <td class="text-left text-stone-300">0,7%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Unmarkierte Querungsstellen mit baulichen Merkmalen (z.B.
-          Gehwegvorstreckungen)
+          Gehwegvorstreckungen).
         </td>
       </tr>
       <tr>
@@ -175,7 +167,7 @@
         <td class="text-left text-stone-300">0,0%</td>
         <td class="text-right">2.366</td>
         <td class="text-left text-stone-300">0,0%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Ein separater Knoten f&uuml;r jede indiviudelle Bushaltestelle bzw.
           jedes Bushaltestellenzeichen.
         </td>
@@ -192,7 +184,7 @@
         <td class="text-left">1,1%</td>
         <td class="text-right">2.386</td>
         <td class="text-left text-stone-300">0,8%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Abstellanlagen f&uuml;r Fahrr&auml;der oder Elektrokleinstfahrzeuge
           mit
           <code>*:position=lane</code>-Tag, Parkletts.
@@ -206,14 +198,14 @@
           >
         </th>
         <td class="text-right">30.313</td>
-        <td class="text-left">9,5%</td>
+        <td class="bg-stone-100 text-left"><strong>9,5%</strong></td>
         <td class="text-right">24.261</td>
         <td class="text-left">10,6%</td>
         <td class="text-right">3.582</td>
         <td class="text-left">6,5%</td>
         <td class="text-right">2.470</td>
         <td class="text-left">4,4%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Einfluss aller r&auml;umlichen Features gemeinsam
         </td>
       </tr>
@@ -229,9 +221,9 @@
         <td class="text-left">3,0%</td>
         <td class="text-right">2.408</td>
         <td class="text-left">1,7%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Einfluss aller r&auml;umlichen Features au&szlig;er Einfahrten und
-          Bushaltestellen
+          Bushaltestellen.
         </td>
       </tr>
       <tr>
@@ -249,18 +241,15 @@
         <td class="text-left text-stone-300">0,8%</td>
         <td class="text-right">2.671</td>
         <td class="text-left">12,8%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Parkbuchten sind als separate Fl&auml;chen gemappt und dadurch
-          r&auml;umlich pr&auml;ziser auswertbar
+          r&auml;umlich pr&auml;ziser auswertbar.
         </td>
       </tr>
       <tr class="border-b-0">
         <th class="bg-emerald-50 py-2 pt-6 pl-3 leading-tight" colspan="10">
           Einfluss einzelner Faktoren:
           <strong class="underline">Parkstreifen&shy;genauigkeit</strong>
-          <span class="rounded bg-stone-100 py-0 px-1 font-mono font-semibold"
-            >2</span
-          >
         </th>
       </tr>
       <tr class="bg-emerald-50">
@@ -296,14 +285,14 @@
           &uuml;berall beidseitig Parallelparken
         </th>
         <td class="text-right">30.542</td>
-        <td class="text-left">10,4%</td>
+        <td class="bg-stone-100 text-left"><strong>10,4%</strong></td>
         <td class="text-right">30.542</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-left text-stone-300">0,0%</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-left text-stone-300">0,0%</td>
         <td class="text-right text-stone-300">-</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Entlang aller Stra&szlig;en wird beidseitiges Parallelparken
           angenommen.
         </td>
@@ -320,7 +309,7 @@
         <td class="text-left">8,4%</td>
         <td class="text-right">2.575</td>
         <td class="text-left">8,8%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           An langen Stra&szlig;enabschnitten ist nur die &uuml;berwiegend
           vorherrschende Art des Parkens erfasst.
         </td>
@@ -337,7 +326,7 @@
         <td class="text-left">3,6%</td>
         <td class="text-right">2.465</td>
         <td class="text-left">4,1%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Signifikante Parkstreifenwechsel (von einer L&auml;nge von mindestens
           etwa 100 Metern) sind erfasst.
         </td>
@@ -354,7 +343,7 @@
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
         <td class="text-right">2.367</td>
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Parkstreifen sind detailliert und kleinteilig erfasst (auch kurze
           Wechsel oder Verbote).
         </td>
@@ -363,9 +352,6 @@
         <th class="bg-emerald-50 py-2 pt-6 pl-3 leading-tight" colspan="10">
           Einfluss einzelner Faktoren:
           <strong class="underline">Attribute</strong>
-          <span class="rounded bg-stone-100 py-0 px-1 font-mono font-semibold"
-            >2</span
-          >
         </th>
       </tr>
       <tr class="bg-emerald-50">
@@ -411,7 +397,7 @@
         <td class="text-left text-stone-300">-0,1%</td>
         <td class="text-right">2.365</td>
         <td class="text-left text-stone-300">-0,1%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Die Fahrbahnen sind mit einem Attribut f&uuml;r ihre Breite
           ausgestattet.
         </td>
@@ -431,7 +417,7 @@
         <td class="text-left text-stone-300">0,0%</td>
         <td class="text-right">2.367</td>
         <td class="text-left text-stone-300">0,0%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Einfahrten, insbesondere mit &Uuml;berbreite, sind mit einer
           Breiteninformation ausgestattet.
         </td>
@@ -451,7 +437,7 @@
         <td class="text-left text-stone-300">0,9%</td>
         <td class="text-right">2.154</td>
         <td class="text-left">-9,0%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Fahrzeugausrichtung separat gemappter Parkstreifen vorhanden (muss
           nicht gesch&auml;tzt werden).
         </td>
@@ -460,9 +446,6 @@
         <th class="bg-emerald-50 py-2 pt-6 pl-3 leading-tight" colspan="10">
           Einfluss einzelner Faktoren:
           <strong class="underline">Mapping-Szenarien</strong>
-          <span class="rounded bg-stone-100 py-0 px-1 font-mono font-semibold"
-            >2</span
-          >
         </th>
       </tr>
       <tr class="bg-emerald-50">
@@ -496,16 +479,16 @@
       <tr>
         <th class="py-2 pl-3 align-baseline leading-tight">keine Daten</th>
         <td class="text-right">34.383</td>
-        <td class="text-left">24,2%</td>
+        <td class="bg-stone-100 text-left"><strong>24,2%</strong></td>
         <td class="text-right">34.383</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-right text-stone-300">-</td>
         <td class="text-right text-stone-300">-</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Keine Parkstreifen (Annahme: &uuml;berall beidseitig Parallelparken),
-          keine r&auml;umlichen Features
+          keine r&auml;umlichen Features.
         </td>
       </tr>
       <tr>
@@ -513,15 +496,15 @@
           geringe Datenqualit&auml;t
         </th>
         <td class="text-right">32.253</td>
-        <td class="text-left">16,5%</td>
+        <td class="bg-stone-100 text-left"><strong>16,5%</strong></td>
         <td class="text-right">25.591</td>
         <td class="text-left">16,6%</td>
         <td class="text-right">3.944</td>
         <td class="text-left">17,2%</td>
         <td class="text-right">2.718</td>
         <td class="text-left">14,8%</td>
-        <td class="align-middle text-xs leading-tight">
-          Nicht differenzierte Parkstreifen, keine r&auml;umlichen Features
+        <td class="align-baseline text-xs leading-tight">
+          Nicht differenzierte Parkstreifen, keine r&auml;umlichen Features.
         </td>
       </tr>
       <tr>
@@ -529,17 +512,17 @@
           mittlere Datenqualit&auml;t
         </th>
         <td class="text-right">29.679</td>
-        <td class="text-left">7,2%</td>
+        <td class="bg-stone-100 text-left"><strong>7,2%</strong></td>
         <td class="text-right">23.461</td>
         <td class="text-left">6,9%</td>
         <td class="text-right">3.663</td>
         <td class="text-left">8,9%</td>
         <td class="text-right">2.555</td>
         <td class="text-left">7,9%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Grob differenzierte Parkstreifen, 50% Einfahrten, prim&auml;re, aber
           keine sekund&auml;ren Querungsstellen, keine Anlagen im
-          Fahrbahnbereich
+          Fahrbahnbereich.
         </td>
       </tr>
       <tr>
@@ -554,9 +537,9 @@
         <td class="text-left">3,6%</td>
         <td class="text-right">2.465</td>
         <td class="text-left">4,1%</td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Grob differenzierte Parkstreifen, (nahezu) alle r&auml;umlichen
-          Features
+          Features.
         </td>
       </tr>
       <tr>
@@ -571,9 +554,9 @@
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
         <td class="text-right">2.367</td>
         <td class="text-right text-xs text-stone-500"><em>Referenz</em></td>
-        <td class="align-middle text-xs leading-tight">
+        <td class="align-baseline text-xs leading-tight">
           Kleinteilig differenzierte Parkstreifen, (nahezu) alle r&auml;umlichen
-          Features
+          Features.
         </td>
       </tr>
     </tbody>

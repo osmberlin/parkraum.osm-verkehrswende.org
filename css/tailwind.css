@@ -1585,6 +1585,10 @@ video {
   margin-left: 0.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -1944,19 +1948,14 @@ video {
   background-color: rgb(209 250 229 / var(--tw-bg-opacity));
 }
 
-.bg-emerald-200 {
+.bg-emerald-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+  background-color: rgb(236 253 245 / var(--tw-bg-opacity));
 }
 
 .bg-stone-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
-}
-
-.bg-emerald-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 253 245 / var(--tw-bg-opacity));
 }
 
 .bg-stone-50 {
@@ -2130,10 +2129,6 @@ video {
 
 .align-baseline {
   vertical-align: baseline;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-mono {
