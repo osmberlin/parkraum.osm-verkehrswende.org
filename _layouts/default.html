@@ -68,7 +68,9 @@
   </head>
 
   <body>
-    <div class="computed-h-screen flex flex-col lg:!h-full lg:flex-row">
+    <div
+      class="{% if page.map_full_heigth_menu_scroll %}computed-h-screen {% endif %}flex flex-col lg:flex-row"
+    >
       {% include menu.html %}
 
       <section class="flex-1">{{ content }}</section>

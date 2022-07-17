@@ -2726,10 +2726,6 @@ video {
     height: 100%;
   }
 
-  .lg\:\!h-full {
-    height: 100% !important;
-  }
-
   .lg\:w-64 {
     width: 16rem;
   }
