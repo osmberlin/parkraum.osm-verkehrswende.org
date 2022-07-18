@@ -26,6 +26,17 @@ menu_highlight: project_vector_tiles_dashboard
       Die Liste zeigt pro Bezirk, wie viel km Straße bereits mit dem
       <code>parking:lane</code>-Schema gemapped sind.
     </p>
+    <p
+      class="mt-2 text-sm text-gray-700"
+      x-data="{ date: '' }"
+      x-init="date = await new Date(await (await (await fetch('https://vts.mapwebbing.eu/public.highways.json')).json()).description)"
+    >
+      Stand der Daten:
+      <span
+        x-text="`${date.toLocaleDateString('de-DE', {weekday: 'short'})} ${date.toLocaleDateString('de-DE')}`"
+        >-</span
+      >
+    </p>
   </div>
   <div class="mt-8 flex flex-col">
     <div
