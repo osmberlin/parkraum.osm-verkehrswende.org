@@ -6,15 +6,20 @@ menu_highlight: project_vector_tiles_dashboard
 ---
 
 <!--
- "id": int8
- "name": text
- "aera_sqkm": numeric
- "street_side_km": numeric
- "lane_km": numeric
- "d_other_km": numeric
- "sum_km": numeric
- "length_wo_dual_carriageway": numeric
- "done_percent": numeric
+{
+  "id": 6,
+  "name": "Berlin",
+  "parent_id": null,
+  "parent_name": null,
+  "admin_level": 4,
+  "aera_sqkm": 891.14,
+  "street_side_km": 64.5,
+  "lane_km": 1372.1,
+  "d_other_km": 10284.7,
+  "sum_km": 11721.3,
+  "length_wo_dual_carriageway": 11975.2,
+  "done_percent": 12.3
+}
 -->
 
 <article class="mb-10 px-4 lg:px-5">
@@ -49,8 +54,12 @@ menu_highlight: project_vector_tiles_dashboard
               scope="col"
               class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
             >
-              Name
+              Bezirk
             </th>
+            <th
+              scope="col"
+              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+            ></th>
             <th
               scope="col"
               class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
@@ -60,18 +69,71 @@ menu_highlight: project_vector_tiles_dashboard
           </tr>
         </thead>
         <tbody
-          x-data="{ features: [] }"
-          x-init="features = await (await (await fetch('https://vts.mapwebbing.eu/export/boundaries_stats.geojson')).json()).features"
+          x-data="{ districts: [], sub_districts: [] }"
+          x-init="
+            data = await (await (await fetch('https://vts.mapwebbing.eu/export/boundaries_stats.geojson')).json()).features
+            districts = data.map((feature) => feature.properties).filter((p) => p.parent_id === null);
+            sub_districts = data.map((feature) => feature.properties).filter((p) => p.parent_id !== null)
+          "
         >
-          <template x-for="feature in features" :key="feature.properties.id">
+          <template x-for="property in districts" :key="property.id">
             <tr>
               <td
                 class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
-                x-text="feature.properties.name"
+                x-text="property.name"
+              ></td>
+              <td
+                class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
+                x-text="property.parent_name"
               ></td>
               <td
                 class="whitespace-nowrap px-3 py-4 text-xl text-gray-500"
-                x-text="`${feature.properties.done_percent.toLocaleString('de-DE', {minimumFractionDigits: 1})}&thinsp;%`"
+                x-text="`${property.done_percent.toLocaleString('de-DE', {minimumFractionDigits: 1})}&thinsp;%`"
+              ></td>
+            </tr>
+          </template>
+
+          <tr class="bg-gray-50">
+            <th
+              colspan="3"
+              class="border-t border-t-gray-300 py-3.5 pl-4 pr-3 text-left text-sm font-bold text-gray-900 sm:pl-6"
+            >
+              Ortsteile
+            </th>
+          </tr>
+          <tr class="bg-gray-50">
+            <th
+              scope="col"
+              class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
+            >
+              Bezirk
+            </th>
+            <th
+              scope="col"
+              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+            >
+              Ortsteil
+            </th>
+            <th
+              scope="col"
+              class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+            >
+              Anteil gemapped
+            </th>
+          </tr>
+          <template x-for="property in sub_districts" :key="property.id">
+            <tr>
+              <td
+                class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
+                x-text="property.parent_name"
+              ></td>
+              <td
+                class="px-3 py-4 text-sm font-medium text-gray-900"
+                x-text="property.name"
+              ></td>
+              <td
+                class="whitespace-nowrap px-3 py-4 text-xl text-gray-500"
+                x-text="`${property.done_percent.toLocaleString('de-DE', {minimumFractionDigits: 1})}&thinsp;%`"
               ></td>
             </tr>
           </template>
