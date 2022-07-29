@@ -541,12 +541,14 @@ map_full_heigth_menu_scroll: true
         // Toggle layer visibility by changing the layout object's visibility property.
         // Default is invisible
         if (visibility === "none") {
-          this.className = classesActive;
           // Hide all layers
           toggleExistingLayerIds.forEach((layerId) => {
-            map.setLayoutProperty(clickedLayer, "visibility", "none");
+            console.log({ layerId, div: document.getElementById(layerId) });
+            document.getElementById(layerId).className = classesInactive;
+            map.setLayoutProperty(layerId, "visibility", "none");
           });
           // Show the clicked layer
+          this.className = classesActive;
           map.setLayoutProperty(clickedLayer, "visibility", "visible");
         } else {
           this.className = classesInactive;
