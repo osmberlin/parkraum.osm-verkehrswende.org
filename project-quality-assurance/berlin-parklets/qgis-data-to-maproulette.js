@@ -17,7 +17,6 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
 
       const taskPartMapillary = [
         "\n",
-        "\n",
         "**Mapillary:**",
         `* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=${f.geometry.coordinates[1]}&lng=${f.geometry.coordinates[0]}&z=19&dateFrom=2022-01-01)`,
         f.properties.JOIN_mapillary &&
@@ -25,7 +24,6 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
       ];
 
       const taskPartTagging = [
-        "\n",
         "\n",
         "**Tagging-Empfehlung:**",
         "* `leisure=parket`",
@@ -83,7 +81,7 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
         type: "Feature",
         geometry: f.geometry,
         properties: {
-          task: task.filter(Boolean).join(" \n"),
+          task: task.filter(Boolean).join("\n"),
           ...Object.fromEntries(
             Object.entries(f.properties).filter(([_k, v]) => v !== null)
           ),
