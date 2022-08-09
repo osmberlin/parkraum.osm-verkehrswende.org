@@ -16,8 +16,8 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
       let task = [""];
 
       const taskPartMapillary = [
-        "",
-        "",
+        "\n",
+        "\n",
         "**Mapillary:**",
         `* [Mapillary an diesem Ort öffnen](https://www.mapillary.com/app/?lat=${f.geometry.coordinates[1]}&lng=${f.geometry.coordinates[0]}&z=19&dateFrom=2022-01-01)`,
         f.properties.JOIN_mapillary &&
@@ -25,13 +25,13 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
       ];
 
       const taskPartTagging = [
-        "",
-        "",
+        "\n",
+        "\n",
         "**Tagging-Empfehlung:**",
         "* `leisure=parket`",
         "* `check_date=<2022-xx-xx>` (Optional) das Datum von Mapillary",
         "* `man_made=planter` (Optional) wenn keine Sitzgelegenheit sonder rein für Blumen",
-        "",
+        "\n",
         "Weitere [Empfehlungen und Beispiele](https://wiki.openstreetmap.org/wiki/Parklets).",
       ];
 
