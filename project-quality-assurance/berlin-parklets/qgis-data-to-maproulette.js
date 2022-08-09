@@ -28,8 +28,11 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
         "",
         "",
         "**Tagging-Empfehlung:**",
-        "* Parklet: Eine Fläche mit `leisure=parket` + `check_date`",
-        "* Planter: Eine Fläche mit `man_made=planter` + `check_date` + `planter:position=lane` oder `street_side` (Parkbucht)",
+        "* `leisure=parket`",
+        "* `check_date=<2022-xx-xx>` (Optional) das Datum von Mapillary",
+        "* `man_made=planter` (Optional) wenn keine Sitzgelegenheit sonder rein für Blumen",
+        "",
+        "Weitere [Empfehlungen und Beispiele](https://wiki.openstreetmap.org/wiki/Parklets).",
       ];
 
       if (f.NUM_OSM_IN_EXT_DATA > 0) {
@@ -46,9 +49,8 @@ fs.readFile("./qgis.geojson", "utf8", (err, data) => {
             "Hier gibt es laut externen Daten ein Parklet.",
             "Wir haben im Umkreis einen `man_made=planter` gefunden.",
             "Bitte prüfe, ob dieser Planter an der Stelle gemapped ist, wo das Parklet steht.",
-            `Bitte füge \`planter:position=lane\` oder \`street_side\` hinzu,
-            damit er automatisch aus dem Parkstreifen ausgestanzt werden kann.`,
-            `Bitte prüfe die Tags, ergänze einen \`mapillary\`-Tag (wenn möglich)
+            "Bitte ergänze den Tag die Tags mit `leisure=parklet` und prüfe die Tags.",
+            `Bitte ergänze einen \`mapillary\`-Tag (wenn möglich)
             und ergänze gerne ein \`check_date\` (ggf. basierend auf dem Mapillary Bild-Datum).`,
             ...taskPartMapillary,
             ...taskPartTagging,

@@ -72,3 +72,7 @@ This script will
 The MapRoulette campaign is linked at https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende/Parkraum/Mapping_Kampagne_Xhain/QA-Parklets.
 
 The geojson that the campaign is based upon is https://parkraum.osm-verkehrswende.org/project-quality-assurance/berlin-parklets/gqis-for-maproulette.geojson.
+
+## Mapping
+
+https://wiki.openstreetmap.org/wiki/Parklets shows our recommendations about how to map Parklets in OSM.
