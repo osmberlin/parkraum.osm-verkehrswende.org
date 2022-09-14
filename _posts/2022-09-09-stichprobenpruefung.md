@@ -20,7 +20,7 @@ Bisher wurden dafür in einem ersten Schritt die „Basisdaten“ zum straßenbe
 
 Zu Erinnerung: Der Berechnungsprozess der Parkraumkarte nimmt die Daten als Basis, die in OSM an der Straßenlinie zum straßenseitigen Parken erfasst sind ("parking:lane"-Schema). Diese Daten werden dann mit weiteren Informationen aus OSM kombiniert, um die Genauigkeit zu erhöhen. Wir "subtrahieren" beispielsweise den Bereich um eine Bushaltestelle oder Einfahrt, an der nicht geparkt werden darf.
 
-Aufbauend auf der genannten Basisdatenerhebung müssen die Daten nun also Schritt für Schritt angereichert werden, um die Präzision weiter zu verbssern: Wo fehlen noch Park- und Halteverbote oder Parkstreifenwechsel? Wo gibt es Parkbuchten, die genauer erfasst werden können? Wo gibt es Einfahrten oder Infrastrukturen wie Fahrradständer und Parklets im Fahrbahnbereich, die das Parken verhindern? Diese Daten können auf Basis von Straßenfotos sowie Beobachtungen vor Ort in OSM erfasst werden.
+Aufbauend auf der genannten Basisdatenerhebung müssen die Daten nun also Schritt für Schritt angereichert werden, um die Präzision weiter zu verbessern: Wo fehlen noch Park- und Halteverbote oder Parkstreifenwechsel? Wo gibt es Parkbuchten, die genauer erfasst werden können? Wo gibt es Einfahrten, Gehwegvorstreckungen oder Infrastrukturen wie Fahrradständer und Parklets im Fahrbahnbereich, die das Parken verhindern? Diese Daten können auf Basis von Straßenfotos sowie Beobachtungen vor Ort in OSM erfasst werden.
 
 Um zu erkunden, wie gut die Daten nach der Basiserhebung bereits sind, ob unsere theoretische Annahme einer "Basisdatenqualität" von 80 Prozent zutrifft und welche Features nun priorisiert erfasst werden sollten, haben wir diese Datenprüfung durchgeführt.
 
@@ -52,7 +52,7 @@ osm_url="https://www.openstreetmap.org/way/194070667"
 mapillary_url="https://www.mapillary.com/app/?pKey=569177870852094&lat=52.5082929&lng=13.4723255&z=17&focus=photo&x=0.2777632981014353&y=0.6493681640785228&zoom=0"
 %}
 
-An einzelnen Straßen kann es weiterhin auch höhere Abweichungen geben, insbesondere, da einige parkraumrelevante Features noch nicht Teil unseres Berechnungsalgorithmus sind (z.B. Halteverbotsmarkierungen auf der Fahrbahn) oder der Algorithmus noch Fehler aufweist (insbesondere bei der Verarbeitung von Parkbuchten).
+An einzelnen Straßen kann es weiterhin auch Abweichungen geben, insbesondere, da einige parkraumrelevante Features noch nicht Teil unseres Berechnungsalgorithmus sind (z.B. Halteverbotsmarkierungen auf der Fahrbahn) oder der Algorithmus noch Fehler aufweist (insbesondere bei der Verarbeitung von Parkbuchten).
 
 Dabei gilt weiterhin das Prinzip: **Je größer der Raum**, für den die Stellplatzzahlen ermittelt werden, **desto zuverlässiger das Ergebnis**. Die Summe der Zahlen für ein kleines Stadtquartier oder einen langen Straßenzug ist also zuverlässiger als die Stellplatzzahl eines einzelnen Straßensegments, da in Summe einzelne Fehler nivelliert werden.
 
