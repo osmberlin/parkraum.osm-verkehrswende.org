@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "dev": "npm-run-all --parallel dev:css dev:jekyll serve",
+    "dev": "npm-run-all --parallel dev:css dev:jekyll",
     "dev:css": "tailwindcss -i css-src/tailwind.css -o css/tailwind.css --watch",
     "//2dev:css": "echo 'https://github.com/tailwindlabs/tailwindcss/discussions/8470' # tailwindcss -i css-src/tailwind.css -o css/tailwind.css --watch",
     "//dev:css": "onchange '**' --exclude-path .gitignore -- tailwindcss -i css-src/tailwind.css -o css/tailwind.css",
     "dev:jekyll": "bundle exec jekyll serve --open-url",
     "//2dev:jekyll": "echo 'https://github.com/tailwindlabs/tailwindcss/discussions/8470' # bundle exec jekyll serve --livereload --open-url",
     "//dev:jekyll": "onchange '**' --exclude-path .gitignore -- bundle exec jekyll build",
-    "serve": "serve './_site'",
+    "//serve": "serve './_site'",
     "build": "npm run build:css && npm run build:jekyll",
     "build:css": "tailwindcss -i css-src/tailwind.css -o css/tailwind.css",
     "build:jekyll": "bundle exec jekyll build"
