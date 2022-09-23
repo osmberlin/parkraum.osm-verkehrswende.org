@@ -29,7 +29,7 @@ Das Projekt wird gepflegt im Rahmen der ehrenamtlichen Aktivitäten der [Berline
 
 # Lizenz
 
-Die unterschiedlichen Daten dieses Projekten verwenden unterschiedliche Lizenzen. [Mehr zu den Lizenzen für die Karten, OSM-Daten, Texte und Skripte/Code](https://github.com/tordans/parkraum.osm-verkehrswende.org/blob/main/LICENSE.md).
+Die unterschiedlichen Daten dieses Projekten verwenden unterschiedliche Lizenzen. [Mehr zu den Lizenzen für die Karten, OSM-Daten, Texte und Skripte/Code](https://github.com/osmberlin/parkraum.osm-verkehrswende.org/blob/main/LICENSE.md).
 
 # Datenschutzerklärung
 

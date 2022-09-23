@@ -27,7 +27,7 @@ All text based content on this website, especially the report and blogpost are l
 
 # Data
 
-The [external datasets](https://github.com/tordans/parkraum.osm-verkehrswende.org/project-prototype-neukoelln/data) have their own licences.
+The [external datasets](https://github.com/osmberlin/parkraum.osm-verkehrswende.org/project-prototype-neukoelln/data) have their own licences.
 
 # Source Code
 

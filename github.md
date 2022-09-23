@@ -14,8 +14,8 @@ Der Quellcode und die Daten der hier beschriebenen Projekte sind an unterschiedl
 </div>
 
 - Diese Website:<br />
-  [github.com/tordans/parkraum.osm-verkehrswende.org](https://github.com/tordans/parkraum.osm-verkehrswende.org)
+  [github.com/osmberlin/parkraum.osm-verkehrswende.org](https://github.com/osmberlin/parkraum.osm-verkehrswende.org)
 - Projekt Parkraum Berlin (Vector Tiles):<br />
   [github.com/gislars/strassenraum-berlin](https://github.com/gislars/strassenraum-berlin)
 - Projekt Prototyp Neukölln (Parkraumkarte):<br />
-  [../project-prototype-neukoelln](https://github.com/tordans/parkraum.osm-verkehrswende.org/tree/main/project-prototype-neukoelln)
+  [../project-prototype-neukoelln](https://github.com/osmberlin/parkraum.osm-verkehrswende.org/tree/main/project-prototype-neukoelln)
