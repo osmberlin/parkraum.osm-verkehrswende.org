@@ -2266,8 +2266,8 @@ video {
   line-height: 2rem;
 }
 
-.\!leading-\[1\.85rem\] {
-  line-height: 1.85rem !important;
+.\!leading-\[1\.8rem\] {
+  line-height: 1.8rem !important;
 }
 
 .leading-tight {
@@ -2284,14 +2284,6 @@ video {
 
 .leading-4 {
   line-height: 1rem;
-}
-
-.\!leading-\[1\.80rem\] {
-  line-height: 1.80rem !important;
-}
-
-.\!leading-\[1\.8rem\] {
-  line-height: 1.8rem !important;
 }
 
 .text-sky-700 {
