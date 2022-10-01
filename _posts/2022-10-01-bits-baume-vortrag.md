@@ -1,5 +1,5 @@
 ---
-title: Parkplatzzählung und Parkraumanalysen mit OpenStreetMap
+title: 'Vortrag: Parkplatzzählung und Parkraumanalysen mit OpenStreetMap'
 date: 2022-10-01 10:30:00 +0100
 author: Alex Seidel @Supaplex030
 layout: post
@@ -11,7 +11,7 @@ show_toc: false
 
 Lars Lingner (gislars) und Alex Seidel (Supaplex030) haben auf der [Bits & Bäume Konferenz 2022 einen aktuellen Stand zum Parkraumprojekt](https://fahrplan22.bits-und-baeume.org/bitsundbaeume/talk/9S8MDK/) vorgestellt.
 
-Exkurs: Das Thema Parkraum ist in einem zweiten Vortrag von Tobias am Sonntag aufgeriffen worden, in dem es übergreifend um die Frage [""]()
+Exkurs: Das Thema Parkraum ist in einem zweiten Vortrag von Tobias am Sonntag aufgeriffen worden, in dem es übergreifend um die Frage ["Mit OpenStreetMap die Verkehrswende begleiten – Tagging, Tools und Analysen"](https://www.osm-verkehrswende.org/posts/2022-10-01-bits-baume-vortrag)
 
 # Slides
 
