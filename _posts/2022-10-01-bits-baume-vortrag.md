@@ -13,15 +13,20 @@ Lars Lingner (gislars) und Alex Seidel (Supaplex030) haben auf der [Bits & Bäum
 
 Exkurs: Das Thema Parkraum ist in einem zweiten Vortrag von Tobias am Sonntag aufgeriffen worden, in dem es übergreifend um die Frage ["Mit OpenStreetMap die Verkehrswende begleiten – Tagging, Tools und Analysen"](https://www.osm-verkehrswende.org/posts/2022-10-01-bits-baume-vortrag)
 
-# Slides
+## Slides
 
 [Slides vom Vortrag (PDF, ~13 MB)](/images/posts/bits-baume-parkplatzzaehlung-und-parkraumanalysen-mit-openstreetmap.pdf)
 
-# Video
 
-`Bald…`
+## Video
 
-# Vortragsbeschreibung
+* [Video auf media.ccc.de](https://media.ccc.de/v/bitsundbaeume-20656-parkplatzzhlung-und-parkraumanalysen-mit-openstreetmap)
+* [Video auf YouTube](https://www.youtube.com/watch?v=s213CrEmlk4)
+
+<!-- <iframe class="w-full aspect-video mt-10" src="https://media.ccc.de/v/bitsundbaeume-20656-parkplatzzhlung-und-parkraumanalysen-mit-openstreetmap/oembed" frameborder="0" allowfullscreen></iframe> -->
+
+
+## Vortragsbeschreibung
 
 > **OpenStreetMap-Daten bieten das Potential, präzise Parkplatzzählungen und Parkraumanalysen durchzuführen und damit wertvolles Wissen für Diskussionen rund um Verkehrswende, Stadtentwicklung und Mobilität bereitzustellen. Dieser Vortrag demonstriert das am Beispiel von Berlin und teilt Ergebnisse sowie Erfahrungen mit euch.**
 >
