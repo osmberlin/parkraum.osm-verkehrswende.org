@@ -1,5 +1,5 @@
 {%- comment %}{% seo %}{% endcomment -%}
-<meta property="og:locale" content="{{ site.locale }}" />
+<meta property="og:locale" content="{{ page.language | default:site.locale }}" />
 <meta property="og:title"
   content="{{ page.title | default: site.title }}">
 <meta property="og:description"
