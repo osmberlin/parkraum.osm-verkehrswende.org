@@ -56,7 +56,7 @@
 |source | Quelle der Geometrie:<br>- „OSM“: Aus OSM übernommen,<br>- „ALKIS“: Aus ALKIS übernommen,<br>- „document“: Aus einem Dokument (z.B. Planwerk) übernommen,<br>- „estimated“: Auf Grundlage baulicher Merkmale geschätzt,<br>- survey: Vor-Ort-Beobachtung.|
 |source:capacity | Quelle der Stellplatzanzahl:<br>- „aerial imagery“: Gezählt auf Luftbild,<br>- „document“: Angabe aus Planwerk o.ä.,<br>- „estimated“: Aus Geometrie interpoliert,<br>- „OSM“: Aus OSM übernommen,<br>- „request“: Anfrage bei Eigentümer/(Ver-)Mieter,<br>- „survey“: Vor-Ort-Beobachtung,<br>- „syntax“: Aus Attribut abgeleitet („parking=garage“ entspricht einem Stellplatz).|
 
-# parking_way.geojson
+# street_parking_lines.geojson
 
 * Beschreibung: Parkstreifen (Linien) im Straßenraum/am Straßenrand
 * Bezugsraum: Berliner Ortsteil Neukölln und Puffer von 500m außerhalb der Ortsteilgrenze
@@ -64,19 +64,23 @@
 
 |Attribut | Erläuterung |
 |---|---|
-|id | Eindeutige Referenznummer|
+|id | Eindeutige Referenznummer, gebildet als Produkt aus x- und y-Koordinate im original verwendeten Referenzsystem ETRS89 / UTM zone 33N (EPSG:25833)|
 |osm_id | OSM-Objektreferenz|
-|parking | Parkstreifentyp (entsprechend des OSM-“parking“-Keys:<br>„lane“: Fahrbahn,<br>„street_side“: Parkbucht.|
-|orientation | Parkausrichtung („parallel“, „diagonal“, „perpendicular“)|
-|position | Position geparkter Fahrzeuge („on_street“, „on_kerb“, „half_on_kerb“, „shoulder“ (= Seitenstreifen), „street_side“ (= Parkbucht))|
-|capacity | Stellplatzanzahl|
-|condition | Zugangsbeschränkungen|
-|condition:other | Temporär abweichende Zugangsbeschränkungen|
-|condition:other:time | Zeitraum temporär abweichender Zugangsbeschränkungen|
-|maxstay | Höchstparkdauer|
-|highway | Straßenkategorie|
-|highway:name | Straßenname|
-|oneway_direction | „true“, wenn Ausrichtung geparkter Fahrzeuge durch Einbahnstraße invertiert|
-|osm-location | Ursprung der Parkstreifeninformation in der OSM-Datenbank:<br>„left“ / „right“ für linke bzw. rechte Seite des Straßenlinienobjekts,<br>„separate“ für separat erfasste Objekte (insbesondere Parkbuchten).|
-|source:capacity | Quelle der Stellplatzanzahl:<br>„estimated“: Aus Geometrie interpoliert,<br>„OSM“: Aus OSM übernommen.|
+|highway | Straßenkategorie
+|highway:name | Straßenname
+|highway:oneway | „yes“ wenn die anliegende Straße eine Einbahnstraße ist
+|parking | Lage des Parkstreifens im Straßenraum:<br>„lane“: auf der Fahrbahn,<br>„street_side“: Parkbucht,<br>„on_kerb“: auf dem Gehweg,<br>„half_on_kerb“: halb auf dem Gehweg,<br>„shoulder“: Seitenstreifen.|
+|orientation | Ausrichtung der parkenden Fahrzeuge:<br>„parallel“: Längsparken,<br>„diagonal“: Schrägparken,<br>„perpendicular“: Querparken).|
+|capacity | Anzahl der Stellplätze pro Straßensegment|
+|source:capacity | Quelle der Anzahl der Stellplätze pro Straßensegment:<br>„estimated“: Aus Länge des Segments und Ausrichtung der Fahrzeuge interpoliert,<br>„OSM“: Feste Angabe aus OSM übernommen,<br>„survey“: Sonstige manuelle Festlegung.|
+|surface | Oberfläche/Belag des Parkbereichs|
+|width | Breite/Tiefe des Parkbereichs in Metern|
+|markings | „yes“ wenn der Parkbereich mit Straßenmarkierungen versehen ist|
+|markings:type | Art der Markierung, falls Parkbereich mit Straßenmarkierungen versehen ist (experimentell)|
+|condition_class | Liste geltener Parkbeschränkungen. Die Notation „ @ (Zeitraum/Bedingung)“ wird als Zusatz hinter dem Klassenattribut verwendet, wenn die Beschränkung nur zu bestimmten Zeiten oder anderen Bedingungen gilt. Zuvor angegebene Attribute ohne zeitliche Beschränkung/Bedingung gelten dann nur außerhalb der angegebenen Zeiten/Bedingungen.<br>„free“: Keine Parkbeschränkungen,<br>„residents“: Nur mit Bewohnerparkausweis,<br>„paid“: Nur mit Parkschein,<br>„mixed“: Mit Bewohnerparkausweis oder Parkschein,<br>„time_limited“: zeitliche Beschränkung (Parkscheibe),<br>„loading“: Ladezone,<br>„charging“: Laden von Elektrofahrzeugen,<br>„disabled“: Behindertenparkplatz,<br>„disabled_private“: Behindertenparkplatz mit Parkausweis,<br>„taxi“: Taxenstand,<br>„car_sharing“: Nur für Carsharing-Fahrzeuge,<br>„vehicle_restriction“: Beschränkung auf/Verbot für ausgewiesene Fahrzeugklassen (spezifiziert durch Attribute „vehicle_designated“ und „vehicle_excluded“),<br>„access_restriction“: Zugangsbeschränkung (z.B. privat, nur für Kunden oder Rettungsfahrzeuge),<br>„no_parking“: Parkverbot / Eingeschränktes Haltverbot,<br>„no_stopping“: Halteverbot / Absolutes Haltverbot.|
+|vehicle_designated | Beschränkung auf ausgewiesene Fahrzeugklassen (z.B. Pkw, Lkw, Bus)|
+|vehicle_excluded | Verbot für einzelne ausgewiesene Fahrzeugklassen|
+|zone | Parkzonenbezeichnung/-nummer, wenn ausgewiesen|
+|side | Straßenseite des Parkstreifens in Linienrichtung des OSM-Objekts („left“ oder „right“)|
+|parking_source | Ursprung der Parkinformation in der OSM-Datenbank:<br>„highway_both“/„highway_left“/„highway_right“: Als Parkstreifeninformation an der Straßenlinie erfasst,<br>„separate_area“/„separate_node“: Separat mit eigener Geometrie erfasst.|
 |length | Länge des Parkstreifensegments in Metern|
