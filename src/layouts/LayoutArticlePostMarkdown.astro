@@ -1,0 +1,21 @@
+---
+import type { MarkdownLayoutProps } from 'astro'
+import type { LayoutArticleProps } from './LayoutArticlePost.astro'
+import LayoutArticlePost from './LayoutArticlePost.astro'
+
+type Props = MarkdownLayoutProps<LayoutArticleProps>
+
+const { frontmatter } = Astro.props
+---
+
+<LayoutArticlePost
+  title={frontmatter.title}
+  menuHighlight={frontmatter.menuHighlight}
+  noindex={frontmatter.noindex}
+  language={frontmatter.language}
+  date={frontmatter.date}
+  updated={frontmatter.updated}
+  author={frontmatter.author}
+>
+  <slot />
+</LayoutArticlePost>

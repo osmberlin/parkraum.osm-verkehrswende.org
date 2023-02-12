@@ -1,0 +1,22 @@
+---
+import Navigation from '@components/Layout/Navigation.astro'
+import Layout from './Layout.astro'
+
+type Props = {
+  title: string
+  menuHighlight: string
+  noindex: boolean
+}
+
+const { title, menuHighlight, noindex } = Astro.props
+const pathname = new URL(Astro.request.url).pathname
+---
+
+<Layout title={title} noindex={noindex}>
+  <div class="computed-h-screen flex flex-col text-gray-900 lg:flex-row lg:gap-3">
+    <Navigation client:load layoutType="app" currentPage={pathname} menuHighlight={menuHighlight} />
+    <main class="flex-1">
+      <slot />
+    </main>
+  </div>
+</Layout>

@@ -1,4 +1,2 @@
-javascript/alpinejs/*.js
-javascript/maplibre-gl.js
-_posts/*.md
-css/maplibre-gl.css
+public/javascript/**/*
+public/css/*.css

@@ -1,0 +1,42 @@
+---
+import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
+
+const allPosts = await Astro.glob('./*.{md,mdx}')
+const sortedPosts = allPosts.sort(
+  (postA, postB) =>
+    new Date(postB.frontmatter.date).valueOf() - new Date(postA.frontmatter.date).valueOf()
+)
+---
+
+<LayoutArticlePage title="Alle Blogposts" menuHighlight="posts" noindex={true}>
+  <header class="mb-4">
+    <h1 class="!mt-0 !mb-0">Alle Blogposts</h1>
+  </header>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Datum</th>
+        <th>Artikel</th>
+        <th>Autor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        sortedPosts.map((post) => {
+          return (
+            <tr>
+              <td class="flex flex-none whitespace-nowrap text-gray-500">
+                {new Date(post.frontmatter.date).toLocaleDateString('en-CA')}
+              </td>
+              <td>
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </td>
+              <td>{post.frontmatter.author}</td>
+            </tr>
+          )
+        })
+      }
+    </tbody>
+  </table>
+</LayoutArticlePage>
