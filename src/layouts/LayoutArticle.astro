@@ -14,12 +14,7 @@ const pathname = new URL(Astro.request.url).pathname
 
 <Layout title={title} noindex={noindex}>
   <div class="flex flex-col text-gray-900 lg:flex-row lg:gap-3">
-    <Navigation
-      client:load
-      layoutType="article"
-      currentPage={pathname}
-      menuHighlight={menuHighlight}
-    />
+    <Navigation layoutType="article" currentPage={pathname} menuHighlight={menuHighlight} />
     <main class="flex-1">
       <slot />
     </main>
