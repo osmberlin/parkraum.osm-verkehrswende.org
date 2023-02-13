@@ -19,6 +19,7 @@
     @apply rounded-sm;
   }
 
+  /* TODO: Cleanup .notice. Only used in one place (sidebar of the vector map). Can be removed afterwards. */
   .notice {
     @apply mb-3 p-4;
     @apply rounded;

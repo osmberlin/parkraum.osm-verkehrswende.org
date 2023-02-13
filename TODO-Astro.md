@@ -15,10 +15,6 @@ This thing still does not work. Alle bilder, die ich mit "/…" referenziere erk
 
 https://docs.astro.build/de/guides/integrations-guide/image/
 
-# Notice component
-
-- [] Bisher nur Beispielhaft verwendet; kann ausgerollt werden auf der Seite.
-
 # Autolink Headlines
 
 ==> WIP branch local. Does not work, yet.
