@@ -24,3 +24,6 @@ packages/integrations/**/.netlify/
 # ignore content collection generated files
 packages/**/test/**/fixtures/**/.astro/
 packages/**/test/**/fixtures/**/env.d.ts
+
+# https://docs.astro.build/de/guides/content-collections/#the-astro-directory
+.astro

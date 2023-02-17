@@ -1,10 +1,10 @@
 ---
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
+import { getCollection } from 'astro:content'
 
-const allPosts = await Astro.glob('./*.{md,mdx}')
+const allPosts = await getCollection('posts')
 const sortedPosts = allPosts.sort(
-  (postA, postB) =>
-    new Date(postB.frontmatter.date).valueOf() - new Date(postA.frontmatter.date).valueOf()
+  (postA, postB) => new Date(postB.data.pubDate).valueOf() - new Date(postA.data.pubDate).valueOf()
 )
 ---
 
@@ -27,12 +27,12 @@ const sortedPosts = allPosts.sort(
           return (
             <tr>
               <td class="flex flex-none whitespace-nowrap text-gray-500">
-                {new Date(post.frontmatter.date).toLocaleDateString('en-CA')}
+                {new Date(post.data.pubDate).toLocaleDateString('en-CA')}
               </td>
               <td>
-                <a href={post.url}>{post.frontmatter.title}</a>
+                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
               </td>
-              <td>{post.frontmatter.author}</td>
+              <td>{post.data.author}</td>
             </tr>
           )
         })

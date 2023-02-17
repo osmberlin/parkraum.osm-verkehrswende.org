@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: Wie viele Autos sind in einem Gebäude angemeldet? Kleinräumige statistische Auswertungen mit OpenData und OSM – ein Interview.
-date: 2021-03-13 12:00:00 +0100
+pubDate: 2021-03-13 12:00:00 +0100
 author: Tobias Jordans @tordans
 menuTitle: Stellplatzdichte-Verteilung
-canonical_url: https://www.openstreetmap.org/user/tordans/diary/396118
+canonicalUrl: https://www.openstreetmap.org/user/tordans/diary/396118
 inMenu: true
 ---
 
@@ -57,7 +56,10 @@ _Alex:_ Dieses Bevölkerungsmodell können wir jetzt nehmen und mit den Daten zu
 
 _Exkurs:_ Mit dieser Herangehensweise könnte man noch viele andere, spannende Auswertungen von demografischen Daten machen, vielleicht auch noch eine genauere Zuordnung. Beispielsweise gibt es [Zensusdaten von 2011 im 100-Meter-Raster](https://www.zensus2011.de/DE/Home/Aktuelles/DemografischeGrunddaten.html).
 
-<ImageWrapper src="/images/posts/opendata-bevoelkerungsdichte-neukoelln-dot-sample-ausschnitt.jpg" alt="" />
+<ImageWrapper
+  src="/images/posts/opendata-bevoelkerungsdichte-neukoelln-dot-sample-ausschnitt.jpg"
+  alt=""
+/>
 
 **_Tobias:_ Jetzt schauen wir gemeinsam das Ergebnis an:** Auf einer OSM-Karte sehen wir Gebäude und Punkte. Dahinter steckt die Umrechnung vom Kiez auf den Häuserblock, dann auf das Gebäude unter der Berücksichtigung einer Wahrscheinlichkeit anhand der Stockwerkzahl, Grundfläche und Funktion des Gebäudes. Also eine Karte der Bevölkerungsdichte, bei der jeder Mensch mit einem statistischen Punkt repräsentiert wird.
 

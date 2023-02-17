@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: OSM-Parkraumanalyse-Projekt unterstützt durch Prototype Fund
-date: 2022-09-01 12:00:00 +0100
+pubDate: 2022-09-01 12:00:00 +0100
 author: Alex Seidel @Supaplex030
 menuTitle: Prototype Fund
-#canonical_url:
+#canonicalUrl:
 inMenu: true
 show_toc: true
 ---

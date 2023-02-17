@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: Prüfung der Parkraum-Datenqualität an einer Stichprobe in Berlin Friedrichshain-Kreuzberg
-date: 2022-09-09 12:00:00 +0100
+pubDate: 2022-09-09 12:00:00 +0100
 author: Alex Seidel @Supaplex030
 menuTitle: Stichprobenprüfung Datenqualität
-#canonical_url:
+#canonicalUrl:
 inMenu: true
 show_toc: true
 ---
@@ -45,10 +44,10 @@ In Friedrichshain dagegen betrug die Abweichung in Summe **30 Prozent** (926 : 7
 Nach dem die parkraumrelevanten Daten entlang der ausgewählten Straßensegmente durch aufwendiges Micro-Mapping detailliert erfasst wurden (insbesondere Parkbuchtgeometrien, Einfahrten und evtl. deren (Über-)Breite, Parkstreifendetails wie kurze Verbotszonen oder -markierungen, Gehwegvorstreckungen…), wurde die Abweichung noch einmal ermittelt. Sie liegt nun bei **weniger als einem Prozent**, was bestätigt, dass im Idealfall äußerst präzise Ergebnisse erzielt werden können.
 
 <ImageWrapper
-src="/images/posts/stichprobenpruefung/parkbuchten.png"
-caption="Die Gürtelstraße in Friedrichshain nach dem Micromapping der Parkbuchten."
-osm_url="https://www.openstreetmap.org/way/194070667"
-mapillary_url="https://www.mapillary.com/app/?pKey=569177870852094&lat=52.5082929&lng=13.4723255&z=17&focus=photo&x=0.2777632981014353&y=0.6493681640785228&zoom=0"
+  src="/images/posts/stichprobenpruefung/parkbuchten.png"
+  caption="Die Gürtelstraße in Friedrichshain nach dem Micromapping der Parkbuchten."
+  osm_url="https://www.openstreetmap.org/way/194070667"
+  mapillary_url="https://www.mapillary.com/app/?pKey=569177870852094&lat=52.5082929&lng=13.4723255&z=17&focus=photo&x=0.2777632981014353&y=0.6493681640785228&zoom=0"
 />
 
 An einzelnen Straßen kann es weiterhin auch Abweichungen geben, insbesondere, da einige parkraumrelevante Features noch nicht Teil unseres Berechnungsalgorithmus sind (z.B. Halteverbotsmarkierungen auf der Fahrbahn) oder der Algorithmus noch Fehler aufweist (insbesondere bei der Verarbeitung von Parkbuchten).
@@ -84,8 +83,19 @@ Wir konnten mit dieser Stichprobenanalyse mehrere Annahmen bestätigen und unser
 </Notice>
 
 <div class="mb-3">
-<h2 id="tabelle">Tabelle: Parkraumanalyse Berlin Friedrichshain-Kreuzberg: Prüfung der Datenqualität an einer Stichprobe</h2>
-<iframe style='border: 2px solid silver' width='100%' height='500'
-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNm9taEP47yjFqUaAN6uVU-vAAPe0PO5NQwi_bBgtwOEP5_0qIMbQkG5ZXU9y2PYxT9cvjd_WMdR8p/pubhtml?gid=774865729&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-<p class="text-right"><a href="https://docs.google.com/spreadsheets/d/1ViU2DqxvNhMvtXkQz7fgqPNEAoq2-_MW8khHcxIldDk/edit#gid=774865729">Tabelle öffnen</a></p>
+  <h2 id="tabelle">
+    Tabelle: Parkraumanalyse Berlin Friedrichshain-Kreuzberg: Prüfung der Datenqualität an einer
+    Stichprobe
+  </h2>
+  <iframe
+    style="border: 2px solid silver"
+    width="100%"
+    height="500"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNm9taEP47yjFqUaAN6uVU-vAAPe0PO5NQwi_bBgtwOEP5_0qIMbQkG5ZXU9y2PYxT9cvjd_WMdR8p/pubhtml?gid=774865729&amp;single=true&amp;widget=true&amp;headers=false"
+  ></iframe>
+  <p class="text-right">
+    <a href="https://docs.google.com/spreadsheets/d/1ViU2DqxvNhMvtXkQz7fgqPNEAoq2-_MW8khHcxIldDk/edit#gid=774865729">
+      Tabelle öffnen
+    </a>
+  </p>
 </div>

@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "strictNullChecks": true, // https://docs.astro.build/de/guides/content-collections/#setting-up-typescript
     "paths": {
       "@assets/*": ["/assets/*"],
       "@components/*": ["src/components/*"],

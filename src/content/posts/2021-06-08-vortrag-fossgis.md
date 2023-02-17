@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: Vortrag auf der FOSSGIS Konferenz zur Parkraumanalyse (26 Minuten)
-date: 2021-06-08 16:00:00 +0100
+pubDate: 2021-06-08 16:00:00 +0100
 author: Alex Seidel @Supaplex030
 menuTitle: Vortrag Methodik
-# canonical_url:
+# canonicalUrl:
 inMenu: true
 ---
 

@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: 'Vortrag: Parkplatzzählung und Parkraumanalysen mit OpenStreetMap'
-date: 2022-10-01 10:30:00 +0100
+pubDate: 2022-10-01 10:30:00 +0100
 author: Alex Seidel @Supaplex030
 menuTitle: Vortrag Bits&Bäume
-#canonical_url:
+#canonicalUrl:
 inMenu: true
 show_toc: false
 ---

@@ -1,0 +1,32 @@
+---
+import LayoutArticlePost from '@layouts/LayoutArticlePost.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('posts')
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<LayoutArticlePost
+  title={entry.data.title}
+  pubDate={entry.data.pubDate}
+  updated={entry.data.updated}
+  author={entry.data.author}
+  inMenu={entry.data.inMenu}
+  menuTitle={entry.data.menuTitle}
+  menuHighlight={entry.data.menuHighlight}
+  canonicalUrl={entry.data.canonicalUrl}
+  language={entry.data.language}
+  imagePath={entry.data.imagePath}
+  imageAlt={entry.data.imageAlt}
+  noindex={entry.data.noindex}
+>
+  <Content />
+</LayoutArticlePost>

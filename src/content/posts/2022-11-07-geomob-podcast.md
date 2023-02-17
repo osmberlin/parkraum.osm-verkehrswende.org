@@ -1,10 +1,9 @@
 ---
-layout: '@layouts/LayoutArticlePostMarkdown.astro'
 title: 'Geomob Podcast - 154. Tobis Jordans: Using OpenStreetMap for parking analysis'
-date: 2022-10-01 10:30:00 +0100
+pubDate: 2022-10-01 10:30:00 +0100
 author: Tobias Jordans @tordans
 menuTitle: Podcast (EN)
-#canonical_url:
+#canonicalUrl:
 inMenu: true
 show_toc: false
 language: 'en'

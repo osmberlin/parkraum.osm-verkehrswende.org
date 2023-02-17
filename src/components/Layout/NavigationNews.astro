@@ -1,12 +1,12 @@
 ---
 import clsx from 'clsx'
+import { getCollection } from 'astro:content'
 
-const allPosts = await Astro.glob('../../pages/posts/*.{md,mdx}')
+const allPosts = await getCollection('posts')
 const sortedPosts = allPosts.sort(
-  (postA, postB) =>
-    new Date(postB.frontmatter.date).valueOf() - new Date(postA.frontmatter.date).valueOf()
+  (postA, postB) => new Date(postB.data.pubDate).valueOf() - new Date(postA.data.pubDate).valueOf()
 )
-const relevantPosts = sortedPosts.filter((p) => p.frontmatter.inMenu === true)
+const relevantPosts = sortedPosts.filter((p) => p.data.inMenu === true)
 
 export type Props = { menuHighlight?: string | undefined }
 
@@ -24,19 +24,19 @@ const pathname = new URL(Astro.request.url).pathname
     relevantPosts.map((post) => {
       return (
         <a
-          href={post.url}
+          href={`/posts/${post.slug}`}
           class={clsx(
-            pathname == post.url ? 'menu-active' : 'hover:bg-blue-50',
+            pathname == `/posts/${post.slug}` ? 'menu-active' : 'hover:bg-blue-50',
             'flex items-center border-b border-gray-200 py-2 pl-4 leading-tight'
           )}
         >
           <span class="mr-1 -ml-1.5 inline-flex rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
             {[
-              new Date(post.frontmatter.date).getFullYear(),
-              new Date(post.frontmatter.date).toLocaleDateString([], { month: '2-digit' }),
+              new Date(post.data.pubDate).getFullYear(),
+              new Date(post.data.pubDate).toLocaleDateString([], { month: '2-digit' }),
             ].join('/')}
           </span>
-          {post.frontmatter.menuTitle}
+          {post.data.menuTitle}
         </a>
       )
     })
