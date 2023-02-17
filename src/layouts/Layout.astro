@@ -13,13 +13,11 @@ const defaults = {
   title: 'Parkraum Projekt — OpenStreetMap Verkehrswende',
   language: 'de',
   description: 'Spezialkarten für Neukölln zum Straßenraum und zur Parkplatzdichte.',
-  image: {
-    path: '/images/social-sharing.png',
-    alt: 'Daten zu Parkplätzen, berechnet auf Basis von OpenStreetMap Daten.',
-  },
+  imagePath: '/images/social-sharing.png',
+  imageAlt: 'Daten zu Parkplätzen, berechnet auf Basis von OpenStreetMap Daten.',
 }
 
-const { title, noindex, canonicalUrl, language, description } = Astro.props
+const { title, noindex, canonicalUrl, language, description, imagePath, imageAlt } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -36,25 +34,14 @@ const { title, noindex, canonicalUrl, language, description } = Astro.props
     <meta property="og:locale" content={language || defaults.language} />
     <meta property="og:title" content={title || defaults.title} />
     <meta property="og:description" content={description || defaults.description} />
-    <!-- <meta
-      property="og:image"
-      content="{{ page.image.path | default: site.image.path | absolute_url }}"
-    /> -->
-    <!-- page.url does not include URL params, so its better to let facebook autodetec the URL -->
-    <!-- <meta property="og:url"
-  content="{{ page.url  | absolute_url }}"> -->
-    <!-- <meta
-      property="og:type"
-      content="{% if page.layout == 'post' or page.layout == 'page' %}article{% else %}website{% endif %}"
-    /> -->
+    <meta property="og:image" content={imagePath || defaults.imagePath} />
+    <!-- We let the Twitter (…) figure out the given URL, so we don't accidentally overwrite params and such  -->
+    <!-- <meta property="og:url" content="…"> -->
     <meta name="twitter:title" content={title || defaults.title} />
     <meta name="twitter:description" content={description || defaults.description} />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- <meta
-      name="twitter:image"
-      content="{{ page.image.path | default: site.image.path | absolute_url }}"
-    /> -->
-    <!-- <meta name="twitter:image:alt" content="{{ page.image.alt | default: site.image.alt }}" /> -->
+    <meta name="twitter:image" content={imagePath || defaults.imagePath} />
+    <meta name="twitter:image:alt" content={imageAlt || defaults.imageAlt} />
     <meta name="twitter:site" content="@osmberlin" />
 
     <meta name="theme-color" content="#7D5197" />

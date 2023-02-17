@@ -4,8 +4,7 @@
   - Double Check noindex-Topic https://discord.com/channels/830184174198718474/1074580000407302154
     - Add PR to inform in Docs that this is not possible; "noindex will be included, but ignored by google"
       - https://docs.astro.build/en/guides/integrations-guide/sitemap/
-- Favicon
-- Social Sharing
+- Social Sharing => Test on production
 - RSS
   - https://parkraum.osm-verkehrswende.org/feed.xml
 - mobile checken

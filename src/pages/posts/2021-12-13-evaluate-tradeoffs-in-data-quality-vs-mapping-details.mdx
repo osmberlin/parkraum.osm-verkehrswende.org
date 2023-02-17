@@ -4,9 +4,8 @@ title: 'Call for help from the data science community: Evaluate tradeoffs in dat
 date: 2021-12-13 06:00:00 +0100
 author: Tobias Jordans @tordans
 description: Let's convince administrations of the data quality created by the OSM community.
-image:
-  path: /images/posts/parkstreifen-generieren.png
-  alt: Parking map with debugging circles to show different cutoff areas.
+imagePath: /images/posts/parkstreifen-generieren.png
+imageAlt: Parking map with debugging circles to show different cutoff areas.
 menuTitle: Data quality
 # canonical_url:
 language: 'en'
@@ -22,7 +21,10 @@ import Notice from '../../components/Notice.astro'
 
 </Notice>
 
-<ImageWrapper src="/images/posts/parkstreifen-generieren.png" alt="Parking map (OSM) with debugging circles to show different cutoff areas." />
+<ImageWrapper
+  src="/images/posts/parkstreifen-generieren.png"
+  alt="Parking map (OSM) with debugging circles to show different cutoff areas."
+/>
 
 The volunteer project "[Parkraumkarte](https://supaplexosm.github.io/strassenraumkarte-neukoelln/?map=parkingmap#17/52.47379/13.44164)" shows that OSM data can be used to calculate the available roadside parking space with very high accuracy.
 
@@ -73,7 +75,11 @@ Those values are taken from [this table in the report](https://supaplexosm.githu
 
 The values depend on local traffic law; those are values that work well for Berlin.
 
-<ImageWrapper src="/images/posts/parkstreifen-generieren.png" alt="Parking map (OSM) with debugging circles to show different cutoff areas." caption="Screenshot of the parking map with debugging circles to show different cutoff areas." />
+<ImageWrapper
+  src="/images/posts/parkstreifen-generieren.png"
+  alt="Parking map (OSM) with debugging circles to show different cutoff areas."
+  caption="Screenshot of the parking map with debugging circles to show different cutoff areas."
+/>
 
 ## Possible report structure and questions to be analysed
 
@@ -84,8 +90,8 @@ This chapter is meant to provide insight into the questions we would like to hav
 | Mapping precision step                           | Number of parked cars | Difference to baseline     | Added precision to previous step |
 | ------------------------------------------------ | --------------------- | -------------------------- | -------------------------------- |
 | Baseline (eg. manual count or Alex precise data) | 789 cars              | \-                         | \-                               |
-| Step 1a:, Add \`parking:lane\` data &gt;50m         | 1.000 cars            | x% difference to baseline  | \-                               |
-| Step 1b: Add \`parking:lane\`data &lt;50m           | 950 cars              | x2% difference to baseline | Step adds x3% precision          |
+| Step 1a:, Add \`parking:lane\` data &gt;50m      | 1.000 cars            | x% difference to baseline  | \-                               |
+| Step 1b: Add \`parking:lane\`data &lt;50m        | 950 cars              | x2% difference to baseline | Step adds x3% precision          |
 | Step 2: Add driveways and remove cuttof          | 900 cars              | x4% difference to baseline | Step adds x5% precision          |
 | Step 3: …                                        | …                     | …                          | …                                |
 
