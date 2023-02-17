@@ -1,17 +1,14 @@
 ---
 import Buttons from '@components/map/Buttons.astro'
 import LegendPrototype from '@components/map/LegendPrototype.astro'
+import ScriptUpdateMapButtonsWithLocation from '@components/map/ScriptUpdateMapButtonsWithLocation.astro'
 import LayoutApp from '@layouts/LayoutApp.astro'
 ---
 
-<!-- Stylesheet for Leafvar icons, fonts etc -->
-<link rel="stylesheet" href="/css/leaflet.css" />
-
-<!--jquery - enables loading a GeoJson from a file directly into Leafvar -->
-<script is:raw src="/javascript/leaflet.js"></script>
-<script is:raw src="/javascript/leaflet-hash.js"></script>
-
-<script is:raw src="/javascript/map/updateMapButtonsWithLocation.js"></script>
+<link rel="stylesheet" href="/public/unpkg.com/leaflet.css" />
+<script is:inline src="/public/unpkg.com/leaflet.js"></script>
+<script is:inline src="/public/unpkg.com/leaflet-hash.js"></script>
+<ScriptUpdateMapButtonsWithLocation />
 
 <LayoutApp
   title="Straßenraumkarte Neukölln – OpenStreetMap Community Berlin"
@@ -31,7 +28,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
     </div>
   </div>
 
-  <script is:inline is:raw>
+  <script>
     const micromap_tiles_updated_at = '25.09.2022'
     const parkingmap_tiles_updated_at = '25.09.2022'
     const debugmap_tiles_updated_at = '25.09.2022'
@@ -184,7 +181,6 @@ import LayoutApp from '@layouts/LayoutApp.astro'
 
       legendPanel.style.display = newDisplay
       map.invalidateSize()
-      console.log(legendPanel, currentDisplay, newDisplay)
     }
     document
       .querySelector("[data-show-hide-trigger='legend']")

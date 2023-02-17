@@ -6,7 +6,7 @@ const date = await fetch('https://vts.mapwebbing.eu/public.highways.json')
     return response
   })
   .then((response) => response.json())
-  .then((json) => json.description)
+  .then((json) => new Date(json.description))
   .catch((error) => console.error(error))
 
 export const PageDashboardDate: React.FC = () => {

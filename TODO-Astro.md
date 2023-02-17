@@ -7,7 +7,9 @@
 - Favicon
 - Social Sharing
 - RSS
+  - https://parkraum.osm-verkehrswende.org/feed.xml
 - mobile checken
+- Fix http://localhost:3000/project-vector-tiles/dashboard CORS
 
 # Astro Svelte Map
 

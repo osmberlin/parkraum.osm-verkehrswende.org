@@ -33,11 +33,11 @@ const data =
     .catch((error) => console.error(error))) || []
 
 export const PageDashboardTable: React.FC = () => {
-  const districts: Response[] = data
+  const districts: Response[] = data.features
     .map((feature: any) => feature.properties)
     .filter((p: any) => p.parent_id === null)
 
-  const sub_districts: Response[] = data
+  const sub_districts: Response[] = data.features
     .map((feature: any) => feature.properties)
     .filter((p: any) => p.parent_id !== null)
 

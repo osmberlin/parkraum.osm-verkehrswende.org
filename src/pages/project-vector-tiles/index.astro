@@ -1,11 +1,14 @@
 ---
+import Buttons from '@components/map/Buttons.astro'
+import BackgroundButtons from '@components/map/ProjectVectorTiles/BackgroundButtons.astro'
+import SumByClick from '@components/map/ProjectVectorTiles/SumByClick.astro'
+import ScriptUpdateMapButtonsWithLocation from '@components/map/ScriptUpdateMapButtonsWithLocation.astro'
 import LayoutApp from '@layouts/LayoutApp.astro'
 ---
 
-<link rel="stylesheet" href="/css/maplibre-gl.css" />
-<script is:raw src="/javascript/maplibre-gl.js"></script>
-
-<script is:raw src="/javascript/map/updateMapButtonsWithLocation.js"></script>
+<link href="/public/unpkg.com/maplibre-gl.css" rel="stylesheet" />
+<script is:inline src="/public/unpkg.com/maplibre-gl.js"></script>
+<ScriptUpdateMapButtonsWithLocation />
 
 <LayoutApp
   title="Karte aus dem Projekt 'Vector Tiles'"
@@ -14,9 +17,9 @@ import LayoutApp from '@layouts/LayoutApp.astro'
 >
   <div class="flex h-full gap-5">
     <div id="map" class="w-100 relative h-full flex-1">
-      <!-- {% include map/buttons.html %} {% include
-    map/vector-tiles/background-buttons.html %} {% include
-    map/vector-tiles/sum-by-click.html %} -->
+      <Buttons />
+      <BackgroundButtons />
+      <SumByClick />
     </div>
 
     <div
@@ -28,7 +31,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
   </div>
 </LayoutApp>
 
-<script is:inline is:raw>
+<script>
   var map = new maplibregl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/pastel/style.json?key=lh0zCEEmjlKmX91QQEAU',
@@ -391,7 +394,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
       link.textContent = toggleableLayerIds[id]
       link.className = classesInactive
       link.role = 'menuitem'
-      link.tabindex = '-1'
+      link.tabIndex = -1
 
       // Show or hide layer when the toggle is clicked.
       link.onclick = function (e) {
@@ -403,7 +406,6 @@ import LayoutApp from '@layouts/LayoutApp.astro'
         if (visibility === 'none') {
           // Hide all layers
           toggleExistingLayerIds.forEach((layerId) => {
-            console.log({ layerId, div: document.getElementById(layerId) })
             document.getElementById(layerId).className = classesInactive
             map.setLayoutProperty(layerId, 'visibility', 'none')
           })
