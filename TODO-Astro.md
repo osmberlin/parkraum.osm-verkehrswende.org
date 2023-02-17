@@ -4,12 +4,14 @@
   - Double Check noindex-Topic https://discord.com/channels/830184174198718474/1074580000407302154
     - Add PR to inform in Docs that this is not possible; "noindex will be included, but ignored by google"
       - https://docs.astro.build/en/guides/integrations-guide/sitemap/
-- Social Sharing => Test on production
+- Social Sharing
+  => NEXT: Test on production
 - RSS
   => Aktuell ist der Body defekt. Astro unterstützt heute noch kein MDX als Body für den RSS Feed.
   => NEXT: Abwarten auf neue Astro JS
 - mobile checken
-- Fix http://localhost:3000/project-vector-tiles/dashboard CORS
+- COrs /project-vector-tiles/dashboard
+  => NEXT: Test on production
 
 # Astro Svelte Map
 
