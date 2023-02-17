@@ -1,25 +1,36 @@
-const date = await fetch('https://vts.mapwebbing.eu/public.highways.json', { mode: 'no-cors' })
-  .then((response) => {
-    if (response.status >= 400 && response.status < 600) {
-      throw new Error('Bad response from server')
-    }
-    return response
-  })
-  .then((response) => response.json())
-  .then((json) => new Date(json.description))
-  .catch((error) => console.error(error))
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 
-export const PageDashboardDate: React.FC = () => {
+const queryClient = new QueryClient()
+
+export const PageDashboardDate = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <PageDashboardDateContent />
+    </QueryClientProvider>
+  )
+}
+
+const PageDashboardDateContent: React.FC = () => {
+  const { isLoading, error, data, isFetching } = useQuery({
+    queryKey: ['date'],
+    queryFn: () =>
+      axios.get('https://vts.mapwebbing.eu/public.highways.json').then((res) => res.data),
+  })
+
+  if (isLoading || isFetching) return <i>Lade Daten…</i>
+
   return (
     <p className="mt-2 text-sm text-gray-700">
-      Stand der Daten:
-      {date ? (
-        <>
-          {date.toLocaleDateString('de-DE', { weekday: 'short' })}{' '}
-          {date.toLocaleDateString('de-DE')}, {date.toLocaleTimeString('de-DE')}
-        </>
+      Stand der Daten:{' '}
+      {error ? (
+        <span className="text-sm text-red-400">Fehler beim Laden der Daten</span>
       ) : (
-        <span className="text-sm text-red-400"> Fehler beim Laden der Daten</span>
+        <>
+          {new Date(data.description).toLocaleDateString('de-DE', { weekday: 'short' })}{' '}
+          {new Date(data.description).toLocaleDateString('de-DE')},{' '}
+          {new Date(data.description).toLocaleTimeString('de-DE')}
+        </>
       )}
     </p>
   )

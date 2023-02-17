@@ -1,3 +1,15 @@
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+
+const queryClient = new QueryClient()
+
+export const PageDashboardTable = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <PageDashboardTableContent />
+    </QueryClientProvider>
+  )
+}
 type Response = {
   id: number
   name: string
@@ -13,33 +25,28 @@ type Response = {
   done_percent: number
 }
 
-const data =
-  (await fetch('https://vts.mapwebbing.eu/export/boundaries_stats.geojson', { mode: 'no-cors' })
-    .then((response) => {
-      if (response.status >= 400 && response.status < 600) {
-        console.error(response)
-        throw new Error('Bad response from server')
-      }
-      return response
-    })
-    .then((response) => {
-      try {
-        return response.json()
-      } catch (error: any) {
-        console.log(error.message)
-        throw new Error('Error when parsing JSON')
-      }
-    })
-    .catch((error) => console.error(error))) || []
+const PageDashboardTableContent: React.FC = () => {
+  const { isLoading, error, data, isFetching } = useQuery({
+    queryKey: ['date'],
+    queryFn: () =>
+      axios
+        .get('https://vts.mapwebbing.eu/export/boundaries_stats.geojson')
+        .then((res) => res.data),
+  })
 
-export const PageDashboardTable: React.FC = () => {
-  const districts: Response[] = data.features
-    .map((feature: any) => feature.properties)
-    .filter((p: any) => p.parent_id === null)
+  if (isLoading || isFetching) return <i>Lade Daten…</i>
 
-  const sub_districts: Response[] = data.features
-    .map((feature: any) => feature.properties)
-    .filter((p: any) => p.parent_id !== null)
+  let districts: Response[] = []
+  let sub_districts: Response[] = []
+  if (data) {
+    districts = data.features
+      .map((feature: any) => feature.properties)
+      .filter((p: any) => p.parent_id === null)
+
+    sub_districts = data.features
+      .map((feature: any) => feature.properties)
+      .filter((p: any) => p.parent_id !== null)
+  }
 
   return (
     <table className="!my-0 min-w-full divide-y divide-gray-300">
@@ -84,7 +91,6 @@ export const PageDashboardTable: React.FC = () => {
             </tr>
           )
         })}
-
         <tr className="bg-gray-50">
           <th
             colSpan={3}
@@ -107,27 +113,28 @@ export const PageDashboardTable: React.FC = () => {
             Anteil gemapped
           </th>
         </tr>
-        {!sub_districts.length && (
+        {error ? (
           <tr>
             <td colSpan={3} className="px-4 text-sm text-red-400 sm:pl-6">
               Fehler beim Laden der Daten
             </td>
           </tr>
+        ) : (
+          sub_districts.map((district) => {
+            return (
+              <tr key={district.id}>
+                <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                  {district.parent_name}
+                </td>
+                <td className="px-3 py-4 text-sm font-medium text-gray-900">{district.name}</td>
+                <td className="whitespace-nowrap px-3 py-4 text-xl text-gray-500">
+                  {district.done_percent.toLocaleString('de-DE', { minimumFractionDigits: 1 })}
+                  &thinsp;%{}
+                </td>
+              </tr>
+            )
+          })
         )}
-        {sub_districts.map((district) => {
-          return (
-            <tr key={district.id}>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                {district.parent_name}
-              </td>
-              <td className="px-3 py-4 text-sm font-medium text-gray-900">{district.name}</td>
-              <td className="whitespace-nowrap px-3 py-4 text-xl text-gray-500">
-                {district.done_percent.toLocaleString('de-DE', { minimumFractionDigits: 1 })}
-                &thinsp;%{}
-              </td>
-            </tr>
-          )
-        })}
       </tbody>
     </table>
   )
