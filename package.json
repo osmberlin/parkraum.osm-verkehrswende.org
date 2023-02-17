@@ -32,7 +32,6 @@
     "@types/react-dom": "^18.0.11",
     "alpinejs": "^3.11.1",
     "astro": "^2.0.13",
-    "astro-heroicons": "^0.3.0",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
