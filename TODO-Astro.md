@@ -6,7 +6,8 @@
       - https://docs.astro.build/en/guides/integrations-guide/sitemap/
 - Social Sharing => Test on production
 - RSS
-  - https://parkraum.osm-verkehrswende.org/feed.xml
+  => Aktuell ist der Body defekt. Astro unterstützt heute noch kein MDX als Body für den RSS Feed.
+  => NEXT: Abwarten auf neue Astro JS
 - mobile checken
 - Fix http://localhost:3000/project-vector-tiles/dashboard CORS
 
