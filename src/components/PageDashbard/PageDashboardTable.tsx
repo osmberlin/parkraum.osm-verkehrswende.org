@@ -14,7 +14,7 @@ type Response = {
 }
 
 const data =
-  (await fetch('https://vts.mapwebbing.eu/export/boundaries_stats.geojson')
+  (await fetch('https://vts.mapwebbing.eu/export/boundaries_stats.geojson', { mode: 'no-cors' })
     .then((response) => {
       if (response.status >= 400 && response.status < 600) {
         console.error(response)

@@ -1,4 +1,4 @@
-const date = await fetch('https://vts.mapwebbing.eu/public.highways.json')
+const date = await fetch('https://vts.mapwebbing.eu/public.highways.json', { mode: 'no-cors' })
   .then((response) => {
     if (response.status >= 400 && response.status < 600) {
       throw new Error('Bad response from server')
