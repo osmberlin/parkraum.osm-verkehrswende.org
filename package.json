@@ -20,6 +20,7 @@
     "@astrojs/image": "^0.14.1",
     "@astrojs/mdx": "^0.16.0",
     "@astrojs/react": "^2.0.2",
+    "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.15",
