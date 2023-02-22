@@ -45,7 +45,7 @@ map_full_heigth_menu_scroll: true
     map.addSource("vts_pl_tiles", {
       type: "vector",
       tiles: [
-        "https://vts.mapwebbing.eu/public.parking_segments/{z}/{x}/{y}.pbf",
+        "https://vts.mapwebbing.eu/processing.parking_segments/{z}/{x}/{y}.pbf",
       ],
       minzoom: 8,
       maxzoom: 22,
@@ -53,7 +53,7 @@ map_full_heigth_menu_scroll: true
 
     map.addSource("vts_boundaries_tiles", {
       type: "vector",
-      tiles: ["https://vts.mapwebbing.eu/public.boundaries/{z}/{x}/{y}.pbf"],
+      tiles: ["https://vts.mapwebbing.eu/processing.boundaries/{z}/{x}/{y}.pbf"],
       minzoom: 8,
       maxzoom: 22,
     });
@@ -61,7 +61,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_boundaries",
       source: "vts_boundaries_tiles",
-      "source-layer": "public.boundaries",
+      "source-layer": "processing.boundaries",
       type: "line",
       filter: ["all", [">=", "admin_level", "'10'"]],
       paint: {
@@ -73,7 +73,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_pl",
       source: "vts_pl_tiles",
-      "source-layer": "public.parking_segments",
+      "source-layer": "processing.parking_segments",
       type: "line",
       filter: [
         "all",
@@ -99,7 +99,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_pl__highlight",
       source: "vts_pl_tiles",
-      "source-layer": "public.parking_segments",
+      "source-layer": "processing.parking_segments",
       type: "line",
       filter: ["in", "id", ""],
       paint: { "line-width": 6, "line-color": "rgba(146, 49, 154, 1)" },
@@ -108,7 +108,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_pl_no",
       source: "vts_pl_tiles",
-      "source-layer": "public.parking_segments",
+      "source-layer": "processing.parking_segments",
       type: "line",
       filter: ["all", ["in", "orientation", "no", "no_parking", "no_stopping"]],
       paint: { "line-width": 2, "line-color": "rgba(233, 171, 148, 1)" },
@@ -117,7 +117,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_pl_all_other",
       source: "vts_pl_tiles",
-      "source-layer": "public.parking_segments",
+      "source-layer": "processing.parking_segments",
       type: "line",
       filter: [
         "all",
@@ -144,7 +144,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_pl_label",
       source: "vts_pl_tiles",
-      "source-layer": "public.parking_segments",
+      "source-layer": "processing.parking_segments",
       type: "symbol",
       layout: {
         "text-field": "{capacity}",

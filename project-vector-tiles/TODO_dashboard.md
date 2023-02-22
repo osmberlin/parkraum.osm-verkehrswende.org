@@ -86,7 +86,7 @@ map_full_heigth_menu_scroll: true
     map.addSource("vts_boundaries_stats_tiles", {
       type: "vector",
       tiles: [
-        "https://vts.mapwebbing.eu/public.boundaries_stats/{z}/{x}/{y}.pbf",
+        "https://vts.mapwebbing.eu/processing.boundaries_stats/{z}/{x}/{y}.pbf",
       ],
       minzoom: 10,
       maxzoom: 22,
@@ -95,7 +95,7 @@ map_full_heigth_menu_scroll: true
     let hoveredStateId = false; // https://maplibre.org/maplibre-gl-js-docs/example/hover-styles/
 
     /*
-    Quelle: https://vts.mapwebbing.eu/public.boundaries_stats.html
+    Quelle: https://vts.mapwebbing.eu/processing.boundaries_stats.html
     [
       { name: "id", type: "int8", },
       { name: "name", type: "text", },
@@ -111,7 +111,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_boundaries_stats_labels",
       source: "vts_boundaries_stats_tiles",
-      "source-layer": "public.boundaries_stats",
+      "source-layer": "processing.boundaries_stats",
       type: "symbol",
       layout: {
         "text-field": "xxx",
@@ -130,7 +130,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_boundaries_stats_line",
       source: "vts_boundaries_stats_tiles",
-      "source-layer": "public.boundaries_stats",
+      "source-layer": "processing.boundaries_stats",
       type: "line",
       paint: {
         "line-width": 2,
@@ -141,7 +141,7 @@ map_full_heigth_menu_scroll: true
     map.addLayer({
       id: "vts_boundaries_stats_fill",
       source: "vts_boundaries_stats_tiles",
-      "source-layer": "public.boundaries_stats",
+      "source-layer": "processing.boundaries_stats",
       type: "fill",
       //filter: ["all", [">=", "admin_level", "'10'"]],
       paint: {
@@ -165,13 +165,13 @@ map_full_heigth_menu_scroll: true
       console.log({ e, f: e.features, hoveredStateId });
       if (hoveredStateId) {
         map.setFeatureState(
-          { source: "public.boundaries_stats", id: hoveredStateId },
+          { source: "processing.boundaries_stats", id: hoveredStateId },
           { hover: false }
         );
       }
       hoveredStateId = e.features[0].properties.id;
       map.setFeatureState(
-        { source: "public.boundaries_stats", id: hoveredStateId },
+        { source: "processing.boundaries_stats", id: hoveredStateId },
         { hover: true }
       );
     });
@@ -181,7 +181,7 @@ map_full_heigth_menu_scroll: true
     map.on("mouseleave", "vts_boundaries_stats_fill", () => {
       if (hoveredStateId) {
         map.setFeatureState(
-          { source: "public.boundaries_stats", id: hoveredStateId },
+          { source: "processing.boundaries_stats", id: hoveredStateId },
           { hover: false }
         );
       }
