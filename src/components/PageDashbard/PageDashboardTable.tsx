@@ -41,11 +41,11 @@ const PageDashboardTableContent: React.FC = () => {
   if (data) {
     districts = data.features
       .map((feature: any) => feature.properties)
-      .filter((p: any) => p.parent_id === null)
+      .filter((p: any) => p.childs !== null)
 
     sub_districts = data.features
       .map((feature: any) => feature.properties)
-      .filter((p: any) => p.parent_id !== null)
+      .filter((p: any) => p.childs === null)
   }
 
   return (
