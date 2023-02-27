@@ -4,6 +4,10 @@ title: Mitmachen
 menuHighlight: participate
 ---
 
+import ImageWrapper from '../../components/ImageWrapper.astro'
+
+# Mitmachen
+
 Du kannst selbst Parkraumdaten in deiner Stadt oder deinem Stadtteil erfassen, um auf dieser Grundlage und mit unserer Parkraumkarte Stellplatzzahlen generieren zu lassen oder die Daten bei Bedarf zu exportieren und weitere Auswertungen damit durchzuführen.
 
 Auf dieser Seite findest du Informationen und Anleitungen dazu, wie und welche Daten dafür erhoben werden können.
@@ -22,7 +26,11 @@ Auf dieser Seite findest du Informationen und Anleitungen dazu, wie und welche D
 
 ## Basisdatenerhebung mit StreetComplete
 
-<img src="/images/participate/QR_Parkraumvoreinstellung_StreetComplete.png" alt="Parkraumvoreinstellung für StreetComplete.">
+<img
+  src="/images/participate/QR_Parkraumvoreinstellung_StreetComplete.png"
+  alt="Parkraumvoreinstellung für StreetComplete."
+  class="float-left mr-5 mb-0 mt-1.5 w-40"
+/>
 
 [StreetComplete](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete&hl=de&gl=US) ist eine einfach zu bedienende Smartphone-App, mit der du OpenStreetMap durch die Beantwortung von Fragen vervollständigen oder das Straßennetz systematisch mit verschiedenen Informationen wie zum Beispiel zum Parken am Straßenrand ausstatten kannst. Du brauchst dafür lediglich die App (derzeit nur für Androit verfügbar) und einen [einfach zu erstellenden OSM-Account](https://www.openstreetmap.org/user/new). Hinter StreetComplete steckt die Idee, die **Fragen unterwegs bei einem Spaziergang, einer Fahrradtour oder z.B. auf dem Weg zur Arbeit zu beantworten und die OSM-Daten damit ohne größeres Hintergrundwissen "nebenbei" zu verbessern**.
 
@@ -36,7 +44,7 @@ Dafür ist aber etwas mehr Hintergrundwissen nötig, da man den Editor mit den p
 
 ## Datengenauigkeit: Schrittweise Verbesserung der Präzision in OSM
 
-StreetComplete oder der Zlant Parking Lanes Editor eignen sich hervorragend, um auf einfache Weise eine „Basisdatenerhebung“ des Parkraums zu machen, also an allen Straßen grundlegend zu hinterlegen, *wo* und *wie* Fahrzeuge im Straßenraum parken. Bitte beachte aber, dass die Genauigkeit der damit generierten Parkraumdaten noch stark eingeschränkt ist, denn **Parkraum ist bei genauerem Hinsehen oft etwas differenzierter verteilt und wird durch viele weitere räumliche Gegebenheiten beeinflusst**, die sich nicht mit StreetComplete oder dem Zlant-Editor erfassen lassen.
+StreetComplete oder der Zlant Parking Lanes Editor eignen sich hervorragend, um auf einfache Weise eine „Basisdatenerhebung“ des Parkraums zu machen, also an allen Straßen grundlegend zu hinterlegen, _wo_ und _wie_ Fahrzeuge im Straßenraum parken. Bitte beachte aber, dass die Genauigkeit der damit generierten Parkraumdaten noch stark eingeschränkt ist, denn **Parkraum ist bei genauerem Hinsehen oft etwas differenzierter verteilt und wird durch viele weitere räumliche Gegebenheiten beeinflusst**, die sich nicht mit StreetComplete oder dem Zlant-Editor erfassen lassen.
 
 **Für einfache Auswertungen können solche Basisdaten aber bereits ausreichend sein.** Unserer Erfahrung nach erreichen sie – je nach Struktur des Parkraums und der Genauigkeit der ersten Erfassungsrunde – im Mittel eine Genauigkeit von 70 bis 80%, wenn für alle Straßen Daten vorliegen. Dabei werden die ermittelten Stellplatzzahlen tendentiell überschätzt, da die Berechnungsmethode Parkplätze überall dort "ausschneidet", wo nicht geparkt werden kann oder Parkbuchten mit vielen Unterbrechungen noch zu ungenau dargestellt werden. In den Basisdaten fehlen solche Informationen zum Ausschneiden meistens noch, sodass zu wenig ausgeschnitten bzw. zu viel berechnet wird.
 
@@ -66,7 +74,10 @@ Was man besonders genau erfassen sollte, um zu besseren Parkraumdaten zu kommen,
     </thead>
     <tbody>
       <tr>
-        <td>Flächendeckende Erfassung aller Parkstreifen im Straßenraum (Basisdatenerhebung: Wo und in welche Richtung kann geparkt werden?)</td>
+        <td>
+          Flächendeckende Erfassung aller Parkstreifen im Straßenraum (Basisdatenerhebung: Wo und in
+          welche Richtung kann geparkt werden?)
+        </td>
         <td>Sehr hoch</td>
       </tr>
       <tr>
@@ -78,15 +89,24 @@ Was man besonders genau erfassen sollte, um zu besseren Parkraumdaten zu kommen,
         <td>Hoch</td>
       </tr>
       <tr>
-        <td>Genaues Kartieren von Parkbuchten mit regelmäßigen „Unterbrechungen“ (z.B. Vorstreckungen für Straßenbäume, Laternen, Querungsstellen…) als Fläche statt an der Straßenlinie</td>
+        <td>
+          Genaues Kartieren von Parkbuchten mit regelmäßigen „Unterbrechungen“ (z.B. Vorstreckungen
+          für Straßenbäume, Laternen, Querungsstellen…) als Fläche statt an der Straßenlinie
+        </td>
         <td>Hoch</td>
       </tr>
       <tr>
-        <td>Kurze Park- und Halteverbote und genauere Übergänge bei Parkstreifenwechseln (kleinteilig differenziert kartierte Parkstreifen)</td>
+        <td>
+          Kurze Park- und Halteverbote und genauere Übergänge bei Parkstreifenwechseln (kleinteilig
+          differenziert kartierte Parkstreifen)
+        </td>
         <td>Mittel</td>
       </tr>
       <tr>
-        <td>Besonders genaue Erfassung parkraumrelevanter Features an Straßensegmenten mit Schräg- und Querparken (mit hoher Fahrzeugdichte pro Längenabschnitt)</td>
+        <td>
+          Besonders genaue Erfassung parkraumrelevanter Features an Straßensegmenten mit Schräg- und
+          Querparken (mit hoher Fahrzeugdichte pro Längenabschnitt)
+        </td>
         <td>Mittel</td>
       </tr>
       <tr>
@@ -94,11 +114,18 @@ Was man besonders genau erfassen sollte, um zu besseren Parkraumdaten zu kommen,
         <td>Mittel</td>
       </tr>
       <tr>
-        <td>Erfassung von Objekten im Fahrbahn- bzw. Parkraumbereich (z.B. Fahrradständer auf der Fahrbahn, Straßenbäume oder Laternen in Parkstreifenbereichen insbesondere bei Gehwegparken)</td>
+        <td>
+          Erfassung von Objekten im Fahrbahn- bzw. Parkraumbereich (z.B. Fahrradständer auf der
+          Fahrbahn, Straßenbäume oder Laternen in Parkstreifenbereichen insbesondere bei
+          Gehwegparken)
+        </td>
         <td>Gering</td>
       </tr>
       <tr>
-        <td>Erfassung von Details an Ampelkreuzungen und Querungsstellen für den Fußverkehr (z.B. Gehwegvorstreckungen, Ampelknoten an allen Haltelinien)</td>
+        <td>
+          Erfassung von Details an Ampelkreuzungen und Querungsstellen für den Fußverkehr (z.B.
+          Gehwegvorstreckungen, Ampelknoten an allen Haltelinien)
+        </td>
         <td>Gering</td>
       </tr>
       <tr>
