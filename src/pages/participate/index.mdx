@@ -6,17 +6,118 @@ menuHighlight: participate
 
 import Notice from '../../components/Notice.astro'
 
-<Notice colorClass="bg-orange-100" className="my-10">
-  <strong>Dieses Projekt ist noch im Aufbau!</strong>
-  <br />
-  Im Laufe der kommenden Zeit werden wir hier Anleitungen und Hinweise zu Editoren und Tools
-  veröffentlichen, um Parkraumdaten in OSM zu erheben.
-</Notice>
+Du kannst selbst Parkraumdaten in deiner Stadt oder deinem Stadtteil erfassen, um auf dieser Grundlage und mit unserer Parkraumkarte Stellplatzzahlen generieren zu lassen oder die Daten bei Bedarf zu exportieren und weitere Auswertungen damit durchzuführen.
 
-# Für den schnellen Einstieg
+Auf dieser Seite findest du Informationen und Anleitungen dazu, wie und welche Daten dafür erhoben werden können.
 
-- Wenn du auf einfache Weise Parkrauminformationen zu OSM beitragen möchtest, dann schau dir am Besten die OSM-App [StreetComplete (für Android)](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete&hl=de&gl=US) an: Diese beinhaltet seit kurzem eine Erfassungsmöglichkeit für Parkstreifen. Starte dafür die App, melde dich mit einem OSM-Account an und klicke oben rechts auf das Feld für weitere Optionen. Dort findest du den Eintrag "Overlays" und kannst eine spezielle Ansicht für "Parkstreifen" anschalten. Nun kannst du für jede Straße sehen, ob es bereits Parkraumdaten gibt oder diese auf intuitiv bedienbare Weise ergänzen.
+## Für den schnellen Einstieg
 
-- Im Berliner Bezirk Friedrichshain-Kreuzberg haben wir eine Mapping-Kampagne gestartet, um in Kooperation mit dem örtlichen Bezirksamt Parkraumdaten zu erfassen. Mehr Informationen dazu und spezielle Beitragsmöglichkeiten sind [im OSM-Wiki](https://wiki.openstreetmap.org/wiki/Berlin/Verkehrswende/Parkraum/Mapping_Kampagne_Xhain) zu finden.
+- Die einfachste Möglichkeit, um sofort mit der Erfassung von Parkraumdaten loszulegen, ist die OSM-App [StreetComplete (für Android)](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete&hl=de&gl=US). Mit dem intuitiv bedienbaren Parkstreifen-Overlay kannst du fehlende Parkraumdaten ausfindig machen und diese bei einem Spaziergang vor Ort einfach ergänzen.
 
-- Für Berlin gibt es darüber hinaus einen [OSM-Parkraum-Editor](https://tordans.github.io/parking-lanes/#19/52.48830/13.39410), der dabei hilft, die OSM-Daten auf Basis von Luftbildern und weiteren Karten zu verbessern. Kurzanleitung: Unten rechts auf Login klicken > OSM-Account erstellen bzw. eingeben > darauf achten, dass unten rechts "Editor" angewählt ist > Straßensegmente anklicken und Parkstreifeninformationen ergänzen > wenn du fertig bist, oben rechts auf "Save" klicken > Damit sind die Änderungen direkt live in der gemeinsamen OSM-Datenbank.
+- Spazieren gehen kommt gerade nicht in Frage? Die Daten können auch aus der Ferne insbesondere auf Basis von Luftbildern verbessert werden, wofür sich vor allem der [Zlant Parking Lanes Viewer und Editor](https://zlant.github.io/parking-lanes/) eignet. Die Berliner OSM-Community hat eine [Version mit Berliner Luftbildern und angepasster Oberfläche](https://tordans.github.io/parking-lanes) aufgesetzt.
+
+- Mit diesen beiden Möglichkeiten lässt sich Parkraum recht effektiv auch für größere Gebiete wie ganze Stadtteile erfassen. Die Präzision der Ergebnisse ist aber noch sehr eingeschränkt. Für einige Anwendungen ist diese Datenqualität aber bereits ausreichend: Auf Grundlage solcher "Basisdaten" lassen sich beispielsweise bereits grobe Schätzungen zu Stellplatzkapazitäten, Vergleiche zwischen Stadtteilen oder Verschneidungen mit anderen Daten anstellen.
+
+- Mit anderen Tools und vollumfänglichen OSM-Editoren kann die Datengenauigkeit auf vielfältige Weise Schritt für Schritt verbessert werden kann – wobei nicht nur die Genauigkeit, sondern auch der Aufwand und das nötige Vorwissen mit jedem Schritt steigt. Je nach Bedarf kannst du also selbst bestimmen, welcher Aufwand sich für dich lohnt.
+
+- Um präzise Parkraumdaten zu generieren, ist es nötig, in die Welt des OSM-Datenschemas und der OSM-Editoren einzutauchen und sich mit dem Kartieren in OSM vertraut zu machen. Unten findest du eine Liste von parkraumrelevanten Features und Kartieraufträgen, die beim systematischen Verbessern der Daten helfen können.
+
+## Basisdatenerhebung mit StreetComplete
+
+<img src="/images/participate/QR_Parkraumvoreinstellung_StreetComplete.png" alt="Parkraumvoreinstellung für StreetComplete.">
+[StreetComplete](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete&hl=de&gl=US) ist eine einfach zu bedienende Smartphone-App, mit der du OpenStreetMap durch die Beantwortung von Fragen vervollständigen oder das Straßennetz systematisch mit verschiedenen Informationen wie zum Beispiel zum Parken am Straßenrand ausstatten kannst. Du brauchst dafür lediglich die App (derzeit nur für Androit verfügbar) und einen [einfach zu erstellenden OSM-Account](https://www.openstreetmap.org/user/new). Hinter StreetComplete steckt die Idee, die **Fragen unterwegs bei einem Spaziergang, einer Fahrradtour oder z.B. auf dem Weg zur Arbeit zu beantworten und die OSM-Daten damit ohne größeres Hintergrundwissen "nebenbei" zu verbessern**.
+
+Nach dem Starten der App und Anmeldung mit deinem OSM-Account kannst du den nebenstehenden QR-Code scannen oder [diesen Link mit deinem Smartphone klicken](https://streetcomplete.app/s?n=Parkraum&q=1mbvhilnbexwagwpa9&o=2), um automatisch eine **Parkraum-Voreinstellung** zu aktivieren. Die App zeigt nun nur noch parkraumrelevante Fragen und das Parkraumoverlay an – auch wenn sich ein Blick in die "normalen" Einstellungen definitv lohnt! Über das Einstellungsmenü kannst du die Aufgaben und Overlays natürlich jederzeit zurücksetzen oder an deine eigenen Interessen anpassen.
+
+## Basisdatenerhebung mit dem Zlant Parking Lanes Editor
+
+Du musst aber nicht vor Ort sein, um OSM-Daten erfassen zu können. Mit Hilfe von Luftbildern und anderen Datenquellen geht das auch aus der Ferne vom gemütlichen Sofa aus. Zum Parkraum mappen eignet sich hier besonders der [Zlant Parking Lanes Viewer und Editor](https://zlant.github.io/parking-lanes/), der Parkstreifeninformationen nicht nur anzeigen, sondern auch bearbeiten kann.
+
+Dafür ist aber etwas mehr Hintergrundwissen nötig, da man den Editor mit den passenden OSM-Tags z.B. zur Ausrichtung der parkenden Fahrzeuge (Parallel-, Schräg- oder Querparken) und Position (z.B. auf der Fahrbahn, dem Gehweg oder in einer Parkbucht) füttern muss. [Dieser Schnelleinstieg in das OSM-Parkraum-Datenschema](https://wiki.openstreetmap.org/wiki/DE:Street_parking#Schnelleinstieg) kann helfen, die passenden Begriffe zu finden.
+
+## Datengenauigkeit: Schrittweise Verbesserung der Präzision in OSM
+
+StreetComplete oder der Zlant Parking Lanes Editor eignen sich hervorragend, um auf einfache Weise eine „Basisdatenerhebung“ des Parkraums zu machen, also an allen Straßen grundlegend zu hinterlegen, *wo* und *wie* Fahrzeuge im Straßenraum parken. Bitte beachte aber, dass die Genauigkeit der damit generierten Parkraumdaten noch stark eingeschränkt ist, denn **Parkraum ist bei genauerem Hinsehen oft etwas differenzierter verteilt und wird durch viele weitere räumliche Gegebenheiten beeinflusst**, die sich nicht mit StreetComplete oder dem Zlant-Editor erfassen lassen.
+
+**Für einfache Auswertungen können solche Basisdaten aber bereits ausreichend sein.** Unserer Erfahrung nach erreichen sie – je nach Struktur des Parkraums und der Genauigkeit der ersten Erfassungsrunde – im Mittel eine Genauigkeit von 70 bis 80%, wenn für alle Straßen Daten vorliegen. Dabei werden die ermittelten Stellplatzzahlen tendentiell überschätzt, da die Berechnungsmethode Parkplätze überall dort "ausschneidet", wo nicht geparkt werden kann oder Parkbuchten mit vielen Unterbrechungen noch zu ungenau dargestellt werden. In den Basisdaten fehlen solche Informationen zum Ausschneiden meistens noch, sodass zu wenig ausgeschnitten bzw. zu viel berechnet wird.
+
+**Um präzisere Stellplatzzahlen zu generieren, ist also ebenso wichtig, wo keine Fahrzeuge parken können (z.B. vor Einfahrten oder Bushaltestellen) und die Feinheiten des Parkraums zu differenzieren (wie die Ausdehnung von Parkbuchten).** Je genauer der Parkraum und parkraumrelevante Features in OSM erfasst werden, desto bessere und kleinräumigere Aussagen und Auswertungen sind mit den generierten Stellplatzdaten möglich. Der dafür nötige Aufwand steigt aber immer weiter an.
+
+<ImageWrapper
+  src="/images/participate/Schema_Datenniveaus_Aussagekraft.png"
+  caption="Daten-Niveaus beim Parkraummappen, ihre Genauigkeit und Aussagekraft."
+/>
+
+## Was muss ich genau tun, um die Datengenauigkeit zu verbessern?
+
+Um die Daten anzureichern und auszudifferenzieren, ist die Verwendung vollumfänglicher OSM-Editoren und ein Verständnis des OSM-Datenschemas notwendig. Wenn das keine Hürde für dich ist, könnten die folgenden Schritte interessant für deine weitere Datenerhebung sein.
+
+Was man besonders genau erfassen sollte, um zu besseren Parkraumdaten zu kommen, haben wir bei der Entwicklung unserer OSM-Parkraum-Methode getestet (im Detail können unsere Untersuchungen dazu im Blog des Parkraumprojekts nachgelesen werden: [Einflussfaktoren auf die Datenqualität von OSM-Parkraumanalysen mit dem „Subtraktiven Modell“](https://parkraum.osm-verkehrswende.org/posts/2022-07-15-einflussfaktoren-datenqualitaet/) und [Prüfung der Parkraum-Datenqualität an einer Stichprobe in Berlin Friedrichshain-Kreuzberg](https://parkraum.osm-verkehrswende.org/posts/2022-09-09-stichprobenpruefung/)). Die folgende Tabelle fasst die Ergebnisse checklistenartig zusammen – wobei die Angaben je nach den baulichen Eigenheiten des Parkraums an einem Ort natürlich davon abweichen können (gibt es z.B. einen hohen Anteil von Parkbuchten, fällt die Abweichung bei ungenau erfassten Parkbuchten auch stärker ins Gesamtgewicht).
+
+<div class="w-full overflow-x-auto">
+  <table>
+    <caption class="mb-6 text-left !text-lg font-semibold">
+      Tabelle: Was sollte ich besonders genau kartieren, um zu besseren Parkraumdaten zu kommen?
+    </caption>
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="w-50">Feature / Beschreibung</th>
+        <th class="w-50">Priorität / Einfluss</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Flächendeckende Erfassung aller Parkstreifen im Straßenraum (Basisdatenerhebung: Wo und in welche Richtung kann geparkt werden?)</td>
+        <td>Sehr hoch</td>
+      </tr>
+      <tr>
+        <td>Erfassung von Park- und Halteverboten</td>
+        <td>Hoch</td>
+      </tr>
+      <tr>
+        <td>Erfassung von Einfahrten (vor denen nicht geparkt werden darf)</td>
+        <td>Hoch</td>
+      </tr>
+      <tr>
+        <td>Genaues Kartieren von Parkbuchten mit regelmäßigen „Unterbrechungen“ (z.B. Vorstreckungen für Straßenbäume, Laternen, Querungsstellen…) als Fläche statt an der Straßenlinie</td>
+        <td>Hoch</td>
+      </tr>
+      <tr>
+        <td>Kurze Park- und Halteverbote und genauere Übergänge bei Parkstreifenwechseln (kleinteilig differenziert kartierte Parkstreifen)</td>
+        <td>Mittel</td>
+      </tr>
+      <tr>
+        <td>Besonders genaue Erfassung parkraumrelevanter Features an Straßensegmenten mit Schräg- und Querparken (mit hoher Fahrzeugdichte pro Längenabschnitt)</td>
+        <td>Mittel</td>
+      </tr>
+      <tr>
+        <td>Genaue Lage von Bushaltestellen</td>
+        <td>Mittel</td>
+      </tr>
+      <tr>
+        <td>Erfassung von Objekten im Fahrbahn- bzw. Parkraumbereich (z.B. Fahrradständer auf der Fahrbahn, Straßenbäume oder Laternen in Parkstreifenbereichen insbesondere bei Gehwegparken)</td>
+        <td>Gering</td>
+      </tr>
+      <tr>
+        <td>Erfassung von Details an Ampelkreuzungen und Querungsstellen für den Fußverkehr (z.B. Gehwegvorstreckungen, Ampelknoten an allen Haltelinien)</td>
+        <td>Gering</td>
+      </tr>
+      <tr>
+        <td>Erfassung von Fahrbahn- und Einfahrtbreiten</td>
+        <td>Sehr gering</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Weiterführende Werkzeuge, Datenquellen und Links
+
+Hier eine Liste verschiedener Tools und Infos zum Parkraum mappen mit OSM:
+
+- Die deutschsprachige Seite im OSM-Wiki zum [Kartieren von Parkplätzen im Straßenraum](https://wiki.openstreetmap.org/wiki/DE:Street_parking) stellt alle möglichen Aspekte und Taggings der OSM-Parkraumkartierung dar.
+- Mit [dieser Overpass-Abfrage](https://overpass-turbo.eu/s/1rFm) kannst du alle Straßen in deiner Umgebung oder einem beliebigen anderen Gebiet erkennen, für die noch keine Parkraumdaten erhoben wurden.
+- Da das Datenschema zur Erfassung von Parkraum im Dezember 2022 vollumfänglich überarbeitet wurde, lohnt sich außerdem ein Check mit [dieser Abfrage](https://overpass-turbo.eu/s/1nOH), ob es noch Daten mit veralteten Parkraumdaten gibt. [Hier kannst du nachlesen, wie du sie aktualisieren kannst](https://www.openstreetmap.org/user/Supaplex030/diary/401053).
+- Eine sehr gute visuelle Unterstützung bei der Erfassung von Parkraum bietet der OSM-Editor [JOSM](https://wiki.openstreetmap.org/wiki/JOSM), wenn die dafür angebotenen [Map Styles und Tagging-Vorlagen](https://wiki.openstreetmap.org/wiki/DE:Street_parking#Nutzung_von_JOSM) verwendet werden.
+- Neben Luftbildern, die in den OSM-Editoren bereits voreingestellt sind, sind Straßenfotos eine wertvolle Datenquelle. Auf [Mapillary](https://www.mapillary.com/app/) oder [KartaView](https://kartaview.org/map/) findest du vielerorts Bilder, die zum Kartieren in OSM verwendet werden dürfen.
+- Wer Parkbeschränkungen wie temporäre Parkverbote, Anwohnerparkzonen, Behindertenstellplätze oder Ladezonen erfassen möchte, findet im OSM-Wiki [viele Beispielsituationen mit jeweils passendem OSM-Tagging](https://wiki.openstreetmap.org/wiki/DE:Street_parking#Parkbeschr%C3%A4nkungen:_Beispielkatalog_deutscher_Verkehrszeichen). Auch das [ParkingStudio](https://wielandb.github.io/parking-studio/export/html5/) hilft bei der Erfassung: Mit Hilfe dieses Werkzeugs können Kombinationen von Verkehrszeichen zusammengestellt und daraus ein passendes OSM-Tagging generiert werden.
+- Falls es im Geodatenportal deines Bundeslands oder deiner Stadt OpenData unter einer OSM-kompatiblen Lizenz gibt, schau doch mal, ob du parkraumrelevante Datensätze z.B. zu Parkzonen oder Behindertenparkplätzen findest.
