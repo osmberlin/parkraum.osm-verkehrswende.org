@@ -1,0 +1,41 @@
+---
+layout: '@layouts/LayoutArticlePageMarkdown.astro'
+title: FAQ
+menuHighlight: faq
+---
+
+## Was ist das OSM-Parkraumprojekt?
+
+Das OSM-Parkraumprojekt stellt Informationen zum Parken im öffentlichen Raum in Form von interaktiven Karten und aufbereiteten Daten-Exporten bereit. Es basiert auf freien Daten des OpenStreetMap-Projekts (OSM). Freiwillige aus der ganzen Welt sammeln in OSM Geodaten, darunter auch Informationen zum Parken. Wir – eine Gruppe aus der Berliner OSM-Community – haben eine Methode entwickelt, um diese Daten zu prozessieren und daraus möglichst genaue Angaben zu generieren, wo wie viele Fahrzeuge im öffentlichen Raum parken. Mehr Informationen findest du auch in den [Informationen über das Projekt](https://parkraum.osm-verkehrswende.org/).
+
+## Was kann ich mit den Karten des Parkraumprojekts tun?
+
+Die Standardansicht der Parkraumkarte stellt Stellplatzkapazitäten von Parkstreifen im öffentlchen Raum dar. Es ist also auf einen Blick zu sehen, wo wie viele Autos entlang einer Straße parken können. Diese Zahlen können entlang von Straßenzügen oder für ein ganzes Gebiet summiert werden, um Stellplatzzahlen für größere Gebiete zu erhalten. Über den Datenexport lassen sich die Daten in einem Geodatenformat exportieren. Darüber hinaus gibt es spezielle Ansichten, die bei der Parkraumerfassung helfen, in dem beispielsweise Datenlücken oder mögliche Fehler identifiziert werden können.
+
+## Gibt es die Parkraumkarte auch für meine Stadt?
+
+Theoretisch kann es die Parkraumkarte an jedem Ort der Welt geben, aber die Voraussetzung ist, dass es Parkraumdaten in OpenStreetMap für deine Stadt gibt. Diese müssen also in den meisten Fällen dafür erst erhoben werden. Sind genügend Daten vorhanden, kannst du dich entweder bei uns melden und wir integrieren deine Stadt in unsere Parkraumkarte oder du bringst das Projektsetup bei dir lokal zum laufen.
+
+## Was kann ich tun, wenn ich selbst Parkraum erfassen will?
+
+Die niedrigschwelligste Möglichkeit, selbst Parkraumdaten zu sammeln, bietet die einfach und ohne Vorwissen zu bedienende OSM-App [StreetComplete](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete&hl=de&gl=US). Die damit gesammelten Daten sind zwar noch nicht sehr genau, aber bilden trotzdem eine gute Grundlage für einfache Auswertungen und können bei Bedarf Schritt für Schritt verbessert werden. Für genauere Daten ist es notwendig, sich mit dem Datenschema und Bearbeiten von OpenStreetMap vertraut zu machen. Auf der [Mitmachen-Seite](https://parkraum.osm-verkehrswende.org/participate/) findest du mehr zu diesem Thema.
+
+## Welche Daten müssen erfasst werden, um den Parkraum mit OSM darstellen zu können?
+
+Zentral sind Angaben dazu, wo und mit welcher Ausrichtung entlang der Straßen geparkt werden kann. Darüber hinaus gibt es viele Dinge, die das Parken beeinflussen: Vor Einfahrten oder Bushaltestellen darf beispielsweise nicht geparkt werden. Das alles können wir mit OSM erfassen.
+
+## Wie funktioniert die Berechnung der Parkplatzzahlen?
+
+In OSM erfassen wir normalerweise nicht die Zahl parkender Fahrzeuge, sondern nur physische Attribute von Parkstreifen, insbesondere die Position und Ausrichtung von Autos. Geometrisch, also aus der Länge einer Straße und der "Dichte" der Fahrzeuge, kann man daraus Stellplatzzahlen ableiten. Bereiche, in denen nicht geparkt werden kann, können wir aus entsprechenden OSM-Datenobjekten ebenfalls ableiten – z.B. darf laut Straßenverkehrsordnung 15 Meter vor und hinter einer Bushaltestelle oder an einem Zebrastreifen nicht geparkt werden. Also beziehen wir solche und viele andere räumliche Features in die Berechnungen ein und "schneiden" die Parkstreifen an diesen Stellen einfach aus. Wir nennen diese Methode das "subtraktive Modell". Wer mehr darüber erfahren möchte, kann sich unseren [Methodenbericht](https://parkraum.osm-verkehrswende.org/project-prototype-neukoelln/report/) ansehen oder auch diesen [Konferenzvortrag](https://parkraum.osm-verkehrswende.org/posts/2021-06-08-vortrag-fossgis/).
+
+## Wie genau sind die Daten?
+
+Das hängt davon ab, wie gut und vollständig die Datengrundlagen in OpenStreetMap bereits erfasst wurde. Im besten Fall – also wenn sehr vollständig und sehr präzise kartiert wurde – können die generierten Parkraumdaten die Realität nahezu exakt wiederspiegeln. Bei Zählungen in unseren Testgebieten lagen die Abweichungen bei unter einem Prozent. Um diese Genauigkeit zu erreichen, ist aber viel Arbeit und eine professionelle OSM-Kartierung nötig. Daher liegt die Genauigkeit an den meisten Orten weit darunter. Wir haben ermittelt, dass die Daten nach einer Basisdatenerhebung (wobei alle Straßen mit einfachen Mitteln mit grundlegenden Parkinformationen ausgestattet werden) zu etwa 80% genau sind, was bereits einfache Auswertungen und schätzende Aussagen ermöglicht.
+
+## Wofür sind solche Parkraumdaten nützlich?
+
+Informationen zum Parkraum sind eine wichtige Planungsgrundlage, erst Recht in Zeiten der Verkehrswende. Vielerorts werden Straßen umgestaltet und politisch um die Neuverteilung des öffentlichen Raums gestritten. Der ruhende Verkehr (also parkende Autos) nimmt eine große Fläche und damit eine wichtige Rolle in diesem Prozess ein, da hier Flächenpotentiale für andere Ansprüche an den Raum bestehen. Für sachliche Argumentationen und Entscheidungen benötigen Politik, Zivilgesellschaft oder Stadtplanung systematische und zugängliche Daten dazu, wo wie viel Parkraum vorhanden ist. Darüber hinaus sind viele andere Anwendungen möglich: Beispielsweise enthalten die Daten Informationen zum Oberflächenbelag von Parkstreifen, woraus sich Entsiegelungspotentiale zur Anpassung von Städten an den Klimawandel ableiten lassen.
+
+## Kann ich die Daten für eigene Zwecke nutzen?
+
+Ja, die Daten und Werkzeuge zur Datengenerierung stehen unter freier Lizenz für alle zur Verfügung.
