@@ -2,6 +2,7 @@
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 import { Octokit } from '@octokit/rest'
 import axios from 'axios'
+import turf from '@turf/turf'
 
 const octokit = new Octokit()
 const githubContent = await octokit.repos.getContent({
@@ -28,8 +29,10 @@ const githubFilesWithContent = await Promise.all(
   githubFiles.map(async (file: any) => {
     const resp = await axios.get(file.downloadUrl)
     const content = await resp.data
+    const bbox = turf.bbox(content)
+    const center = turf.centerOfMass(content)
 
-    return { ...file, content }
+    return { ...file, content, bbox, center }
   })
 )
 ---
@@ -45,6 +48,21 @@ const githubFilesWithContent = await Promise.all(
               <code>{region.filename}</code>
             </h2>
             <p class="my-1">{region.content.properties.name}</p>
+            <p class="my-1">
+              Gebiet:{' '}
+              <>
+                <code>{JSON.stringify(region.bbox)}</code>
+                <br />
+              </>
+              Zentrum:{' '}
+              <a
+                href={`https://www.openstreetmap.org/#map=12/${region.center.geometry.coordinates
+                  .reverse()
+                  .join('/')}`}
+              >
+                <code>{JSON.stringify(region.center.geometry.coordinates)}</code>
+              </a>
+            </p>
             <p class="my-1">
               <a href={region.url}>Vorschau</a>
             </p>
