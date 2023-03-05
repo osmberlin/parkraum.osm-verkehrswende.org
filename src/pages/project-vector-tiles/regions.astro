@@ -2,7 +2,7 @@
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 import { Octokit } from '@octokit/rest'
 import axios from 'axios'
-import turf from '@turf/turf'
+import { bbox, centerOfMass } from '@turf/turf'
 
 const octokit = new Octokit()
 const githubContent = await octokit.repos.getContent({
@@ -29,10 +29,10 @@ const githubFilesWithContent = await Promise.all(
   githubFiles.map(async (file: any) => {
     const resp = await axios.get(file.downloadUrl)
     const content = await resp.data
-    const bbox = turf.bbox(content)
-    const center = turf.centerOfMass(content)
+    const bounds = bbox(content)
+    const center = centerOfMass(content)
 
-    return { ...file, content, bbox, center }
+    return { ...file, content, bounds, center }
   })
 )
 ---
@@ -51,7 +51,7 @@ const githubFilesWithContent = await Promise.all(
             <p class="my-1">
               Gebiet:{' '}
               <>
-                <code>{JSON.stringify(region.bbox)}</code>
+                <code>{JSON.stringify(region.bounds)}</code>
                 <br />
               </>
               Zentrum:{' '}
