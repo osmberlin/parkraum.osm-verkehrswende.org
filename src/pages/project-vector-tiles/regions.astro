@@ -1,0 +1,57 @@
+---
+import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
+import { Octokit } from '@octokit/rest'
+import axios from 'axios'
+
+// Only valid for 7 day…
+const octokit = new Octokit({ auth: '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' })
+
+const oktokitRepoConfig = { owner: 'osmberlin', repo: 'osm-parking-processing', ref: 'docker' }
+const githubContent = await octokit.repos.getContent({
+  ...oktokitRepoConfig,
+  path: '/extracts/boundaries',
+})
+const githubFiles = githubContent.data
+  // @ts-ignore no idea how to guard this from TS
+  ?.filter((file: any) => file.type === 'file')
+  ?.map((file: any) => {
+    const res = {
+      filename: file.name,
+      downloadUrl: file.download_url,
+      url: file.html_url,
+      content: null,
+    }
+    return res
+  })
+
+// Fetch the content for the files
+const githubFilesWithContent = await Promise.all(
+  githubFiles.map(async (file: any) => {
+    const resp = await axios.get(file.downloadUrl)
+    const content = await resp.data
+
+    return { ...file, content }
+  })
+)
+---
+
+<LayoutArticlePage title="Regionen">
+  <h1>Regionen</h1>
+  <div>
+    {
+      githubFilesWithContent.map((region) => {
+        return (
+          <div class="mb-5 border-b border-sky-200 pb-5 first:border-t">
+            <h2 class="!mt-6">
+              <code>{region.filename}</code>
+            </h2>
+            <p class="my-1">{region.content.properties.name}</p>
+            <p class="my-1">
+              <a href={region.url}>Vorschau</a>
+            </p>
+          </div>
+        )
+      })
+    }
+  </div>
+</LayoutArticlePage>
