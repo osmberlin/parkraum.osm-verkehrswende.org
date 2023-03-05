@@ -3,12 +3,11 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 import { Octokit } from '@octokit/rest'
 import axios from 'axios'
 
-// Only valid for 7 day…
-const octokit = new Octokit({ auth: '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' })
-
-const oktokitRepoConfig = { owner: 'osmberlin', repo: 'osm-parking-processing', ref: 'docker' }
+const octokit = new Octokit()
 const githubContent = await octokit.repos.getContent({
-  ...oktokitRepoConfig,
+  owner: 'osmberlin',
+  repo: 'osm-parking-processing',
+  ref: 'docker', // For now, until the branch is merged into `main`
   path: '/extracts/boundaries',
 })
 const githubFiles = githubContent.data
