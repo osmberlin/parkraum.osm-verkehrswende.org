@@ -3,10 +3,12 @@ import axios from 'axios'
 
 const queryClient = new QueryClient()
 
-export const PageDashboardTable = () => {
+type Props = { regionKey: string }
+
+export const PageDashboardTable: React.FC<Props> = ({ regionKey }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <PageDashboardTableContent />
+      <PageDashboardTableContent regionKey={regionKey} />
     </QueryClientProvider>
   )
 }
@@ -25,12 +27,12 @@ type Response = {
   done_percent: number
 }
 
-const PageDashboardTableContent: React.FC = () => {
+const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
     queryFn: () =>
       axios
-        .get('https://vts.mapwebbing.eu/export/boundaries_stats.geojson')
+        .get(`https://vts.mapwebbing.eu/export/region_${regionKey}.geojson`)
         .then((res) => res.data),
   })
 
