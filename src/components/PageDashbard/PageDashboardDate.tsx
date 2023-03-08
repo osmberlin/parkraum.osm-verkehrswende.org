@@ -15,7 +15,9 @@ const PageDashboardDateContent: React.FC = () => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
     queryFn: () =>
-      axios.get('https://vts.mapwebbing.eu/processing.highways.json').then((res) => res.data),
+      axios
+        .get('https://vts.mapwebbing.eu/processing.parking_segments.json')
+        .then((res) => res.data),
   })
 
   if (isLoading || isFetching) return <i>Lade Daten…</i>
