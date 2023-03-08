@@ -47,7 +47,7 @@ const githubFilesWithContent = await Promise.all(
             <h2 class="!mt-6">
               <code>{region.filename}</code>
             </h2>
-            <p class="my-1">{region.content.properties.name}</p>
+            <p class="my-1">{region.content.properties?.name || '-'}</p>
             <p class="my-1">
               Gebiet:{' '}
               <>
