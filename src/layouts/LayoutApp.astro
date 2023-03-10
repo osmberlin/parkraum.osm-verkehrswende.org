@@ -4,11 +4,11 @@ import Layout from './Layout.astro'
 
 type Props = {
   title: string
-  menuHighlight: string
   noindex: boolean
+  menuHighlight?: string
 }
 
-const { title, menuHighlight, noindex } = Astro.props
+const { title, noindex, menuHighlight } = Astro.props
 const pathname = new URL(Astro.request.url).pathname
 ---
 

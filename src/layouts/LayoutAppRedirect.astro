@@ -1,0 +1,18 @@
+---
+import './base.css'
+import LayoutApp from './LayoutApp.astro'
+
+type Props = {
+  newUrl: string
+}
+
+const { newUrl } = Astro.props
+---
+
+<meta slot="meta" http-equiv="refresh" content={`0; URL=${newUrl}`} />
+
+<LayoutApp title="Diese Seite wurde verschoben…" noindex={true}>
+  <div class="flex h-full w-full items-center justify-center">
+    <a class="text-2xl underline" href={newUrl}>Diese Seite wurde verschoben…</a>
+  </div>
+</LayoutApp>

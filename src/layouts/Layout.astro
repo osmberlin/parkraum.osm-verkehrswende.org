@@ -27,6 +27,8 @@ const { title, noindex, canonicalUrl, language, description, imagePath, imageAlt
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 
+    <slot name="meta" />
+
     <title>{title}</title>
     {noindex && <meta name="robots" content="noindex" />}
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
