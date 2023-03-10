@@ -1,40 +1,8 @@
 ---
+import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
-import { Octokit } from '@octokit/rest'
-import axios from 'axios'
-import { bbox, centerOfMass } from '@turf/turf'
 
-const octokit = new Octokit()
-const githubContent = await octokit.repos.getContent({
-  owner: 'osmberlin',
-  repo: 'osm-parking-processing',
-  ref: 'docker', // For now, until the branch is merged into `main`
-  path: '/extracts/boundaries',
-})
-const githubFiles = githubContent.data
-  // @ts-ignore no idea how to guard this from TS
-  ?.filter((file: any) => file.type === 'file')
-  ?.map((file: any) => {
-    const res = {
-      filename: file.name,
-      downloadUrl: file.download_url,
-      url: file.html_url,
-      content: null,
-    }
-    return res
-  })
-
-// Fetch the content for the files
-const githubFilesWithContent = await Promise.all(
-  githubFiles.map(async (file: any) => {
-    const resp = await axios.get(file.downloadUrl)
-    const content = await resp.data
-    const bounds = bbox(content)
-    const center = centerOfMass(content)
-
-    return { ...file, content, bounds, center }
-  })
-)
+const githubFilesWithContent = await fetchRegionWithContent()
 ---
 
 <LayoutArticlePage title="Regionen">

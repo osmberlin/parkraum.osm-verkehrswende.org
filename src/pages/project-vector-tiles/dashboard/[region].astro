@@ -1,46 +1,11 @@
 ---
 import { PageDashboardDate } from '@components/PageDashbard/PageDashboardDate'
 import { PageDashboardTable } from '@components/PageDashbard/PageDashboardTable'
+import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
-import { Octokit } from '@octokit/rest'
-import { bbox, centerOfMass } from '@turf/turf'
-import axios from 'axios'
 
 export async function getStaticPaths() {
-  const octokit = new Octokit()
-  const githubContent = await octokit.repos.getContent({
-    owner: 'osmberlin',
-    repo: 'osm-parking-processing',
-    ref: 'docker', // For now, until the branch is merged into `main`
-    path: '/extracts/boundaries',
-  })
-  const githubFiles = githubContent.data
-    // @ts-ignore no idea how to guard this from TS
-    ?.filter((file: any) => file.type === 'file')
-    ?.map((file: any) => {
-      const res = {
-        filename: file.name,
-        downloadUrl: file.download_url,
-        url: file.html_url,
-        content: null,
-      }
-      return res
-    })
-
-  // Fetch the content for the files
-  const githubFilesWithContent = await Promise.all(
-    githubFiles.map(async (file: any) => {
-      const resp = await axios.get(file.downloadUrl)
-      const content = await resp.data
-      const slug = file.filename.replace('.geojson', '')
-      const name = slug.charAt(0).toUpperCase() + slug.slice(1)
-      const bounds = bbox(content)
-      const center = centerOfMass(content)
-
-      return { ...file, slug, name, content, bounds, center }
-    })
-  )
-
+  const githubFilesWithContent = await fetchRegionWithContent()
   const regions = await githubFilesWithContent.map((region) => {
     return { params: { region: region.slug }, props: { data: region } }
   })
