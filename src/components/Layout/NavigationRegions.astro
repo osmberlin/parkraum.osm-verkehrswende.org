@@ -35,7 +35,8 @@ const { pathname: currentPathname } = Astro.url
       )}
       title="Karte im Radverkehrsatlas öffnen"
     >
-      <img src={SvgMap} class="h-5 w-5" />
+      <img src={SvgMap} class="h-5 w-5" alt="" />
+      <span class="sr-only">Karte im Radverkehrsatlas öffnen</span>
     </a>
   </div>
   <div class="flex items-stretch border-b border-gray-200 bg-gray-50 font-semibold">
@@ -58,7 +59,8 @@ const { pathname: currentPathname } = Astro.url
         'p-2 flex items-center'
       )}
     >
-      <img src={SvgMap} class="h-5 w-5" />
+      <img src={SvgMap} class="h-5 w-5" alt="" />
+      <span class="sr-only">Karte öffnen</span>
     </a>
   </div>
 
@@ -88,7 +90,8 @@ const { pathname: currentPathname } = Astro.url
             )}
             title="Karte im Radverkehrsatlas öffnen"
           >
-            <img src={SvgMap} class="h-5 w-5" />
+            <img src={SvgMap} class="h-5 w-5" alt="" />
+            <span class="sr-only">Karte im Radverkehrsatlas öffnen</span>
           </a>
         </div>
       )
