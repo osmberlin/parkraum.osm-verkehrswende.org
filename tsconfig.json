@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "strictNullChecks": true, // https://docs.astro.build/de/guides/content-collections/#setting-up-typescript
     "paths": {
-      "@assets/*": ["/assets/*"],
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
     }

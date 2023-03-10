@@ -1,0 +1,88 @@
+---
+import SvgMap from '@assets/icons/Map.svg'
+import SvgTableCells from '@assets/icons/TableCells.svg'
+import SvgArrowSmall from '@assets/icons/ArrowSmall.svg'
+import SvgPresentationChartBar from '@assets/icons/PresentationChartBar.svg'
+import Notice from '@components/Notice.astro'
+import { PageDashboardDate } from '@components/PageDashbard/PageDashboardDate'
+import { PageDashboardTable } from '@components/PageDashbard/PageDashboardTable'
+import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
+import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
+import { atlasUrl } from '@components/regions/utils/atlasUrl'
+
+export async function getStaticPaths() {
+  const githubFilesWithContent = await fetchRegionWithContent()
+  const regions = await githubFilesWithContent.map((region) => {
+    return { params: { region: region.slug }, props: { data: region } }
+  })
+
+  return regions
+}
+
+const { data } = Astro.props
+---
+
+<LayoutArticlePage
+  title={`Parkraum Daten für die Region ${data.name}`}
+  maxWidthClass="max-w-7xl lg:pr-10"
+>
+  <h1>Parkraum Daten für die Region {data.name}</h1>
+
+  <p>
+    <a href="/#project-prototype-neukoelln">Mehr über das Projekt…</a>
+  </p>
+
+  <div class="not-prose mt-14">
+    <a
+      href={atlasUrl(data.center)}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex flex-row items-center gap-4 rounded bg-gradient-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
+    >
+      <img src={SvgMap} class="h-20 w-20" alt="" />
+      <div>
+        <h2
+          class="mb-0 flex items-center text-3xl font-bold text-gray-900 decoration-1 underline-offset-4 group-hover:underline"
+        >
+          Karte
+          <img src={SvgArrowSmall} class="h-8 w-8" alt="" />
+        </h2>
+        <p class="mb-1 text-gray-800 no-underline">Karte auf radverkehrsatlas.de öffnen.</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="mb-8 flex items-center gap-2">
+    <img src={SvgTableCells} class="my-0 h-8 w-8" alt="" />
+    Datenexport für {data.name}
+  </h2>
+  <div>
+    <p><em>Der Datenexport für {data.name} ist noch in Arbeit.</em></p>
+    <p>
+      Bitte beachte, dass die <strong>Datenqualität je nach Straße sehr unterschiedlich</strong> sein
+      kann. Hinweise dazu, mit welcher Genauigkeit zu rechnen ist, haben wir in unserem Artikel
+      <a href="/posts/2022-09-09-stichprobenpruefung">Stichprobenprüfung Datenqualität</a> und
+      <a href="/posts/2022-07-15-einflussfaktoren-datenqualitaet"
+        >Einflussfaktoren auf die Datenqualität</a
+      > beschrieben.
+    </p>
+  </div>
+
+  <h2 class="mb-8 flex items-center gap-2">
+    <img src={SvgPresentationChartBar} class="my-0 h-8 w-8" alt="" />
+    Statistik für {data.name}
+  </h2>
+  <PageDashboardDate client:idle />
+  <div class="flex flex-col">
+    <div class="overflow-hidden shadow ring-1 ring-black/5 md:rounded-lg">
+      <PageDashboardTable client:load regionKey={data.slug} />
+    </div>
+  </div>
+
+  <Notice className="mt-10">
+    <strong>Hinweis zum OpenStreetMap Parkraum-Schema</strong><br />
+    Anfang 2023 wurde das Schema zum Erfassen von Parkraum-Daten überarbeitet. Dieses Projekt zeigt nur
+    die neuste Version des Schemas an. Du kannst gerne dabei helfen, die Daten in deiner Region zu aktualisieren.
+    <a href="https://www.openstreetmap.org/user/Supaplex030/diary/401053">Mehr erfahren…</a>
+  </Notice>
+</LayoutArticlePage>

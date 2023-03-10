@@ -23,7 +23,7 @@ const PageDashboardDateContent: React.FC = () => {
   if (isLoading || isFetching) return <i>Lade Daten…</i>
 
   return (
-    <p className="mt-2 text-sm text-gray-700">
+    <p>
       Stand der Daten:{' '}
       {error ? (
         <span className="text-sm text-red-400">Fehler beim Laden der Daten</span>

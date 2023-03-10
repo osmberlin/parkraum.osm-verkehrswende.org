@@ -27,3 +27,4 @@ packages/**/test/**/fixtures/**/env.d.ts
 
 # https://docs.astro.build/de/guides/content-collections/#the-astro-directory
 .astro
+.env.local

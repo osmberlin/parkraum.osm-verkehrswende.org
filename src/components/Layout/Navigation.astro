@@ -1,8 +1,9 @@
 ---
 import clsx from 'clsx'
+import NavigationFooter from './NavigationFooter.astro'
 import NavigationGeneral from './NavigationGeneral.astro'
 import NavigationNews from './NavigationNews.astro'
-import NavigationProjects from './NavigationProjects.astro'
+import NavigationRegions from './NavigationRegions.astro'
 
 export interface Props {
   /** @desc switches the navigation to scroll in itself ("app") vs. with the "article" */
@@ -47,8 +48,9 @@ const { layoutType, menuHighlight } = Astro.props
   </button>
 
   <div data-show-hide-target="navi" class="hidden transition-all duration-150 lg:block">
-    <NavigationProjects menuHighlight={menuHighlight} />
-    <NavigationNews menuHighlight={menuHighlight} />
     <NavigationGeneral menuHighlight={menuHighlight} />
+    <NavigationRegions menuHighlight={menuHighlight} />
+    <NavigationNews menuHighlight={menuHighlight} />
+    <NavigationFooter menuHighlight={menuHighlight} />
   </div>
 </nav>

@@ -1,18 +1,26 @@
 import { regionExportUrl } from '@components/PageDashbard/PageDashboardTable'
 import { Octokit } from '@octokit/rest'
-import { type BBox, bbox, centerOfMass } from '@turf/turf'
+import { type BBox, bbox, centerOfMass, Position } from '@turf/turf'
 import axios from 'axios'
 
-type GithubFile = { filename: string; downloadUrl: string; url: string; content: null }
-type GithubFileWithContent = GithubFile & {
+type GithubFile = {
   slug: string
   name: string
+  filename: string
+  downloadUrl: string
+  url: string
+}
+type GithubFileWithContent = GithubFile & {
   bounds: BBox
+  center: Position
   content: any
 }
 
 export const fetchRegions = async () => {
-  const octokit = new Octokit()
+  // We don't need the auth on githup actions, since those work fine without.
+  // However, locally, when we hit the API a lot, we need to auth because of rate limits.
+  const auth = import.meta.env.OCTOKIT_AUTH ? { auth: import.meta.env.OCTOKIT_AUTH } : {}
+  const octokit = new Octokit(auth)
   const githubContent = await octokit.repos.getContent({
     owner: 'osmberlin',
     repo: 'osm-parking-processing',
@@ -24,11 +32,16 @@ export const fetchRegions = async () => {
     // @ts-ignore no idea how to guard this from TS
     ?.filter((file: any) => file.type === 'file')
     ?.map((file: any) => {
+      const slug = file.name.replace('.geojson', '')
       return {
+        slug,
+        name: slug
+          .split('_')
+          .map((s: string) => s.charAt(0).toUpperCase() + s.slice(1))
+          .join(' '),
         filename: file.name,
         downloadUrl: file.download_url,
         url: file.html_url,
-        content: null,
       }
     }) as GithubFile[]
 
@@ -52,12 +65,10 @@ export const fetchRegionWithContent = async () => {
     githubFiles.map(async (file: any) => {
       const resp = await axios.get(file.downloadUrl)
       const content = await resp.data
-      const slug = file.filename.replace('.geojson', '')
-      const name = slug.charAt(0).toUpperCase() + slug.slice(1)
       const bounds = bbox(content)
-      const center = centerOfMass(content)
+      const center = centerOfMass(content).geometry.coordinates
 
-      return { ...file, slug, name, content, bounds, center }
+      return { ...file, content, bounds, center }
     })
   )) as GithubFileWithContent[]
 

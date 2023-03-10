@@ -1,23 +1,56 @@
 ---
+import SvgArrowSmall from '@assets/icons/ArrowSmall.svg'
+import SvgMap from '@assets/icons/Map.svg'
+import SvgTableCells from '@assets/icons/TableCells.svg'
+import SvgCommandLine from '@assets/icons/CommandLine.svg'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 ---
 
 <LayoutArticlePage
-  title="Daten aus dem Projekt 'Prototyp Neukölln'"
-  menuHighlight="project_prototype_data"
+  title={`Parkraum Daten für aus Neukölln, Berlin`}
+  maxWidthClass="max-w-7xl lg:pr-10"
+  menuHighlight="project_prototype_map_data"
 >
-  <h1 class="!mb-5">Scripte</h1>
+  <h1>Parkraum Daten für das Pilotgebiet Neuköln, Berlin</h1>
 
+  <p><a href="/#project-vector-tiles">Mehr über das Projekt…</a></p>
+
+  <div class="not-prose mt-14">
+    <a
+      href="/project-prototype-neukoelln"
+      class="group flex flex-row items-center gap-4 rounded bg-gradient-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
+    >
+      <img src={SvgMap} class="h-20 w-20" alt="" />
+      <div>
+        <h2
+          class="mb-0 flex items-center text-3xl font-bold text-gray-900 decoration-1 underline-offset-4 group-hover:underline"
+        >
+          Karte
+          <img src={SvgArrowSmall} class="h-8 w-8" alt="" />
+        </h2>
+        <p class="mb-1 text-gray-800 no-underline">Parkraumkarte anzeigen.</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="mb-8 flex items-center gap-2">
+    <img src={SvgCommandLine} class="my-0 h-8 w-8" alt="" />
+    Die Scripte des Prototyps
+  </h2>
   <p>
-    Die verwendeten Scripte sind <a href="https://github.com/SupaplexOSM/street_parking.py"
-      >auf GitHub verfügbar und dort auch dokumentiert</a
+    Die verwendeten Scripte sind <a
+      href="https://github.com/SupaplexOSM/street_parking.py"
+      target="_blank">auf GitHub verfügbar und dort auch dokumentiert</a
     >.
   </p>
 
-  <h1 class="!mt-12 !mb-5">Datensätze (GIS-Datenformat)</h1>
+  <h2 class="mb-8 flex items-center gap-2">
+    <img src={SvgTableCells} class="my-0 h-8 w-8" alt="" />
+    Datensätze (GIS-Datenformat) für Neukölln
+  </h2>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_parking_way.jpg"
@@ -60,7 +93,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_parking_area.jpg"
@@ -101,7 +134,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_lane_area.jpg"
@@ -137,7 +170,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_traffic_area.jpg"
@@ -174,7 +207,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_kfz_points.jpg"
@@ -217,7 +250,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
-    <div class="aspect-w-2 aspect-h-1 md:w-60">
+    <div class="md:w-72">
       <img
         class="img-thumbnail !m-0 object-cover md:!mt-2"
         src="/images/data/thumb_kfz_lor.jpg"

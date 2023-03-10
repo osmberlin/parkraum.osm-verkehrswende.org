@@ -2,19 +2,22 @@
 import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 
-const githubFilesWithContent = await fetchRegionWithContent()
+const regions = await fetchRegionWithContent()
 ---
 
 <LayoutArticlePage title="Regionen">
   <h1>Regionen</h1>
   <div>
     {
-      githubFilesWithContent.map((region) => {
+      regions.map((region) => {
         return (
-          <div class="mb-5 border-b border-sky-200 pb-5 first:border-t">
-            <h2 class="!mt-6">
-              <code>{region.filename}</code>
-            </h2>
+          <div>
+            <a
+              href={`/regions/${region.slug}`}
+              class="mb-5 border-b border-sky-200 pb-5 first:border-t"
+            >
+              <h2 class="!mt-6">Region {region.name} öffnen</h2>
+            </a>
             <p class="my-1">{region.content.properties?.name || '-'}</p>
             <p class="my-1">
               Gebiet:{' '}
@@ -24,15 +27,13 @@ const githubFilesWithContent = await fetchRegionWithContent()
               </>
               Zentrum:{' '}
               <a
-                href={`https://www.openstreetmap.org/#map=12/${region.center.geometry.coordinates
-                  .reverse()
-                  .join('/')}`}
+                href={`https://www.openstreetmap.org/#map=12/${region.center.reverse().join('/')}`}
               >
-                <code>{JSON.stringify(region.center.geometry.coordinates)}</code>
+                <code>{JSON.stringify(region.center)}</code>
               </a>
             </p>
             <p class="my-1">
-              <a href={region.url}>Vorschau</a>
+              <a href={region.url}>GeoJSON</a>
             </p>
           </div>
         )

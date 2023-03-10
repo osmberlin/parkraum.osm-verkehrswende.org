@@ -1,0 +1,97 @@
+---
+import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
+import { atlasUrl } from '@components/regions/utils/atlasUrl'
+import clsx from 'clsx'
+import SvgMap from '@assets/icons/Map.svg'
+
+export interface Props {
+  menuHighlight: string | undefined
+}
+
+const regions = (await fetchRegionWithContent()).filter((r) => r.slug !== 'berlin')
+const { menuHighlight } = Astro.props
+const { pathname: currentPathname } = Astro.url
+---
+
+<h2 class="my-2 text-xl font-semibold">Regionen</h2>
+<div class="mb-7 flex flex-col overflow-hidden rounded border border-b-0 border-gray-200">
+  <div class="flex items-stretch border-b border-gray-200 bg-gray-50 font-semibold">
+    <a
+      href={`/regions/berlin`}
+      class={clsx(
+        currentPathname === `/regions/berlin` ? 'menu-active' : 'hover:bg-blue-50',
+        'flex-grow py-2 px-4'
+      )}
+    >
+      Berlin
+    </a>
+    <a
+      href={atlasUrl([13.407826941531509, 52.495314008962936])}
+      target="_blank"
+      rel="noopener noreferrer"
+      class={clsx(
+        currentPathname === `/regions/berlin` && 'menu-active cursor-pointer hover:!bg-blue-50',
+        'flex items-center p-2 hover:bg-blue-50'
+      )}
+      title="Karte im Radverkehrsatlas öffnen"
+    >
+      <img src={SvgMap} class="h-5 w-5" />
+    </a>
+  </div>
+  <div class="flex items-stretch border-b border-gray-200 bg-gray-50 font-semibold">
+    <a
+      href="/project-prototype-neukoelln/data"
+      class={clsx(
+        menuHighlight === 'project_prototype_map_data' ? 'menu-active' : 'hover:bg-blue-50',
+        'flex-grow py-2 px-4'
+      )}
+    >
+      Prototype Neukölln
+    </a>
+    <a
+      href="/project-prototype-neukoelln?map=parkingmap"
+      class={clsx(
+        menuHighlight === 'project_prototype_map' && 'menu-active',
+        menuHighlight === 'project_prototype_map_data' &&
+          'menu-active cursor-pointer hover:!bg-blue-50',
+        menuHighlight !== 'project_prototype_map' && 'hover:bg-blue-50',
+        'p-2 flex items-center'
+      )}
+    >
+      <img src={SvgMap} class="h-5 w-5" />
+    </a>
+  </div>
+
+  {
+    regions.map((region) => {
+      return (
+        <div class="flex items-stretch border-b border-gray-200">
+          <a
+            href={`/regions/${region.slug}`}
+            class={clsx(
+              currentPathname === `/regions/${region.slug}` ? 'menu-active' : 'hover:bg-blue-50',
+              region.slug === 'berlin' ? 'font-bold' : '',
+              'flex-grow truncate py-2 px-4'
+            )}
+            title={region.name}
+          >
+            {region.name}
+          </a>
+          <a
+            href={atlasUrl(region.center)}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={clsx(
+              currentPathname === `/regions/${region.slug}` &&
+                'menu-active cursor-pointer hover:!bg-blue-50',
+              'flex items-center p-2 hover:bg-blue-50'
+            )}
+            title="Karte im Radverkehrsatlas öffnen"
+          >
+            <img src={SvgMap} class="h-5 w-5" />
+          </a>
+        </div>
+      )
+    })
+  }
+</div>
