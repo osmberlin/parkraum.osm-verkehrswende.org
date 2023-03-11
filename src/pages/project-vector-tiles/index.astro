@@ -1,5 +1,27 @@
 ---
-import LayoutAppRedirect from '@layouts/LayoutAppRedirect.astro'
+import LayoutApp from '@layouts/LayoutApp.astro'
 ---
 
-<LayoutAppRedirect newUrl="https://parkraum.osm-verkehrswende.org/regions/berlin" />
+<script is:inline>
+  // This is a very manual workaround to preserve the previous map position when redirecting to the new page.
+  // Those params are pickd up in `[region].astro`.
+
+  if (typeof window !== 'undefined') {
+    const newUrl = new URL('https://parkraum.osm-verkehrswende.org/regions/berlin')
+    const hash = window.location.hash
+    if (hash.includes('/')) {
+      const [zoom, lng, lat] = hash
+        .replace('#', '')
+        .split('/')
+        .map((r) => r.trim())
+      newUrl.searchParams.set('zoom', zoom)
+      newUrl.searchParams.set('lat', lat)
+      newUrl.searchParams.set('lng', lng)
+      window.location.replace(newUrl.href)
+    } else {
+      window.location.replace(newUrl.href)
+    }
+  }
+</script>
+
+<LayoutApp title="" noindex={true} />

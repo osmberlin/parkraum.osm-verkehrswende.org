@@ -22,6 +22,24 @@ export async function getStaticPaths() {
 const { data } = Astro.props
 ---
 
+<script is:inline>
+  // This is a very manual workaround to preserve the previous map position when redirecting to the new page.
+  // Those params are set in `/pages/project-vector-tiles/index.astro`.
+  // We could make this a React component, but for now this works…
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    const mapLink = document.getElementById('map')
+    const params = new URLSearchParams(window.location.search)
+    const newUrl =
+      document
+        .getElementById('map')
+        .dataset.urlTemplate.replace('1000', params.get('lat'))
+        .replace('2000', params.get('lng')) + `&zoom=${params.get('zoom')}`
+    mapLink.href = newUrl
+    console.log(mapLink, newUrl)
+  })
+</script>
+
 <LayoutArticlePage
   title={`Parkraum Daten für die Region ${data.name}`}
   maxWidthClass="max-w-7xl lg:pr-10"
@@ -34,6 +52,8 @@ const { data } = Astro.props
 
   <div class="not-prose mt-14">
     <a
+      id="map"
+      data-url-template={atlasUrl([1000, 2000])}
       href={atlasUrl(data.center)}
       target="_blank"
       rel="noopener noreferrer"
