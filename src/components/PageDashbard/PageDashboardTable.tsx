@@ -44,13 +44,15 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   let districts: Response[] = []
   const suburbs: Record<string, Response[]> = {}
   if (data) {
-    city = data.features
-      .map((feature: any) => feature.properties)
-      .filter((p: any) => p.admin_level === 4 && p.name !== 'Brandenburg')
+    const flatFeatureProperties = data.features.map((feature: any) => feature.properties)
 
-    districts = city[0]?.childs
-      ?.map((feature: any) => feature.properties)
-      ?.filter((p: any) => p.admin_level === 9)
+    city = flatFeatureProperties.filter((p: any) => p.admin_level === 4 && p.name !== 'Brandenburg')
+
+    // In Hannover, the output does not have admin_level 9, so we need to jump to the districts directly.
+    const cityOrUseDistrictsDireclty =
+      city[0]?.childs?.map((feature: any) => feature.properties) || flatFeatureProperties
+
+    districts = cityOrUseDistrictsDireclty?.filter((p: any) => p.admin_level === 9)
 
     districts?.forEach((district) => {
       const topLevelDistrict = data.features
