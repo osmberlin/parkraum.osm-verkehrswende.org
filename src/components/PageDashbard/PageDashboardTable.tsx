@@ -217,6 +217,9 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
           </>
         </tbody>
       </table>
+      <div className="text-gray-9 00 border-t border-t-gray-300 bg-gray-50 py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
+        API URL <code>{regionExportUrl(regionKey)}</code>
+      </div>
       {/* <details className="mt-10" open id="debugOutput">
         <summary>Debug Output</summary>
         <textarea>{JSON.stringify(debugStructure, undefined, 2)}</textarea>
