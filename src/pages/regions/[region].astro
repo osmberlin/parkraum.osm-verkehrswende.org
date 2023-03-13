@@ -30,11 +30,16 @@ const { data } = Astro.props
   document.addEventListener('DOMContentLoaded', function (event) {
     const mapLink = document.getElementById('map')
     const params = new URLSearchParams(window.location.search)
-    const newUrl =
-      document
+    const lat = params.get('lat')
+    const lng = params.get('lat')
+    const zoom = params.get('zoom')
+    if (lat && lng && zoom) {
+      const newUrl = document
         .getElementById('map')
-        .dataset.urlTemplate.replace('1000', params.get('lat'))
-        .replace('2000', params.get('lng')) + `&zoom=${params.get('zoom')}`
+        .dataset.urlTemplate.replace('1000', lat)
+        .replace('2000', lng)
+        .concat('&zoom=', zoom)
+    }
     mapLink.href = newUrl
     console.log(mapLink, newUrl)
   })
