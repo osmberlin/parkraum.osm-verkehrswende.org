@@ -2,6 +2,7 @@ import { regionExportUrl } from '@components/PageDashbard/PageDashboardTable'
 import { Octokit } from '@octokit/rest'
 import { type BBox, bbox, centerOfMass, Position } from '@turf/turf'
 import axios from 'axios'
+import { keyToName } from './keyToName'
 
 type GithubFile = {
   slug: string
@@ -35,10 +36,7 @@ export const fetchRegions = async () => {
       const slug = file.name.replace('.geojson', '')
       return {
         slug,
-        name: slug
-          .split('_')
-          .map((s: string) => s.charAt(0).toUpperCase() + s.slice(1))
-          .join(' '),
+        name: keyToName(slug),
         filename: file.name,
         downloadUrl: file.download_url,
         url: file.html_url,
