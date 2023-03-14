@@ -25,7 +25,7 @@ export const fetchRegions = async () => {
   const githubContent = await octokit.repos.getContent({
     owner: 'osmberlin',
     repo: 'osm-parking-processing',
-    ref: 'docker', // For now, until the branch is merged into `main`
+    ref: 'main', // For now, until the branch is merged into `main`
     path: '/extracts/boundaries',
   })
 
