@@ -1,3 +1,4 @@
+import { keyToName } from '@components/regions/utils/keyToName'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
@@ -44,13 +45,15 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   let districts: Response[] = []
   const suburbs: Record<string, Response[]> = {}
   if (data) {
-    const flatFeatureProperties = data.features.map((feature: any) => feature.properties)
+    const flatFeatureProperties = data.features?.map((feature: any) => feature.properties)
 
-    city = flatFeatureProperties.filter((p: any) => p.admin_level === 4 && p.name !== 'Brandenburg')
+    city = flatFeatureProperties?.filter(
+      (p: any) => p.admin_level === 4 && p.name !== 'Brandenburg'
+    )
 
     // In Hannover, the output does not have admin_level 9, so we need to jump to the districts directly.
     const cityOrUseDistrictsDireclty =
-      city[0]?.childs?.map((feature: any) => feature.properties) || flatFeatureProperties
+      city?.[0]?.childs?.map((feature: any) => feature.properties) || flatFeatureProperties
 
     districts = cityOrUseDistrictsDireclty?.filter((p: any) => p.admin_level === 9)
 
@@ -63,6 +66,13 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
         ?.map((feature: any) => feature.properties)
         ?.filter((p: any) => p.admin_level === 10)
     })
+
+    // For Kiel, we start at admin_level 10, so the code above will not add any data.
+    if (!Object.keys(suburbs).length) {
+      suburbs[keyToName(regionKey)] = flatFeatureProperties?.filter(
+        (p: any) => p.admin_level === 10
+      )
+    }
   }
 
   // See https://docs.google.com/spreadsheets/d/1mgIu-WV_OtLKdX6gt6JUfze-iTXXh8jLByi3o-wmd04/edit#gid=0
@@ -109,6 +119,10 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   //   })
   // })
 
+  if (!city) {
+    return <p className="px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</p>
+  }
+
   return (
     <>
       <div className="border-b border-b-gray-300 bg-gray-50 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
@@ -120,32 +134,27 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
         ))}
       </div>
       <table className="!my-0 min-w-full divide-y divide-gray-300">
-        <thead className="bg-gray-50">
-          <tr>
-            <th
-              scope="col"
-              className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-            >
-              Bezirk
-            </th>
-            <th
-              scope="col"
-              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-            ></th>
-            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-              Anteil gemapped
-            </th>
-          </tr>
-        </thead>
+        {Boolean(districts?.length) && (
+          <thead className="bg-gray-50">
+            <tr>
+              <th
+                scope="col"
+                className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
+              >
+                Bezirk
+              </th>
+              <th
+                scope="col"
+                className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+              ></th>
+              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                Anteil gemapped
+              </th>
+            </tr>
+          </thead>
+        )}
         <tbody>
           <>
-            {!districts?.length && (
-              <tr>
-                <td colSpan={3} className="px-4 text-sm text-red-400 sm:pl-6">
-                  Fehler beim Laden der Daten
-                </td>
-              </tr>
-            )}
             {districts?.map((district) => {
               return (
                 <tr key={district.id}>
@@ -224,8 +233,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
       </div>
       {/* <details className="mt-10" open id="debugOutput">
         <summary>Debug Output</summary>
-        <textarea>{JSON.stringify(debugStructure, undefined, 2)}</textarea>
-        <pre>{JSON.stringify(debugOutput, undefined, 2)}</pre>
+        <pre>{JSON.stringify(debugStructure, undefined, 2)}</pre>
       </details> */}
     </>
   )
