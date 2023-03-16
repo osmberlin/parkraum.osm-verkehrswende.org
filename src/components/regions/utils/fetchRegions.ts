@@ -1,6 +1,5 @@
-import { regionExportUrl } from '@components/PageDashbard/PageDashboardTable'
 import { Octokit } from '@octokit/rest'
-import { type BBox, bbox, centerOfMass, Position } from '@turf/turf'
+import { bbox, centerOfMass, Position, type BBox } from '@turf/turf'
 import axios from 'axios'
 import { keyToName } from './keyToName'
 
@@ -45,16 +44,18 @@ export const fetchRegions = async () => {
 
   // Cleanup all those files from github that don't produce an api response
   // Those are not actually present in the data, just prepared in github (but unused)
-  await Promise.all(
-    githubFiles.map(async (file, index) => {
-      const apiUrl = regionExportUrl(file.slug)
-      await axios.get(apiUrl).catch((_error) => {
-        delete githubFiles[index]
-      })
-    })
-  )
+  // await Promise.all(
+  //   githubFiles.map(async (file, index) => {
+  //     const apiUrl = regionExportUrl(file.slug)
+  //     await axios.get(apiUrl).catch((_error) => {
+  //       delete githubFiles[index]
+  //     })
+  //   })
+  // )
+  // return githubFiles.filter(Boolean)
+  const supportedRegions = ['berlin', 'bamberg', 'bremen', 'hannover', 'hamburg', 'kiel']
 
-  return githubFiles.filter(Boolean)
+  return githubFiles.filter((file) => supportedRegions.includes(file.slug))
 }
 
 export const fetchRegionWithContent = async () => {
