@@ -53,7 +53,7 @@ export const fetchRegions = async () => {
   //   })
   // )
   // return githubFiles.filter(Boolean)
-  const supportedRegions = ['berlin', 'bamberg', 'bremen', 'hannover', 'hamburg', 'kiel']
+  const supportedRegions = ['berlin', 'bamberg', 'bremen', 'dortmund', 'hannover', 'hamburg', 'kiel']
 
   return githubFiles.filter((file) => supportedRegions.includes(file.slug))
 }
