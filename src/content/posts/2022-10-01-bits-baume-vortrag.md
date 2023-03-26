@@ -14,7 +14,7 @@ Exkurs: Das Thema Parkraum ist in einem zweiten Vortrag von Tobias am Sonntag au
 
 ## Slides
 
-[Slides vom Vortrag (PDF, ~13 MB)](/images/posts/bits-baume-parkplatzzaehlung-und-parkraumanalysen-mit-openstreetmap.pdf)
+[Slides vom Vortrag (PDF, ~13 MB)](/public/images/posts/bits-baume-parkplatzzaehlung-und-parkraumanalysen-mit-openstreetmap.pdf)
 
 ## Video
 
