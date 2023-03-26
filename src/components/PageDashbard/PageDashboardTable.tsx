@@ -33,6 +33,14 @@ export const regionExportUrl = (regionKey: string) => {
   return `https://vts.mapwebbing.eu/export/region_${regionKey}.geojson`
 }
 
+const ApiUrl: React.FC<Props> = ({ regionKey }) => {
+  return (
+    <div className="text-gray-9 00 border-t border-t-gray-300 bg-gray-50 py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
+      API URL <code>{regionExportUrl(regionKey)}</code>
+    </div>
+  )
+}
+
 const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
@@ -120,7 +128,12 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
   // })
 
   if (!city) {
-    return <p className="px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</p>
+    return (
+      <div>
+        <p className="px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</p>
+        <ApiUrl regionKey={regionKey} />
+      </div>
+    )
   }
 
   return (
@@ -228,9 +241,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
           </>
         </tbody>
       </table>
-      <div className="text-gray-9 00 border-t border-t-gray-300 bg-gray-50 py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
-        API URL <code>{regionExportUrl(regionKey)}</code>
-      </div>
+      <ApiUrl regionKey={regionKey} />
       {/* <details className="mt-10" open id="debugOutput">
         <summary>Debug Output</summary>
         <pre>{JSON.stringify(debugStructure, undefined, 2)}</pre>
