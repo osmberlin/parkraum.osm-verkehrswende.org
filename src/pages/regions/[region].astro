@@ -1,4 +1,5 @@
 ---
+import regions from '@data/regions.json'
 import SvgMap from '@assets/icons/Map.svg'
 import SvgTableCells from '@assets/icons/TableCells.svg'
 import SvgArrowSmall from '@assets/icons/ArrowSmall.svg'
@@ -6,20 +7,21 @@ import SvgPresentationChartBar from '@assets/icons/PresentationChartBar.svg'
 import Notice from '@components/Notice.astro'
 import { PageDashboardDate } from '@components/PageDashbard/PageDashboardDate'
 import { PageDashboardTable } from '@components/PageDashbard/PageDashboardTable'
-import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 import { atlasUrl } from '@components/regions/utils/atlasUrl'
+import type { fetchRegionWithGeodata } from '@data/fetchRegions'
 
 export async function getStaticPaths() {
-  const githubFilesWithContent = await fetchRegionWithContent()
-  const regions = await githubFilesWithContent.map((region) => {
-    return { params: { region: region.slug }, props: { data: region } }
-  })
-
-  return regions
+  return regions.regions
+    .filter((region) => !!region.center)
+    .map((region) => {
+      return { params: { region: region.slug }, props: { data: region } }
+    })
 }
 
-const { data } = Astro.props
+type Data = { data: Awaited<ReturnType<typeof fetchRegionWithGeodata>>[number] }
+
+const { data } = Astro.props as Data
 ---
 
 <script is:inline>
@@ -80,17 +82,27 @@ const { data } = Astro.props
     <img src={SvgTableCells} class="my-0 h-8 w-8" alt="" />
     Datenexport für {data.name}
   </h2>
-  <div>
-    <p><em>Der Datenexport für {data.name} ist noch in Arbeit.</em></p>
-    <p>
-      Bitte beachte, dass die <strong>Datenqualität je nach Straße sehr unterschiedlich</strong> sein
-      kann. Hinweise dazu, mit welcher Genauigkeit zu rechnen ist, haben wir in unserem Artikel
-      <a href="/posts/2022-09-09-stichprobenpruefung">Stichprobenprüfung Datenqualität</a> und
-      <a href="/posts/2022-07-15-einflussfaktoren-datenqualitaet"
-        >Einflussfaktoren auf die Datenqualität</a
-      > beschrieben.
-    </p>
-  </div>
+  <p>
+    Bitte beachte, dass die <strong>Datenqualität je nach Straße sehr unterschiedlich</strong> sein kann.
+    Hinweise dazu, mit welcher Genauigkeit zu rechnen ist, haben wir in unserem Artikel
+    <a href="/posts/2022-09-09-stichprobenpruefung">Stichprobenprüfung Datenqualität</a> und
+    <a href="/posts/2022-07-15-einflussfaktoren-datenqualitaet"
+      >Einflussfaktoren auf die Datenqualität</a
+    > beschrieben.
+  </p>
+  <ul>
+    {
+      Object.entries(data.exports).map(([name, value]) => {
+        return (
+          <li>
+            <a href={value.url} download>
+              Download {value.format} <code>{name}</code> ({value.updatedAt})
+            </a>
+          </li>
+        )
+      })
+    }
+  </ul>
 
   <h2 class="mb-8 flex items-center gap-2">
     <img src={SvgPresentationChartBar} class="my-0 h-8 w-8" alt="" />
@@ -99,7 +111,7 @@ const { data } = Astro.props
   <PageDashboardDate client:idle />
   <div class="flex flex-col">
     <div class="overflow-hidden shadow ring-1 ring-black/5 md:rounded-lg">
-      <PageDashboardTable client:load regionKey={data.slug} />
+      <PageDashboardTable client:load apiUrl={data.region} name={data.name} />
     </div>
   </div>
 

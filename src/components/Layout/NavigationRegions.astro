@@ -1,5 +1,5 @@
 ---
-import { fetchRegionWithContent } from '@components/regions/utils/fetchRegions'
+import regions from '@data/regions.json'
 import { atlasUrl } from '@components/regions/utils/atlasUrl'
 import clsx from 'clsx'
 import SvgMap from '@assets/icons/Map.svg'
@@ -8,7 +8,7 @@ export interface Props {
   menuHighlight: string | undefined
 }
 
-const regions = (await fetchRegionWithContent()).filter((r) => r.slug !== 'berlin')
+const filteredRegions = regions.regions.filter((r) => r.slug !== 'berlin')
 const { menuHighlight } = Astro.props
 const { pathname: currentPathname } = Astro.url
 ---
@@ -65,7 +65,9 @@ const { pathname: currentPathname } = Astro.url
   </div>
 
   {
-    regions.map((region) => {
+    filteredRegions.map((region) => {
+      if (!region.center) return null
+
       return (
         <div class="flex items-stretch border-b border-gray-200">
           <a

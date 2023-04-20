@@ -1,15 +1,17 @@
-import { keyToName } from '@components/regions/utils/keyToName'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
 const queryClient = new QueryClient()
 
-type Props = { regionKey: string }
+type Props = {
+  apiUrl: string
+  name: string
+}
 
-export const PageDashboardTable: React.FC<Props> = ({ regionKey }) => {
+export const PageDashboardTable: React.FC<Props> = ({ apiUrl, name }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <PageDashboardTableContent regionKey={regionKey} />
+      <PageDashboardTableContent apiUrl={apiUrl} name={name} />
     </QueryClientProvider>
   )
 }
@@ -29,22 +31,18 @@ type Response = {
   childs?: any
 }
 
-export const regionExportUrl = (regionKey: string) => {
-  return `https://vts.mapwebbing.eu/export/region_${regionKey}.geojson`
-}
-
-const ApiUrl: React.FC<Props> = ({ regionKey }) => {
+const ApiUrl = ({ apiUrl }: { apiUrl: string }) => {
   return (
     <div className="text-gray-9 00 border-t border-t-gray-300 bg-gray-50 py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
-      API URL <code>{regionExportUrl(regionKey)}</code>
+      API URL <code>{apiUrl}</code>
     </div>
   )
 }
 
-const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
+const PageDashboardTableContent: React.FC<Props> = ({ apiUrl, name }) => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
-    queryFn: () => axios.get(regionExportUrl(regionKey)).then((res) => res.data),
+    queryFn: () => axios.get(apiUrl).then((res) => res.data),
   })
 
   if (isLoading || isFetching) return <i>Lade Daten…</i>
@@ -77,9 +75,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
 
     // For Kiel, we start at admin_level 10, so the code above will not add any data.
     if (!Object.keys(suburbs).length) {
-      suburbs[keyToName(regionKey)] = flatFeatureProperties?.filter(
-        (p: any) => p.admin_level === 10
-      )
+      suburbs[name] = flatFeatureProperties?.filter((p: any) => p.admin_level === 10)
     }
   }
 
@@ -131,7 +127,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
     return (
       <div>
         <p className="px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</p>
-        <ApiUrl regionKey={regionKey} />
+        <ApiUrl apiUrl={apiUrl} />
       </div>
     )
   }
@@ -241,7 +237,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ regionKey }) => {
           </>
         </tbody>
       </table>
-      <ApiUrl regionKey={regionKey} />
+      <ApiUrl apiUrl={apiUrl} />
       {/* <details className="mt-10" open id="debugOutput">
         <summary>Debug Output</summary>
         <pre>{JSON.stringify(debugStructure, undefined, 2)}</pre>
