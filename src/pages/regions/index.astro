@@ -26,7 +26,7 @@ const allRegions = regions.regions
               </>
               Zentrum:{' '}
               <a
-                href={`https://www.openstreetmap.org/#map=12/${region.center.reverse().join('/')}`}
+                href={`https://www.openstreetmap.org/#map=12/${region.center[1]}/${region.center[0]}}`}
               >
                 <code>{JSON.stringify(region.center)}</code>
               </a>
