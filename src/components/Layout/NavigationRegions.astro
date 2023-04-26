@@ -75,7 +75,7 @@ const { pathname: currentPathname } = Astro.url
             class={clsx(
               currentPathname === `/regions/${region.slug}` ? 'menu-active' : 'hover:bg-blue-50',
               region.slug === 'berlin' ? 'font-bold' : '',
-              'flex-grow truncate py-2 px-4'
+              'flex-grow truncate px-4 py-2'
             )}
             title={region.name}
           >
