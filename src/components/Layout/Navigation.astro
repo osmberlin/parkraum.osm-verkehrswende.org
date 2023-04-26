@@ -17,14 +17,16 @@ const { layoutType, menuHighlight } = Astro.props
 
 <nav
   class={clsx(
-    { 'overflow-y-scroll': layoutType === 'app' },
-    'relative z-[1001] w-full px-3 py-3 shadow-xl lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none mb-10 sm:mb-0'
+    { 'overflow-y-scroll bg-white': layoutType === 'app' },
+    { 'mb-10': layoutType !== 'app' },
+    'relative z-[1001] w-full px-3 py-3 shadow-xl lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none sm:mb-0 flex-none'
   )}
   lang="de"
 >
   <a href="/"
     ><h1 class="text-xl font-semibold !leading-[1.8rem] lg:text-2xl">
-      OpenStreetMap Parkraum Projekt
+      <span class="hidden lg:inline">OpenStreetMap</span>
+      <span class="lg:hidden">OSM</span> Parkraum Projekt
     </h1>
   </a>
   <p class="text-sm text-gray-400 lg:mb-5">
@@ -47,7 +49,7 @@ const { layoutType, menuHighlight } = Astro.props
     </svg>
   </button>
 
-  <div data-show-hide-target="navi" class="hidden transition-all duration-150 lg:block">
+  <div data-show-hide-target="navi" class="z-[2000] hidden transition-all duration-150 lg:block">
     <NavigationGeneral menuHighlight={menuHighlight} />
     <NavigationRegions menuHighlight={menuHighlight} />
     <NavigationNews menuHighlight={menuHighlight} />
