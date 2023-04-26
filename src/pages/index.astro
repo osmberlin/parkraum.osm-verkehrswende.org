@@ -56,28 +56,29 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
       <li>
         <strong>Welche Daten:</strong> Unser Fokus liegt auf dem Parken im öffentlichen Straßenraum,
         das in OpenStreetMap mit dem
-        <code>Street Parking</code>-Schema erfasst wird. Den Parkraum abseits des Straßenraums, also
-        öffentliche und private Parkplätze (inkl. Tiefgaragen, Parkhäusern, Garagen) möchten wir
-        später ebenfalls einbeziehen bzw. tun dies zum Teil bereits.
+        <a href="https://wiki.openstreetmap.org/wiki/DE:Street_parking"
+          ><code>Street Parking</code>-Schema</a
+        > erfasst wird. Den Parkraum abseits des Straßenraums, also öffentliche und private Parkplätze
+        (inkl. Tiefgaragen, Parkhäusern, Garagen) stellen wir ebenfalls dar – entsprechend der <a
+          href="https://wiki.openstreetmap.org/wiki/DE:Good_practice">Guidelines von OSM</a
+        >.
       </li>
       <li>
-        <strong>OpenStreetMap</strong> – Ziel ist, die Analysen zu möglichst 100&nbsp;% auf OpenStreetMap-Daten
-        zu basieren.
+        <strong>OpenStreetMap</strong> – Die Analysen basieren zu 100&nbsp;% auf OpenStreetMap-Daten.
       </li>
       <li>
-        <strong>OpenData, OpenSource</strong> – Ziel ist, alle Projektbestandteile offen zu entwickeln
-        und offen bereitzustellen.
+        <strong>OpenData, OpenSource</strong> – Alle Projektbestandteile sind OpenSource und OpenData.
       </li>
       <li>
-        Global denken, lokal handeln — Wir fokussieren uns auf Berlin aber denken bei unserer Arbeit
-        an die Skalierung auf weitere Städte, ganz Deutschland und darüber hinaus.
+        Global denken, lokal handeln — Unsere Pilotgebiet ist Berlin aber wir denken bei unserer
+        Arbeit an die Skalierung auf weitere Regionen, ganz Deutschland und darüber hinaus.
       </li>
     </ul>
 
     <p>
       <em>Nicht-Ziele:</em> Das
       <strong>Interpolieren von Parkraumdaten</strong> an Orten, an denen noch keine Parkstreifen-Informationen
-      in OSM erfasst wurden, ist zur Zeit nicht Teil des Projektes. Lieber möchten wir zur tatsächlichen
+      in OSM erfasst wurden, ist nicht Teil des Projektes. Stattdessen möchten wir zur tatsächlichen
       Vervollständigung der Daten motivieren.
     </p>
   </div>
@@ -86,26 +87,27 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     id="project-vector-tiles"
     class="target:notice target:bg-purple-100 hover:bg-purple-50 hover:ring-8 hover:ring-purple-50"
   >
-    <h2 class="mb-3">Projekt Parkraum Berlin (Vector Tiles)</h2>
+    <h2 class="mb-3">Projekt Parkraum Regionen (Vector Tiles)</h2>
 
     <p>
-      In unserem neusten Projekt haben wir uns zum Ziel gesetzt, die Erfahrungen aus dem Prototyp
-      Neukölln auf eine skalierbare technische Basis zu heben.
+      Basierend auf den Erfahrungen des "Prototyp Neukölln" haben wir eine skalierbare Datenpipeline
+      entwickelt, die es erlaubt, verschiedene Regionen in Deutschland in kurzer Zeit zu
+      verarbeiten. Wir setzen dabei auf OpenSource Software wie osm2pgsql und PostGIS und liefern
+      die Daten als Vector Tiles und tägliche Daten-Exporte aus.
     </p>
     <p>
-      Innerhalb von ~15 Minuten können wir Daten für ganz Berlin generieren, die als sogenannte
-      Vector Tiles ausgeliefert werden können. Diese Daten erlauben es, interaktive Karten (man kann
-      bspw. Segemente anklicken um sie zu summieren) mit unterschiedlichen Visualisierungen zu
-      bauen.
-    </p>
-
-    <p>
-      <a href="/project-vector-tiles" class="button-outline">Zur Karte</a>
+      Auf einer interaktiven Karte kann man die Daten analysieren. Mit unserer "Debug" Ansicht kann
+      man die Prozessierung der Daten nachvollziehen. Und zur einfachen Addition von Stellplätzen
+      gibt es ein praktisches Summierungstool.
     </p>
 
     <p>
-      <a href="https://github.com/osmberlin/osm-parking-processing"
-        ><strong>Code: GitHub</strong> (Code zum generieren der Vector Tiles)</a
+      <a href="/regions/berlin/" class="button-outline">Zur Karte und zum Export für Berlin</a>
+    </p>
+
+    <p>
+      <a href="/github#projekt-parkraum-berlin-vector-tiles"
+        ><strong>Code: GitHub</strong> (Code zum generieren der Vector Tiles, Exporte, WebGIS)</a
       >
     </p>
   </div>
@@ -137,12 +139,13 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </p>
 
     <p>
-      <a href="/project-prototype-neukoelln" class="button-outline">Zur Karte</a>
-      <a href="/project-prototype-neukoelln/data" class="button-outline">Daten</a>
+      <a href="/project-prototype-neukoelln/data" class="button-outline"
+        >Zur Karte und zum Export für Neukölln</a
+      >
     </p>
 
     <p>
-      <a href="https://github.com/SupaplexOSM/street_parking.py"
+      <a href="/github#projekt-prototyp-neuk%C3%B6lln-parkraumkarte"
         ><strong>Code: GitHub</strong> (Python Skripte zu Erstellen der Datengrundlage für die Parkraumkarte)</a
       >
     </p>
@@ -160,6 +163,11 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
       <a href="https://www.fixmycity.de">FixMyCity</a> zusammengeschlossen um in einer gemeinsamen Kampagne
       zusammen mit zivilgesellschaftlichen Akteuren Parkraumdaten für Xhain zu erfassen. Teil des Projektes
       ist auch, die Datenqualität zusammen mit dem Bezirksamt zu prüfen.
+    </p>
+    <p>
+      Seit Anfang 2023 steht <a href="https://www.geodaten-fk.de/MeinXhain/Portal/#"
+        >im GeoPortal von Friedrichshain-Kreuzberg</a
+      > ein offiziell geprüfter Datensatz zur Nutzung bereit.
     </p>
     <p>
       Mehr Informationen
@@ -181,8 +189,8 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     <h2 class="mb-3">Förderung Prototype Fund</h2>
 
     <p>
-      Im Zeitraum September 2022 bis Februar 2023 wird dieses Projekt durch den Prototype Fund des
-      Bundesministeriums für Bildung und Forschung gefördert.
+      Im Zeitraum September 2022 bis Februar 2023 wurde dieses Projekt durch den Prototype Fund
+      (Runde 12) des Bundesministeriums für Bildung und Forschung gefördert.
       <a href="/posts/2022-09-01-prototype-fund">Mehr erfahren…</a>
     </p>
     <div class="grid grid-cols-3 items-start justify-start gap-3">

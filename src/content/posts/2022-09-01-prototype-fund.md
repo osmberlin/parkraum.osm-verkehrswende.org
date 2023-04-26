@@ -8,7 +8,7 @@ inMenu: true
 show_toc: true
 ---
 
-Mit unserer [Parkraumanalyse für den Berliner Ortsteil Neukölln](https://parkraum.osm-verkehrswende.org/posts/2021-03-12-parkraumanalyse) haben wir gezeigt, dass OSM-Daten dazu geeignet sind, präzise Analysen und Zählungen zum Parken im öffentlichen Straßenraum durchzuführen. Solche Daten werden im Zuge der Verkehrswende immer wichtiger, denn sie können eine wichtige – und derzeit meist fehlende – Planungs- und Diskussionsgrundlage für Verkehrs- und Stadtentwicklungsprozesse sein.
+Mit unserer [Parkraumanalyse für den Berliner Ortsteil Neukölln](/posts/2021-03-10-parkraumanalyse/) haben wir gezeigt, dass OSM-Daten dazu geeignet sind, präzise Analysen und Zählungen zum Parken im öffentlichen Straßenraum durchzuführen. Solche Daten werden im Zuge der Verkehrswende immer wichtiger, denn sie können eine wichtige – und derzeit meist fehlende – Planungs- und Diskussionsgrundlage für Verkehrs- und Stadtentwicklungsprozesse sein.
 
 Wir sind dabei, diese Methode über ihren "Proof of Conept" hinaus weiterzuentwickeln und erhalten dafür nun Unterstützung vom [Prototype Fund](https://prototypefund.de/)! Der Prototype Fund ist ein Förderprogramm des [Bundesministeriums für Bildung und Forschung](https://www.bmbf.de/) in Kooperation mit der [Open Knowledge Foundation Deutschland](https://okfn.de/), das Open-Source-Projekte zur Umsetzung neuer Ideen mit finanziellen und ideellen Mittel unterstützt. Konkret heißt das, dass wir zu dritt im nächsten halben Jahr – zwischen September 2022 und Februar 2023 – in Teilzeit an der Weiterentwicklung der Parkraumanalyse-Methode arbeiten können. (Zur [Projektbeschreibung beim Prototype Fund](https://prototypefund.de/project/parkraumdaten-aus-openstreetmap-prozessierung-und-visualisierung/).)
 
