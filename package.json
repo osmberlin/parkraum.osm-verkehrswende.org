@@ -13,7 +13,7 @@
     "type-check": "astro check && tsc --skipLibCheck",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro|mdx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro|mdx)\" --write",
-    "check": "npm run type-check && npm run lint && npm run format",
+    "check": "npm run type-check && npm run format && npm run lint",
     "prepare": "husky install"
   },
   "dependencies": {
