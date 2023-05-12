@@ -2,7 +2,7 @@ import { bbox, centerOfMass } from '@turf/turf'
 import axios from 'axios'
 import fs from 'fs'
 
-type TRawRegionDataset = {
+type TRawRegionExport = {
   name: string
   file_type: 'gpkg' | 'geojson'
   lastUpdate: string
@@ -11,11 +11,11 @@ type TRawRegion = {
   name: string
   label: string
   lastUpdate: string
-  datasets: TRawRegionDataset[]
+  exports: TRawRegionExport[]
 }
 type TRawRegionsResult = {
   regions: { region: TRawRegion[] }
-  dataset_url_prefix: string
+  export_url_prefix: string
   license: string
 }
 
@@ -23,13 +23,13 @@ export const fetchRegions = async () => {
   const apiUrl = 'https://vts.mapwebbing.eu/export/exports.json'
   const { data: rawRegionsResult } = await axios.get<TRawRegionsResult>(apiUrl)
 
-  const exportUrlTemplate = `${rawRegionsResult.dataset_url_prefix}%REGION%/%DATASET%_%REGION%.%FILETYPE%`
+  const exportUrlTemplate = `${rawRegionsResult.export_url_prefix}%REGION%/%DATASET%_%REGION%.%FILETYPE%`
 
   // This is potentially a ly, but it gets us nice autocomplete in our views.
   type Dataset = {
     name: string
     url: string
-    format: TRawRegionDataset['file_type']
+    format: TRawRegionExport['file_type']
     updatedAt: string
   }
   type Datasets = {
@@ -38,31 +38,31 @@ export const fetchRegions = async () => {
     parking_segments: Dataset
   }
 
-  const resolveUrlTemplate = (regionName: string, dataset: TRawRegionDataset | undefined) => {
-    if (!dataset) return
+  const resolveUrlTemplate = (regionName: string, eexport: TRawRegionExport | undefined) => {
+    if (!eexport) return
     return exportUrlTemplate
       .replaceAll('%REGION%', regionName)
-      .replaceAll('%DATASET%', dataset.name)
-      .replaceAll('%FILETYPE%', dataset.file_type)
+      .replaceAll('%DATASET%', eexport.name === 'summary' ? 'region' : eexport.name)
+      .replaceAll('%FILETYPE%', eexport.file_type)
   }
 
   const regions = rawRegionsResult.regions.region.map((region) => {
-    const exports = Object.fromEntries(
-      region.datasets
-        .filter((dataset) => dataset.name !== 'region')
-        .map((dataset) => {
-          const url = resolveUrlTemplate(region.name, dataset)
-          return [dataset.name, { url, format: dataset.file_type, updatedAt: dataset.lastUpdate }]
+    const eexports = Object.fromEntries(
+      region.exports
+        .filter((eexport) => eexport.name !== 'summary')
+        .map((eexport) => {
+          const url = resolveUrlTemplate(region.name, eexport)
+          return [eexport.name, { url, format: eexport.file_type, updatedAt: eexport.lastUpdate }]
         })
     ) as Datasets
 
     return {
       slug: region.name,
       name: region.label,
-      exports,
+      exports: eexports,
       region: resolveUrlTemplate(
         region.name,
-        region.datasets.find((d) => d.name === 'region')
+        region.exports.find((d) => d.name === 'summary')
       ) as string, // todo: find a nicer way to type this
     }
   })
