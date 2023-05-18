@@ -215,7 +215,7 @@
       },
       "region": "https://vts.mapwebbing.eu/export/braunschweig/region_braunschweig.geojson",
       "bounds": [10.4124522000000006,52.1867941999999942, 10.6433892000000014,52.3573831000000069],
-      "center": [52.26749, 10.52232]
+      "center": [10.52232, 52.26749]
     }
   ]
 }
