@@ -198,17 +198,17 @@
       "name": "Braunschweig",
       "exports": {
         "parking_lanes": {
-          "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_lanes_braunschweig.gpkg",
+          "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_lanes_braunschweig.gpkg",
           "format": "gpkg",
           "updatedAt": "18.05.2023"
         },
         "parking_spaces": {
-          "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_spaces_braunschweig.gpkg",
+          "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_spaces_braunschweig.gpkg",
           "format": "gpkg",
           "updatedAt": "18.05.2023"
         },
         "parking_segments": {
-          "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_segments_braunschweig.gpkg",
+          "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_segments_braunschweig.gpkg",
           "format": "gpkg",
           "updatedAt": "18.05.2023"
         }
