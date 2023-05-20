@@ -1,3 +1,4 @@
+import { Link } from '@components/Link'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
@@ -5,41 +6,44 @@ const queryClient = new QueryClient()
 
 type Props = {
   apiUrl: string
-  name: string
 }
 
-export const PageDashboardTable: React.FC<Props> = ({ apiUrl, name }) => {
+export const PageDashboardTable: React.FC<Props> = ({ apiUrl }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <PageDashboardTableContent apiUrl={apiUrl} name={name} />
+      <PageDashboardTableContent apiUrl={apiUrl} />
     </QueryClientProvider>
   )
 }
-type Response = {
+
+const ApiUrl = ({ apiUrl }: { apiUrl: string }) => {
+  return (
+    <div className="py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
+      API URL{' '}
+      <Link to={apiUrl} blank>
+        <code>{apiUrl}</code>
+      </Link>
+    </div>
+  )
+}
+
+type Properties = {
   id: number
   name: string
-  parent_id: number | null
-  parent_name: number | null
   admin_level: number
-  aera_sqkm: number
+  area_sqkm: number
   street_side_km: number
   lane_km: number
   d_other_km: number
   sum_km: number
   length_wo_dual_carriageway: number
   done_percent: number
-  childs?: any
+  geom_label: GeoJSON.Point
+  childs?: GeoJSON.Feature<GeoJSON.MultiPolygon, Omit<Properties, 'childs'>>[]
 }
+type Feature = GeoJSON.Feature<GeoJSON.MultiPolygon, Properties>
 
-const ApiUrl = ({ apiUrl }: { apiUrl: string }) => {
-  return (
-    <div className="text-gray-9 00 border-t border-t-gray-300 bg-gray-50 py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
-      API URL <code>{apiUrl}</code>
-    </div>
-  )
-}
-
-const PageDashboardTableContent: React.FC<Props> = ({ apiUrl, name }) => {
+const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
     queryFn: () => axios.get(apiUrl).then((res) => res.data),
@@ -47,83 +51,117 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl, name }) => {
 
   if (isLoading || isFetching) return <i>Lade Daten…</i>
 
-  let city: Response[] = []
-  let districts: Response[] = []
-  const suburbs: Record<string, Response[]> = {}
-  if (data) {
-    const flatFeatureProperties = data.features?.map((feature: any) => feature.properties)
-
-    city = flatFeatureProperties?.filter(
-      (p: any) => p.admin_level === 4 && p.name !== 'Brandenburg'
+  // Thanks ChatGPT
+  function filterByUniqueID(objects: Result[]) {
+    const uniqueObjects: Result[] = Object.values(
+      objects.reduce((acc: { [unique_id: string]: Result }, obj) => {
+        if (!acc[obj.unique_id] || obj.admin_level > (acc[obj.unique_id]?.admin_level || 0)) {
+          acc[obj.unique_id] = obj
+        }
+        return acc
+      }, {})
     )
 
-    // In Hannover, the output does not have admin_level 9, so we need to jump to the districts directly.
-    const cityOrUseDistrictsDireclty =
-      city?.[0]?.childs?.map((feature: any) => feature.properties) || flatFeatureProperties
-
-    districts = cityOrUseDistrictsDireclty?.filter((p: any) => p.admin_level === 9)
-
-    districts?.forEach((district) => {
-      const topLevelDistrict = data.features
-        .map((feature: any) => feature.properties)
-        .filter((p: any) => p.admin_level === 9 && p.name === district.name)
-
-      suburbs[district.name] = topLevelDistrict?.[0]?.childs
-        ?.map((feature: any) => feature.properties)
-        ?.filter((p: any) => p.admin_level === 10)
-    })
-
-    // For Kiel, we start at admin_level 10, so the code above will not add any data.
-    if (!Object.keys(suburbs).length) {
-      suburbs[name] = flatFeatureProperties?.filter((p: any) => p.admin_level === 10)
-    }
+    return uniqueObjects
   }
 
-  // See https://docs.google.com/spreadsheets/d/1mgIu-WV_OtLKdX6gt6JUfze-iTXXh8jLByi3o-wmd04/edit#gid=0
-  // const debugOutput = structuredClone(data)
-  // const debugStructure: any[] = []
-  // debugOutput.features.forEach((d: any) => {
-  //   debugStructure.push(
-  //     [
-  //       'name',
-  //       d.properties.name,
-  //       'level',
-  //       d.properties.admin_level,
-  //       'name',
-  //       '.',
-  //       'level',
-  //       '.',
-  //       '%',
-  //       d.properties.done_percent,
-  //       'children-prop-count',
-  //       d?.properties?.childs?.length,
-  //     ].join(';')
-  //   )
-  //   d.geometry = '__REMOVED__'
-  //   d.properties.geom_label = '__REMOVED__'
-  //   d?.properties?.childs?.forEach((c: any) => {
-  //     debugStructure.push(
-  //       [
-  //         'name',
-  //         d.properties.name,
-  //         'level',
-  //         d.properties.admin_level,
-  //         'name',
-  //         c.properties.name,
-  //         'level',
-  //         c.properties.admin_level,
-  //         '%',
-  //         c.properties.done_percent,
-  //         'children-prop-count',
-  //         c.properties?.childs?.length,
-  //       ].join(';')
-  //     )
-  //     c.geometry = '__REMOVED__'
-  //     c.properties.geom_label = '__REMOVED__'
-  //   })
-  // })
+  // Thanks ChatGPT
+  function groupByCombination(objects: Result[]) {
+    const groupedObjects: { [key: string]: Result[] } = {}
 
-  if (!city) {
+    objects.forEach((obj) => {
+      const key = `${obj.table_level}--${obj.parent_name}`
+      if (!groupedObjects[key]) {
+        groupedObjects[key] = []
+      }
+      // @ts-ignore "Object is possibly 'undefined'." is not true here
+      groupedObjects[key].push(obj)
+    })
+
+    const filteredGroupedObjects: { [key: string]: Result[] } = {}
+    Object.keys(groupedObjects).forEach((key) => {
+      // @ts-ignore "Object is possibly 'undefined'." is not true here
+      if (groupedObjects[key].length > 1) {
+        // @ts-ignore Type 'undefined' is not assignable to type 'Result[]'.ts is not true here
+        filteredGroupedObjects[key] = groupedObjects[key]
+      }
+    })
+
+    return filteredGroupedObjects
+  }
+
+  type Result = {
+    table_level: number
+    unique_id: string
+    parent_name: string
+    parent_admin_level: number
+    parent_id: number
+  } & Omit<Properties, 'child' | 'geom_label'>
+
+  const result: Result[] = []
+  const pushLine = (
+    tableLevel: number,
+    parentName: string,
+    parentAdminLevel: number,
+    parentId: number,
+    properties: Properties
+  ) => {
+    result.push({
+      table_level: tableLevel,
+      unique_id: `${properties.id}--${properties.admin_level}--${properties.name}`,
+      parent_name: parentName,
+      parent_admin_level: parentAdminLevel,
+      parent_id: parentId,
+      // Properties
+      id: properties.id,
+      name: properties.name,
+      admin_level: properties.admin_level,
+      area_sqkm: properties.area_sqkm,
+      street_side_km: properties.street_side_km,
+      lane_km: properties.lane_km,
+      d_other_km: properties.d_other_km,
+      sum_km: properties.sum_km,
+      length_wo_dual_carriageway: properties.length_wo_dual_carriageway,
+      done_percent: properties.done_percent,
+    })
+  }
+
+  if (data) {
+    const features = data.features as Feature[]
+    // Level 1
+    features.forEach((level1) => {
+      pushLine(
+        1,
+        '(Oberste Ebene)',
+        level1.properties.admin_level,
+        level1.properties.id,
+        level1.properties
+      )
+      // Level 2
+      if (level1.properties.childs) {
+        level1.properties.childs.forEach((level2) => {
+          // The children layer only go 1 level deep.
+          // After this, we need to use the admin_level to create our hierarchy
+          pushLine(
+            level2.properties.admin_level === 10 ? 3 : level2.properties.admin_level === 9 ? 2 : 99,
+            `${level1.properties.name} (Admin Level ${level2.properties.admin_level})`,
+            level1.properties.admin_level,
+            level1.properties.id,
+            level2.properties
+          )
+        })
+      }
+    })
+  }
+  const filteredResult = filterByUniqueID(result)
+  const filteredGroupedResult = groupByCombination(filteredResult)
+  if (error) {
+    console.log('result', result)
+    console.log('unique', filteredResult)
+    console.log('grouped', filteredGroupedResult)
+  }
+
+  if (!filteredGroupedResult) {
     return (
       <div>
         <p className="px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</p>
@@ -134,114 +172,68 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl, name }) => {
 
   return (
     <>
-      <div className="border-b border-b-gray-300 bg-gray-50 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
-        {city.map((c) => (
-          <div key={c.name}>
-            {c.name}: {c.done_percent.toLocaleString('de-DE', { minimumFractionDigits: 1 })}
-            &thinsp;%
+      {error && (
+        <div className="my-10 px-4 text-sm text-red-400 sm:pl-6">Fehler beim Laden der Daten</div>
+      )}
+
+      {Object.entries(filteredGroupedResult).map(([key, values]) => {
+        const [_tableLevel, tableHead] = key.split('--')
+        return (
+          <div key={key} className="mb-10 flex flex-col">
+            <div className="overflow-hidden shadow ring-1 ring-black/5 md:rounded-lg">
+              <table className="!my-0 min-w-full divide-y divide-gray-300">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="py-3.5 pl-4 pr-3 text-left text-sm text-gray-900 sm:pl-6"
+                    >
+                      <strong className="font-semibold">{tableHead}</strong>{' '}
+                      <span className="font-normal text-gray-500">– Stadt/Bezirk/Stadtteil</span>
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    ></th>
+                    <th
+                      scope="col"
+                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    >
+                      Anteil gemapped
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {values.map((value) => {
+                    return (
+                      <tr key={value.id}>
+                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                          {value.name}
+                        </td>
+                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-500 sm:pl-6">
+                          {value.parent_name}
+                        </td>
+                        <td className="relative w-52 whitespace-nowrap px-3 py-4 text-xl text-gray-500">
+                          {value.done_percent.toLocaleString('de-DE', {
+                            minimumFractionDigits: 1,
+                          })}
+                          &thinsp;%
+                          <div
+                            className="absolute inset-y-0 -z-10 bg-teal-500 opacity-20"
+                            style={{ width: `${value.done_percent}%` }}
+                          />
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
-        ))}
-      </div>
-      <table className="!my-0 min-w-full divide-y divide-gray-300">
-        {Boolean(districts?.length) && (
-          <thead className="bg-gray-50">
-            <tr>
-              <th
-                scope="col"
-                className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-              >
-                Bezirk
-              </th>
-              <th
-                scope="col"
-                className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-              ></th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                Anteil gemapped
-              </th>
-            </tr>
-          </thead>
-        )}
-        <tbody>
-          <>
-            {districts?.map((district) => {
-              return (
-                <tr key={district.id}>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                    {district.name}
-                  </td>
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                    {district.parent_name}
-                  </td>
-                  <td className="relative whitespace-nowrap px-3 py-4 text-xl text-gray-500">
-                    {district.done_percent.toLocaleString('de-DE', { minimumFractionDigits: 1 })}
-                    &thinsp;%
-                    <div
-                      className="absolute inset-y-0 -z-10 bg-teal-500 opacity-20"
-                      style={{ width: `${district.done_percent}%` }}
-                    />
-                  </td>
-                </tr>
-              )
-            })}
-            <tr className="bg-gray-50">
-              <th
-                colSpan={3}
-                className="border-t border-t-gray-300 py-3.5 pl-4 pr-3 text-left text-sm font-bold text-gray-900 sm:pl-6"
-              >
-                Ortsteile
-              </th>
-            </tr>
-            <tr className="bg-gray-50">
-              <th
-                scope="col"
-                className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-              >
-                Bezirk
-              </th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                Ortsteil
-              </th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                Anteil gemapped
-              </th>
-            </tr>
-            {error ? (
-              <tr>
-                <td colSpan={3} className="px-4 text-sm text-red-400 sm:pl-6">
-                  Fehler beim Laden der Daten
-                </td>
-              </tr>
-            ) : (
-              Object.entries(suburbs)?.map(([districtName, districtSuburbs]) => {
-                return districtSuburbs.map((suburb) => {
-                  return (
-                    <tr key={suburb.id}>
-                      <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                        {districtName}
-                      </td>
-                      <td className="px-3 py-4 text-sm font-medium text-gray-900">{suburb.name}</td>
-                      <td className="relative whitespace-nowrap px-3 py-4 text-xl text-gray-500">
-                        {suburb.done_percent.toLocaleString('de-DE', { minimumFractionDigits: 1 })}
-                        &thinsp;%{}
-                        <div
-                          className="absolute inset-y-0 -z-10 bg-emerald-500 opacity-20"
-                          style={{ width: `${suburb.done_percent}%` }}
-                        />
-                      </td>
-                    </tr>
-                  )
-                })
-              })
-            )}
-          </>
-        </tbody>
-      </table>
+        )
+      })}
+
       <ApiUrl apiUrl={apiUrl} />
-      {/* <details className="mt-10" open id="debugOutput">
-        <summary>Debug Output</summary>
-        <pre>{JSON.stringify(debugStructure, undefined, 2)}</pre>
-      </details> */}
     </>
   )
 }

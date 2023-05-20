@@ -107,11 +107,7 @@ const { data } = Astro.props as Data
     Statistik für {data.name}
   </h2>
   <PageDashboardDate client:idle />
-  <div class="flex flex-col">
-    <div class="overflow-hidden shadow ring-1 ring-black/5 md:rounded-lg">
-      <PageDashboardTable client:load apiUrl={data.region} name={data.name} />
-    </div>
-  </div>
+  <PageDashboardTable client:load apiUrl={data.region} />
 
   <Notice className="mt-10">
     <strong>Hinweis zum OpenStreetMap Parkraum-Schema</strong><br />
