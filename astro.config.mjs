@@ -26,4 +26,9 @@ export default defineConfig({
     remarkPlugins: [remarkToc],
   },
   site: 'https://parkraum.osm-verkehrswende.org/',
+  experimental: { redirects: true },
+  redirects: {
+    '/project-vector-tiles/dashboard': '/regions/berlin',
+    '/project-vector-tiles/data': '/regions/berlin',
+  },
 })

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "01.07.2024, 11:15:23",
+  "updatedAt": "18.6.2023, 05:44:37",
   "regions": [
     {
       "slug": "berlin",
@@ -311,7 +311,7 @@
       },
       "region": "https://vts.mapwebbing.eu/export/freiburg/region_freiburg.geojson",
       "bounds": [7.6620055, 47.9035777, 7.9308444, 48.0710579],
-      "center": [7.82960, 48.00059]
+      "center": [7.8296, 48.00059]
     },
     {
       "slug": "magdeburg",
@@ -335,7 +335,7 @@
       },
       "region": "https://vts.mapwebbing.eu/export/magdeburg/region_magdeburg.geojson",
       "bounds": [11.5172379, 52.0237486, 11.7639936, 52.2283566],
-      "center": [11.63550, 52.12132]
+      "center": [11.6355, 52.12132]
     },
     {
       "slug": "neu_ulm",
@@ -407,7 +407,7 @@
       },
       "region": "https://vts.mapwebbing.eu/export/hattingen/region_hattingen.geojson",
       "bounds": [7.1080626, 51.3099382, 7.2571611, 51.4252893],
-      "center": [7.182790, 51.397929]
+      "center": [7.18279, 51.397929]
     }
   ]
 }
