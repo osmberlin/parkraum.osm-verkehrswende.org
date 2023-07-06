@@ -237,7 +237,7 @@
           "updatedAt": "06.07.2023"
         }
       },
-      "region": "https://vts.mapwebbing.eu/export/braunschweig/region_oldenburg.geojson",
+      "region": "https://vts.mapwebbing.eu/export/oldenburg/region_oldenburg.geojson",
       "bounds": [8.1295152, 53.0831237, 8.3122117, 53.2047616],
       "center": [8.21951, 53.14434]
     }
