@@ -286,8 +286,32 @@
         }
       },
       "region": "https://vts.mapwebbing.eu/export/metzingen/region_metzingen.geojson",
-      "bounds": [8.1106718, 49.9932751, 8.3861621, 50.1518098],
-      "center": [8.24802, 50.07505]
+      "bounds": [9.2383084, 48.4925303, 9.3454482, 48.5619654],
+      "center": [9.287955, 48.538776]
+    },
+    {
+      "slug": "freiburg",
+      "name": "Freiburg im Breisgau",
+      "exports": {
+        "parking_lanes": {
+          "url": "https://vts.mapwebbing.eu/export/freiburg/parking_lanes_freiburg.gpkg",
+          "format": "gpkg",
+          "updatedAt": "31.08.2023"
+        },
+        "parking_spaces": {
+          "url": "https://vts.mapwebbing.eu/export/freiburg/parking_spaces_freiburg.gpkg",
+          "format": "gpkg",
+          "updatedAt": "31.08.2023"
+        },
+        "parking_segments": {
+          "url": "https://vts.mapwebbing.eu/export/freiburg/parking_segments_freiburg.gpkg",
+          "format": "gpkg",
+          "updatedAt": "31.08.2023"
+        }
+      },
+      "region": "https://vts.mapwebbing.eu/export/freiburg/region_freiburg.geojson",
+      "bounds": [7.6620055, 47.9035777, 7.9308444, 48.0710579],
+      "center": [7.82960, 48.00059]
     }
   ]
 }
