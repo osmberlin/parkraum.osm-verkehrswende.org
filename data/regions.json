@@ -1,5 +1,5 @@
 {
-  "updatedAt": "19.05.2024, 10:56:50",
+  "updatedAt": "01.07.2024, 11:15:23",
   "regions": [
     {
       "slug": "berlin",
@@ -8,17 +8,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/berlin/parking_lanes_berlin.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/berlin/parking_spaces_berlin.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/berlin/parking_segments_berlin.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/berlin/region_berlin.geojson",
@@ -32,17 +32,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/bremen/parking_lanes_bremen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/bremen/parking_spaces_bremen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/bremen/parking_segments_bremen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/bremen/region_bremen.geojson",
@@ -56,17 +56,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/dortmund/parking_lanes_dortmund.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/dortmund/parking_spaces_dortmund.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/dortmund/parking_segments_dortmund.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/dortmund/region_dortmund.geojson",
@@ -80,17 +80,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/hannover/parking_lanes_hannover.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/hannover/parking_spaces_hannover.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/hannover/parking_segments_hannover.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/hannover/region_hannover.geojson",
@@ -104,17 +104,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/hamburg/parking_lanes_hamburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/hamburg/parking_spaces_hamburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/hamburg/parking_segments_hamburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/hamburg/region_hamburg.geojson",
@@ -128,17 +128,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/kiel/parking_lanes_kiel.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/kiel/parking_spaces_kiel.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/kiel/parking_segments_kiel.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/kiel/region_kiel.geojson",
@@ -152,17 +152,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/bonn/parking_lanes_bonn.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/bonn/parking_spaces_bonn.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/bonn/parking_segments_bonn.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/bonn/region_bonn.geojson",
@@ -176,17 +176,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_lanes_bietigheim_bissingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_spaces_bietigheim_bissingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/parking_segments_bietigheim_bissingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/bietigheim_bissingen/region_bietigheim_bissingen.geojson",
@@ -200,17 +200,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_lanes_braunschweig.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_spaces_braunschweig.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/braunschweig/parking_segments_braunschweig.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/braunschweig/region_braunschweig.geojson",
@@ -224,17 +224,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/oldenburg/parking_lanes_oldenburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/oldenburg/parking_spaces_oldenburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/oldenburg/parking_segments_oldenburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/oldenburg/region_oldenburg.geojson",
@@ -248,17 +248,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/wiesbaden/parking_lanes_wiesbaden.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/wiesbaden/parking_spaces_wiesbaden.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/wiesbaden/parking_segments_wiesbaden.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/wiesbaden/region_wiesbaden.geojson",
@@ -272,17 +272,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/metzingen/parking_lanes_metzingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/metzingen/parking_spaces_metzingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/metzingen/parking_segments_metzingen.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/metzingen/region_metzingen.geojson",
@@ -296,17 +296,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/freiburg/parking_lanes_freiburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/freiburg/parking_spaces_freiburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/freiburg/parking_segments_freiburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/freiburg/region_freiburg.geojson",
@@ -320,17 +320,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/magdeburg/parking_lanes_magdeburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/magdeburg/parking_spaces_magdeburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/magdeburg/parking_segments_magdeburg.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/magdeburg/region_magdeburg.geojson",
@@ -344,17 +344,17 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/neu_ulm/parking_lanes_neu_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/neu_ulm/parking_spaces_neu_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/neu_ulm/parking_segments_neu_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/neu_ulm/region_neu_ulm.geojson",
@@ -368,22 +368,46 @@
         "parking_lanes": {
           "url": "https://vts.mapwebbing.eu/export/ulm/parking_lanes_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_spaces": {
           "url": "https://vts.mapwebbing.eu/export/ulm/parking_spaces_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         },
         "parking_segments": {
           "url": "https://vts.mapwebbing.eu/export/ulm/parking_segments_ulm.gpkg",
           "format": "gpkg",
-          "updatedAt": "19.05.2024"
+          "updatedAt": "01.07.2024"
         }
       },
       "region": "https://vts.mapwebbing.eu/export/ulm/region_ulm.geojson",
       "bounds": [9.8420502, 48.3066627, 10.0428303, 48.4685153],
       "center": [9.94568, 48.38775]
+    },
+    {
+      "slug": "hattingen",
+      "name": "Hattingen",
+      "exports": {
+        "parking_lanes": {
+          "url": "https://vts.mapwebbing.eu/export/hattingen/parking_lanes_hattingen.gpkg",
+          "format": "gpkg",
+          "updatedAt": "01.07.2024"
+        },
+        "parking_spaces": {
+          "url": "https://vts.mapwebbing.eu/export/hattingen/parking_spaces_hattingen.gpkg",
+          "format": "gpkg",
+          "updatedAt": "01.07.2024"
+        },
+        "parking_segments": {
+          "url": "https://vts.mapwebbing.eu/export/hattingen/parking_segments_hattingen.gpkg",
+          "format": "gpkg",
+          "updatedAt": "01.07.2024"
+        }
+      },
+      "region": "https://vts.mapwebbing.eu/export/hattingen/region_hattingen.geojson",
+      "bounds": [7.1080626, 51.3099382, 7.2571611, 51.4252893],
+      "center": [7.182790, 51.397929]
     }
   ]
 }
