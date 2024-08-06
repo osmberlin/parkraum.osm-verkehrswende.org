@@ -1,15 +1,14 @@
 ---
-import regions from '@data/regions.json'
-import SvgMap from '@assets/icons/Map.svg'
-import SvgTableCells from '@assets/icons/TableCells.svg'
 import SvgArrowSmall from '@assets/icons/ArrowSmall.svg'
+import SvgMap from '@assets/icons/Map.svg'
 import SvgPresentationChartBar from '@assets/icons/PresentationChartBar.svg'
+import SvgTableCells from '@assets/icons/TableCells.svg'
 import Notice from '@components/Notice.astro'
 import { PageDashboardDate } from '@components/PageDashbard/PageDashboardDate'
 import { PageDashboardTable } from '@components/PageDashbard/PageDashboardTable'
-import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 import { atlasUrl } from '@components/regions/utils/atlasUrl'
-import type { fetchRegionWithGeodata } from '@data/fetchRegions'
+import regions from '@data/regions.json'
+import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 
 export async function getStaticPaths() {
   return regions.regions
@@ -19,9 +18,7 @@ export async function getStaticPaths() {
     })
 }
 
-type Data = { data: Awaited<ReturnType<typeof fetchRegionWithGeodata>>[number] }
-
-const { data } = Astro.props as Data
+const { data } = Astro.props
 ---
 
 <script is:inline>
@@ -63,13 +60,13 @@ const { data } = Astro.props as Data
       rel="noopener noreferrer"
       class="group flex flex-row items-center gap-4 rounded bg-gradient-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
     >
-      <img src={SvgMap} class="h-20 w-20" alt="" />
+      <img src={SvgMap.src} class="h-20 w-20" alt="" />
       <div>
         <h2
           class="mb-0 flex items-center text-3xl font-bold text-gray-900 decoration-1 underline-offset-4 group-hover:underline"
         >
           Karte
-          <img src={SvgArrowSmall} class="h-8 w-8" alt="" />
+          <img src={SvgArrowSmall.src} class="h-8 w-8" alt="" />
         </h2>
         <p class="mb-1 text-gray-800 no-underline">Karte auf radverkehrsatlas.de öffnen.</p>
       </div>
@@ -77,7 +74,7 @@ const { data } = Astro.props as Data
   </div>
 
   <h2 class="mb-8 flex items-center gap-2">
-    <img src={SvgTableCells} class="my-0 h-8 w-8" alt="" />
+    <img src={SvgTableCells.src} class="my-0 h-8 w-8" alt="" />
     Datenexport für {data.name}
   </h2>
   <p>
@@ -103,7 +100,7 @@ const { data } = Astro.props as Data
   </ul>
 
   <h2 class="mb-8 flex items-center gap-2">
-    <img src={SvgPresentationChartBar} class="my-0 h-8 w-8" alt="" />
+    <img src={SvgPresentationChartBar.src} class="my-0 h-8 w-8" alt="" />
     Statistik für {data.name}
   </h2>
   <PageDashboardDate client:idle />
