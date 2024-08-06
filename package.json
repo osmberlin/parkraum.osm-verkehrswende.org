@@ -14,7 +14,8 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro|mdx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|astro|mdx)\" --write",
     "check": "npm run type-check && npm run format && npm run lint",
-    "update": "npx npm-check-updates -u",
+    "updatePackages:major": "npx taze major --write && npm install",
+    "updatePackages:minor": "npx taze minor --write && npm install",
     "prepare": "husky install"
   },
   "dependencies": {
