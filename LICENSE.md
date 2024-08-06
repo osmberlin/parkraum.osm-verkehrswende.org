@@ -6,7 +6,7 @@ All OSM Data used in this Project are licenced under ODbL as described at [opens
 
 The Licence can be found at the bottom right of the map. It needs to be visible on screenshots and such as well.
 
-    OSM-Parkraumananlyse, © OpenStreetMap-Mitwirkende
+    OSM-Parkraumanalyse, © OpenStreetMap-Mitwirkende
     https://parkraum.osm-verkehrswende.org
     https://www.openstreetmap.org/copyright
 
