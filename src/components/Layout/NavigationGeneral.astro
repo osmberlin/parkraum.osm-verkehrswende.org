@@ -15,7 +15,7 @@ const { menuHighlight } = Astro.props
     href="/"
     class={clsx(
       menuHighlight === 'about' ? 'menu-active' : 'hover:bg-blue-50',
-      'border-b border-gray-200 py-2 px-4'
+      'border-b border-gray-200 px-4 py-2',
     )}
   >
     Über das Projekt
@@ -24,7 +24,7 @@ const { menuHighlight } = Astro.props
     href="/project-prototype-neukoelln/report"
     class={clsx(
       menuHighlight === 'report' ? 'menu-active' : 'hover:bg-blue-50',
-      'border-b border-gray-200 py-2 px-4'
+      'border-b border-gray-200 px-4 py-2',
     )}
   >
     Methodenbericht
@@ -33,7 +33,7 @@ const { menuHighlight } = Astro.props
     href="/participate"
     class={clsx(
       menuHighlight === 'participate' ? 'menu-active' : 'hover:bg-blue-50',
-      'border-b border-gray-200 py-2 px-4'
+      'border-b border-gray-200 px-4 py-2',
     )}
   >
     Mitmachen
@@ -42,7 +42,7 @@ const { menuHighlight } = Astro.props
     href="/faq"
     class={clsx(
       menuHighlight === 'faq' ? 'menu-active' : 'hover:bg-blue-50',
-      'border-b border-gray-200 py-2 px-4'
+      'border-b border-gray-200 px-4 py-2',
     )}
   >
     FAQ

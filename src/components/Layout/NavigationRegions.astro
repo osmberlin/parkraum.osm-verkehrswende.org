@@ -20,22 +20,22 @@ const { pathname: currentPathname } = Astro.url
       href={`/regions/berlin`}
       class={clsx(
         currentPathname === `/regions/berlin` ? 'menu-active' : 'hover:bg-blue-50',
-        'flex-grow py-2 px-4'
+        'flex-grow px-4 py-2',
       )}
     >
       Berlin
     </a>
     <a
-      href={atlasUrl([13.407826941531509, 52.495314008962936])}
+      href={atlasUrl('berlin', [13.407826941531509, 52.495314008962936])}
       target="_blank"
       rel="noopener noreferrer"
       class={clsx(
         currentPathname === `/regions/berlin` && 'menu-active cursor-pointer hover:!bg-blue-50',
-        'flex items-center p-2 hover:bg-blue-50'
+        'flex items-center p-2 hover:bg-blue-50',
       )}
       title="Karte im Radverkehrsatlas öffnen"
     >
-      <img src={SvgMap} class="h-5 w-5" alt="" />
+      <img src={SvgMap.src} class="h-5 w-5" alt="" />
       <span class="sr-only">Karte im Radverkehrsatlas öffnen</span>
     </a>
   </div>
@@ -44,7 +44,7 @@ const { pathname: currentPathname } = Astro.url
       href="/project-prototype-neukoelln/data"
       class={clsx(
         menuHighlight === 'project_prototype_map_data' ? 'menu-active' : 'hover:bg-blue-50',
-        'flex-grow py-2 px-4'
+        'flex-grow px-4 py-2',
       )}
     >
       Prototype Neukölln
@@ -56,10 +56,10 @@ const { pathname: currentPathname } = Astro.url
         menuHighlight === 'project_prototype_map_data' &&
           'menu-active cursor-pointer hover:!bg-blue-50',
         menuHighlight !== 'project_prototype_map' && 'hover:bg-blue-50',
-        'p-2 flex items-center'
+        'flex items-center p-2',
       )}
     >
-      <img src={SvgMap} class="h-5 w-5" alt="" />
+      <img src={SvgMap.src} class="h-5 w-5" alt="" />
       <span class="sr-only">Karte öffnen</span>
     </a>
   </div>
@@ -75,24 +75,24 @@ const { pathname: currentPathname } = Astro.url
             class={clsx(
               currentPathname === `/regions/${region.slug}` ? 'menu-active' : 'hover:bg-blue-50',
               region.slug === 'berlin' ? 'font-bold' : '',
-              'flex-grow truncate px-4 py-2'
+              'flex-grow truncate px-4 py-2',
             )}
             title={region.name}
           >
             {region.name}
           </a>
           <a
-            href={atlasUrl(region.center)}
+            href={atlasUrl(region.slug, region.center)}
             target="_blank"
             rel="noopener noreferrer"
             class={clsx(
               currentPathname === `/regions/${region.slug}` &&
                 'menu-active cursor-pointer hover:!bg-blue-50',
-              'flex items-center p-2 hover:bg-blue-50'
+              'flex items-center p-2 hover:bg-blue-50',
             )}
             title="Karte im Radverkehrsatlas öffnen"
           >
-            <img src={SvgMap} class="h-5 w-5" alt="" />
+            <img src={SvgMap.src} class="h-5 w-5" alt="" />
             <span class="sr-only">Karte im Radverkehrsatlas öffnen</span>
           </a>
         </div>

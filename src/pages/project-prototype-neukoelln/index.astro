@@ -80,7 +80,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
         layerControlName: `Debug-Modus Straßenraumkarte<br><span style='margin-left: 16px;' class='text-gray-400'>Datenstand: ${debugmap_tiles_updated_at}</span>`,
         attribution:
           '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>, Bordsteinkanten: OpenStreetMap und Geoportal Berlin / ALKIS.',
-      }
+      },
     )
 
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -100,7 +100,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
         layerControlName: 'Luftbilder 2020',
         attribution:
           '<a href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_luftbild2020_true_rgb@senstadt&bbox=388712,5818615,394579,5822445">Geoportal Berlin / Digitale farbige TrueOrthophotos 2020 (TrueDOP20RGB) - Sommerbefliegung</a>',
-      }
+      },
     )
 
     // name set of tilelayers and adds them to the layer-selector
@@ -147,7 +147,7 @@ import LayoutApp from '@layouts/LayoutApp.astro'
           setMapLayer(map, baseMaps, layerName)
           event.preventDefault()
         },
-        false
+        false,
       )
     })
 

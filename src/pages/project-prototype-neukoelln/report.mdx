@@ -17,10 +17,10 @@ Stand: März 2021
 <Notice>
 
 <strong>Hinweis in 2022:</strong> Sowohl der "Prototyp Neukölln" als auch das neue Projekt "Parkraum
-Berlin" basieren weiterhin auf den Methoden, die hier beschrieben werden. Beide Projekte haben seit dem
-aber weitere "Stanzungen" oder "Subtraktionen" eingeführt, also automatisierte Prozesschritte um auf
-Basis von anderen OpenStreetMap-Daten Bereiche zu erkennen, in denen nicht geparkt werden darf. Mittelfristig
-wird es daher eine neue Version des Methodenberichtes geben.
+Berlin" basieren weiterhin auf den Methoden, die hier beschrieben werden. Beide Projekte haben seit
+dem aber weitere "Stanzungen" oder "Subtraktionen" eingeführt, also automatisierte Prozesschritte um
+auf Basis von anderen OpenStreetMap-Daten Bereiche zu erkennen, in denen nicht geparkt werden darf.
+Mittelfristig wird es daher eine neue Version des Methodenberichtes geben.
 
 </Notice>
 
@@ -205,6 +205,7 @@ Die eigentliche Datenverarbeitung fand weitestgehend automatisiert über Python-
 (6.) Abschließend wurden Stellplatzkapazitäten für zusammenhängende Parkstreifensegmente berechnet (Quotient aus der Länge eines Segments und dem Abstand der dort geparkten Fahrzeuge, vgl. nachfolgender Abschnitt).
 
 [^7]: Dafür wurde zunächst ein automatisiertes „Snapping“ und anschließend eine systematische Fehlerkorrektur und Nachkontrolle für jedes Einzelsegment vorgenommen, teils unter Verwendung von aktuellen Straßenfotos (Mapillary) und anderen Daten wie dem Verkehrszeichen- und Gehwegüberfahrten-Layer der Berliner Straßenbefahrung 2014 zur präziseren Ausrichtung von Park- und Halteverboten oder Einfahtsbereichen.
+
 [^8]: Die Abweichung zwischen den rein automatisiert ermittelten Stellplatzzahlen und den nachbearbeiteten Daten beträgt für das Straßenparken lediglich 0,6 Prozent und ist damit geringer als die anderer Unsicherheitsfaktoren (vgl. Kapitel 3).
 
 ### 2.5. Interpolation von Stellplatzkapazitäten
@@ -216,6 +217,7 @@ Für 5,5 Prozent aller Parkstände im Straßenbereich des Untersuchungsgebiets l
 Beim Parallelparken sind einzelne Stellplätze meist nicht markiert; die Anzahl der Fahrzeuge, die entlang eines Streckenabschnitts geparkt werden können, richtet sich vielmehr nach der Fahrzeuglänge und einem Rangier-/Sicherheitsabstand. Dabei wird in der Verkehrsplanungsliteratur ein mittlerer Abstand von 5,2 Metern zwischen den Fahrzeugen angenommen, der sich bei Zählungen im Untersuchungsgebiet weitestgehend bestätigen lässt ([vgl. auch Anhang B](#anhang-b-vergleich-interpolierter-und-gezählter-stellplätze-straßenparken)). Beim Schräg- und Querparken richtet sich die Anordnung der einzelnen Parkstände üblicherweise nach den Empfehlungen für Anlagen des ruhenden Verkehrs (EAR).[^9] Beim Schrägparken sind dabei verschiedene Aufstellwinkel möglich, die in verschiedenen Parkstandsbreiten resultieren -- hier wurde ein konstanter Aufstellwinkel von 60 gon (54 Grad) angenommen.[^10] Daraus ergeben sich folgende Abstände zwischen jeweils zwei geparkten Fahrzeugen:
 
 [^9]: Forschungsgesellschaft für Straßen- und Verkehrswesen e.V. (FGSV) (Hrsg.): Empfehlungen für Anlagen des ruhenden Verkehrs EAR 05, Ausgabe 2005. Köln: FGSV-Verlag.
+
 [^10]: Dieser Wert entspricht dem Winkel, der bei den meisten Parkständen dieser Art aus Stichproben im Untersuchungsgebiet aus Orthophotos ermittelt werden konnte. Bei davon abweichenden Winkeln ist insgesamt nur eine marginale Abweichung in Bezug auf das Gesamtergebnis zu erwarten, daher wurde dieser Wert zur Vereinfachung der Berechnungen als konstant angenommen.
 
 - Längsparken: 5,2 Meter,
@@ -353,6 +355,7 @@ Für kleinräumige Aussagen, beispielsweise zur Bestimmung der Stellplatzdichte 
 Für das Bevölkerungsmodell wurde zunächst jedem Gebäude die statistisch erwartbare Anzahl von Bewohnenden zugeordnet. Dafür müssen zunächst Wohngebäude von anderen Gebäuden unterschieden[^15] und die jeweils zum Wohnen genutzten Gebäudestockwerke ermittelt werden.[^16] Die Gesamtbevölkerung einer Blockteilfläche wurde schließlich anteilig dieser „Wohngeschossflächenzahl" auf die Gebäude verteilt. Jede Bewohnerin und jeder Bewohner lässt sich auf diese Weise statistisch individuell am Wohnort darstellen und kann auf Basis der Kfz-Anmeldedaten mit einer entsprechenden Wahrscheinlichkeit als Kfz-Halter/in eingestuft werden.
 
 [^15]: Die ALKIS-Gebäudedaten enthalten für jedes Gebäude eine Klassifikation seiner Funktion, sodass Wohngebäude beispielsweise von Büro-, Gewerbe- oder Industriegebäuden unterschieden werden können oder Mischnutzungen erkennbar sind.
+
 [^16]: Für reine Wohngebäude wurden dabei alle Obergeschosse einbezogen. Für Gebäude der Kategorie „Wohngebäude mit Gewerbenutzung“ ist anzunehmen, dass ein Geschoss (Erdgeschoss) nicht zum Wohnen genutzt wird. Für die eher seltene Kategorie „Gewergegebäude mit Wohnnutzung“ wurde angenommen, dass die Hälfte aller Geschosse als Wohngeschosse genutzt werden.
 
 Die resultierenden Kfz-Halterdaten lassen sich auf diese Weise -- ebenso wie die verfügbaren Stellplätze -- in Form von Punktwolken abbilden, wobei jeder Punkt einem Stellplatz bzw. einem zugelassenen Kfz entspricht. Für ein bestimmtes Gebiet lässt sich auf diese Weise leicht das Verhältnis aus verfügbaren Stellplätzen und angemeldeten Kfz ermitteln. Die Parkraumkarte stellt diese Stellplatzdichte auf niedrigeren Zoomstufen für das Nahumfeld eines Wohnortes dar, wobei eine fußläufige Distanz von 350 Metern (3 Minuten zu Fuß bei einer Laufgeschwindigkeit von 7 km/h bzw. knapp über 4 Minuten bei 5 km/h) zugrunde liegt. Die Stellplatzdichte für diese Distanz wurde jeweils für den Gittermittelpunkt eines 25 Meter großen hexagonalen Gitters berechnet auf Basis von Isochronen[^17] berechnet.
@@ -416,6 +419,7 @@ Darüber hinaus gibt es eine Reihe anderer Faktoren, die zu einer Über- oder Un
   - Zunehmend sind in diesem Zusammenhang auch Fahrzeuge von Carsharing-Anbietern zu berücksichtigen, von denen in Berlin derzeit etwa 6.000 im Free-Floating-Segment bereitstehen. Im Untersuchungsgebiet dürfte der Anteil dieser Fahrzeuge etwa in einer Größenordnung von einem Prozent liegen.[^22] Zusätzlich beanspruchen stationsbasierte Anbieter vereinzelt Stellplätze beispielsweise in Tiefgaragen.
 
 [^21]: Etwa vier Prozent der Autofahrer:innen in Deutschland geben an, dass ihr Erstfahrzeug ein Dienstwagen ist (vgl. Statista: [„Anzahl der Personen in Deutschland, deren Erstwagen ein Privat- bzw. Dienstwagen ist"](https://de.statista.com/statistik/daten/studie/172094/umfrage/dienstwagen-oder-privatwagen-als-erstwagen/)). Inwieweit sich diese Angaben auf die sozioökonomischen und geografischen Bedingungen des Untersuchungsgebiets übertragen lassen und wie Zweitwagen etc. und andere Faktoren diesen Wert beeinflussen, kann an dieser Stelle nicht bewertet werden.
+
 [^22]: Unter der Annahme, dass diese 6.000 Fahrzeuge alle innerhalb des S-Bahn-Rings abgestellt würden, wo es etwa 350.000 zugelassene Kfz gibt, ergäbe sich ein Anteil von 1,7 Prozent der dort zugelassenen Fahrzeuge. Der Geschäftsbereich vieler Anbieter erstreckt sich aber auch darüber hinaus.
 
 - In Gebieten mit geringem Parkdruck kommen außerdem Fahrzeuge dazu, die dort auf Grund der günstigen Parkraumsituation länger und in größerer Entfernung zu ihrem eigentlichen Meldeort abgestellt werden (beispielsweise sporadisch genutzte Transporter oder Wohnmobile) -- dafür aber am eigentlichen Meldeort keinen Stellplatz in Anspruch nehmen. Phänomene wie Besuchsverkehr dürften dagegen bei der Bewertung der dauerhaften Parkraumsituation nur einen geringen Einfluss haben.

@@ -19,7 +19,7 @@ const { layoutType, menuHighlight } = Astro.props
   class={clsx(
     { 'overflow-y-scroll bg-white': layoutType === 'app' },
     { 'mb-10': layoutType !== 'app' },
-    'relative z-[1001] w-full px-3 py-3 shadow-xl lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none sm:mb-0 flex-none'
+    'relative z-[1001] w-full flex-none px-3 py-3 shadow-xl sm:mb-0 lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none',
   )}
   lang="de"
 >
@@ -38,7 +38,7 @@ const { layoutType, menuHighlight } = Astro.props
   <button
     type="button"
     data-show-hide-trigger="navi"
-    class="absolute right-5 top-5 block rounded-sm border border-blue-500 bg-blue-200 text-blue-500 print:hidden lg:hidden"
+    class="absolute right-5 top-5 block rounded-sm border border-blue-500 bg-blue-200 text-blue-500 lg:hidden print:hidden"
   >
     <!-- https://fontawesome.com/v5.15/icons/bars?style=solid -->
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8" viewBox="0 0 16 16">

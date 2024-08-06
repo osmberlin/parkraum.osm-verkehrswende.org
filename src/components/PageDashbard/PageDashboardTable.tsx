@@ -59,7 +59,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
           acc[obj.unique_id] = obj
         }
         return acc
-      }, {})
+      }, {}),
     )
 
     return uniqueObjects
@@ -104,7 +104,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
     parentName: string,
     parentAdminLevel: number,
     parentId: number,
-    properties: Properties
+    properties: Properties,
   ) => {
     result.push({
       table_level: tableLevel,
@@ -135,7 +135,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
         '(Oberste Ebene)',
         level1.properties.admin_level,
         level1.properties.id,
-        level1.properties
+        level1.properties,
       )
       // Level 2
       if (level1.properties.childs) {
@@ -147,7 +147,7 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
             `${level1.properties.name} (Admin Level ${level2.properties.admin_level})`,
             level1.properties.admin_level,
             level1.properties.id,
-            level2.properties
+            level2.properties,
           )
         })
       }

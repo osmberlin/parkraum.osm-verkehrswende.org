@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content'
 
 const allPosts = await getCollection('posts')
 const sortedPosts = allPosts.sort(
-  (postA, postB) => new Date(postB.data.pubDate).valueOf() - new Date(postA.data.pubDate).valueOf()
+  (postA, postB) => new Date(postB.data.pubDate).valueOf() - new Date(postA.data.pubDate).valueOf(),
 )
 const relevantPosts = sortedPosts.filter((p) => p.data.inMenu === true)
 
@@ -27,7 +27,7 @@ const pathname = new URL(Astro.request.url).pathname
           href={`/posts/${post.slug}`}
           class={clsx(
             pathname == `/posts/${post.slug}` ? 'menu-active' : 'hover:bg-blue-50',
-            'flex items-center border-b border-gray-200 py-2 pl-4 leading-tight'
+            'flex items-center border-b border-gray-200 py-2 pl-4 leading-tight',
           )}
         >
           <span class="-ml-1.5 mr-1 inline-flex rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">

@@ -631,20 +631,21 @@ Die Spalten _Parallel-, Schräg-, Querparken_ erlaubt eine Bewertung, welchen Ei
 </div>
 
 - <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">1</strong> Diese Abweichung
-  ist größer als die Summe der Abweichungen der einzelnen Features, da ein durch ein bestimmtes Feature
-  vom Parken „freigehaltener“ Bereich auch von anderen Features umfasst sein kann.
-- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">2</strong> Werden nur die separat
-  gemappten Linienabschnitte allein betrachtet, würde ohne separate Kartierweise eine Überschätzung von
-  32% der Stellplätze entstehen (1.312 Stellplätze mit, 1.738 ohne separates Mapping).
-- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">3</strong> Straßenbreiten sind
-  zum Testzeitpunkt nur an 40 Prozent des Straßennetzes im Testgebiet gemappt. Werden nur die Straßen
-  mit gemappter Breite verglichen, wird die Stellplatzzahl um etwa 1 Prozent unterschätzt.
-- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">4</strong> Breite von Einfahrten
-  ist im Testgebiet nur an wenigen Einfahrten gemappt (insbesondere an überbreiten Einfahrten), der Einfluss
-  kann wahrscheinlich dennoch als sehr gering eingeschätzt werden.
-- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">5</strong> Nur auf die separat
-  gemappten Parkflächen allein bezogen entsteht eine Abweichung von 11,2% (1.180 Stellplätze mit interpolierten
-  Werten, 1.312 mit getaggten Werten, Scriptversion 25.6.2022).
+  ist größer als die Summe der Abweichungen der einzelnen Features, da ein durch ein bestimmtes
+  Feature vom Parken „freigehaltener“ Bereich auch von anderen Features umfasst sein kann.
+- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">2</strong> Werden nur die
+  separat gemappten Linienabschnitte allein betrachtet, würde ohne separate Kartierweise eine
+  Überschätzung von 32% der Stellplätze entstehen (1.312 Stellplätze mit, 1.738 ohne separates
+  Mapping).
+- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">3</strong> Straßenbreiten
+  sind zum Testzeitpunkt nur an 40 Prozent des Straßennetzes im Testgebiet gemappt. Werden nur die
+  Straßen mit gemappter Breite verglichen, wird die Stellplatzzahl um etwa 1 Prozent unterschätzt.
+- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">4</strong> Breite von
+  Einfahrten ist im Testgebiet nur an wenigen Einfahrten gemappt (insbesondere an überbreiten
+  Einfahrten), der Einfluss kann wahrscheinlich dennoch als sehr gering eingeschätzt werden.
+- <strong class="rounded bg-stone-200 px-1 py-0 font-mono font-semibold">5</strong> Nur auf die
+  separat gemappten Parkflächen allein bezogen entsteht eine Abweichung von 11,2% (1.180 Stellplätze
+  mit interpolierten Werten, 1.312 mit getaggten Werten, Scriptversion 25.6.2022).
 
 ## Wie repräsentativ sind diese Testergebnisse?
 
@@ -661,5 +662,7 @@ Ein sehr detailliertes, aufwendiges Parkstreifenmapping ist nicht notwendig, um 
 ## Fußnoten
 
 [^1]: Eine genaue Erfassung von Parkbeschränkungen (temporäre Parkverbote, Ladezonen, Stellplätze für mobilitätseingeschränkte Personen etc.) sind ohne kleinteilig differenzierte Parkstreifen ebenfalls oft schwer umzusetzen.
+
 [^3]: Die Ergebnissen wären jedoch ähnlich, wenn die Berechnungen stattdessen auf Grundlage der manuell erzeugten, künstlich "verschlechterten", grob differenzierten Parkstreifen basieren würden.
+
 [^2]: Vergleichsgrundlage ist stets die nicht-ordnungswidrige Parksituation, also die Anzahl der Stellplätze, die es an einem Ort gibt, wenn alle juristischen Vorgaben (insbesondere die Straßenverkehrsordnung) eingehalten werden (würden). Allein bei der Auslegung dieser Regeln gibt es signifikante Grauzonen und Unsicherheiten.
