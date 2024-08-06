@@ -57,8 +57,8 @@ const { data } = Astro.props as Data
   <div class="not-prose mt-14">
     <a
       id="map"
-      data-url-template={atlasUrl([1000, 2000])}
-      href={atlasUrl(data.center)}
+      data-url-template={atlasUrl(data.slug, [1000, 2000])}
+      href={atlasUrl(data.slug, data.center)}
       target="_blank"
       rel="noopener noreferrer"
       class="group flex flex-row items-center gap-4 rounded bg-gradient-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
