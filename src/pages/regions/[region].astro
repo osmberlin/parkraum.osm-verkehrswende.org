@@ -35,8 +35,8 @@ const { data } = Astro.props
     if (lat && lng && zoom) {
       const newUrl = document
         .getElementById('map')
-        .dataset.urlTemplate.replace('1000', lat)
-        .replace('2000', lng)
+        .dataset.urlTemplate.replace('2000', lat)
+        .replace('1000', lng)
         .concat('&zoom=', zoom)
       mapLink.href = newUrl
     }
