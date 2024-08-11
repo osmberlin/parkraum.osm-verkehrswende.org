@@ -53,7 +53,7 @@ export const fetchRegions = async () => {
         .map((eexport) => {
           const url = resolveUrlTemplate(region.name, eexport)
           return [eexport.name, { url, format: eexport.file_type, updatedAt: eexport.lastUpdate }]
-        })
+        }),
     ) as Datasets
 
     return {
@@ -62,7 +62,7 @@ export const fetchRegions = async () => {
       exports: eexports,
       region: resolveUrlTemplate(
         region.name,
-        region.exports.find((d) => d.name === 'summary')
+        region.exports.find((d) => d.name === 'summary'),
       ) as string, // todo: find a nicer way to type this
     }
   })
