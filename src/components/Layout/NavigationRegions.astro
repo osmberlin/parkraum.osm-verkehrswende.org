@@ -8,7 +8,9 @@ export interface Props {
   menuHighlight: string | undefined
 }
 
-const filteredRegions = regions.regions.filter((r) => r.slug !== 'berlin')
+const filteredRegions = regions.regions
+  .filter((r) => r.slug !== 'berlin')
+  .sort((a, b) => a.name.localeCompare(b.name))
 const { menuHighlight } = Astro.props
 const { pathname: currentPathname } = Astro.url
 ---
