@@ -95,4 +95,4 @@ export const fetchRegionWithGeodata = async () => {
 
 const regions = await fetchRegionWithGeodata()
 const content = { updatedAt: new Date(Date.now()).toLocaleString('de-DE'), regions }
-await fs.writeFileSync('./data/regions.json', JSON.stringify(content, null, 2))
+await fs.writeFileSync('./data/regions_FYI.json', JSON.stringify(content, null, 2))
