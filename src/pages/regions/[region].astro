@@ -33,6 +33,7 @@ const { data } = Astro.props
     const lng = params.get('lng')
     const zoom = params.get('zoom') || '12'
     const newUrl = new URL(document.getElementById('map').dataset.urlTemplate)
+    if (!lat || !lng) return
     newUrl.searchParams.delete('map')
     newUrl.searchParams.set('map', `${zoom}/${lng}/${lat}`)
     mapLink.href = newUrl.toString()
