@@ -14,9 +14,7 @@ Auf der FOSSGIS Konferenz 2021 (online) hat Alex Seidel einen Vortrag gehalten Ã
 - [Video auf media.cc.de](https://media.ccc.de/v/fossgis2021-9026-parkplatzzhlung-und-parkraumanalysen-auf-osm-basis)
 - [Video auf YouTube](https://www.youtube.com/watch?v=Y6RKFe8EPFA)
 
-<div class="aspect-w-16 aspect-h-9 w-full mt-10">
-<iframe class="" src="https://media.ccc.de/v/fossgis2021-9026-parkplatzzhlung-und-parkraumanalysen-auf-osm-basis/oembed" frameborder="0" allowfullscreen></iframe>
-</div>
+<iframe class="aspect-video mt-10 w-full" src="https://media.ccc.de/v/fossgis2021-9026-parkplatzzhlung-und-parkraumanalysen-auf-osm-basis/oembed" frameborder="0" allowfullscreen></iframe>
 
 ## Kurzbeschreibung des Vortrages
 

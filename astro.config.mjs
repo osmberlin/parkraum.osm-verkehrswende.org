@@ -19,6 +19,13 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkToc],
   },
+  experimental: {
+    // https://docs.astro.build/en/reference/experimental-flags/svg/
+    svg: true,
+  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   site: 'https://parkraum.osm-verkehrswende.org/',
   redirects: {
     '/project-vector-tiles/dashboard': '/regions/berlin',

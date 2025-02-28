@@ -21,9 +21,7 @@ Exkurs: Das Thema Parkraum ist in einem zweiten Vortrag von Tobias am Sonntag au
 - [Video auf media.ccc.de](https://media.ccc.de/v/bitsundbaeume-20656-parkplatzzhlung-und-parkraumanalysen-mit-openstreetmap)
 - [Video auf YouTube](https://www.youtube.com/watch?v=s213CrEmlk4)
 
-<div class="aspect-w-16 aspect-h-9 w-full mt-10">
-<iframe class="" src="https://media.ccc.de/v/bitsundbaeume-20656-parkplatzzhlung-und-parkraumanalysen-mit-openstreetmap/oembed" frameborder="0" allowfullscreen></iframe>
-</div>
+<iframe class="aspect-video mt-10 w-full" src="https://media.ccc.de/v/bitsundbaeume-20656-parkplatzzhlung-und-parkraumanalysen-mit-openstreetmap/oembed" frameborder="0" allowfullscreen></iframe>
 
 ## Vortragsbeschreibung
 
