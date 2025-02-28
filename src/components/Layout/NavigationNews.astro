@@ -19,7 +19,7 @@ const pathname = new URL(Astro.request.url).pathname
     Neuigkeiten <span class="text-gray-500">({relevantPosts.length})</span>
   </a>
 </h2>
-<div class="mb-7 flex flex-col overflow-hidden rounded border border-b-0 border-gray-200">
+<div class="mb-7 flex flex-col overflow-hidden rounded-sm border border-b-0 border-gray-200">
   {
     relevantPosts.map((post) => {
       return (
@@ -30,7 +30,7 @@ const pathname = new URL(Astro.request.url).pathname
             'flex items-center border-b border-gray-200 py-2 pl-4 leading-tight',
           )}
         >
-          <span class="-ml-1.5 mr-1 inline-flex rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
+          <span class="mr-1 -ml-1.5 inline-flex rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
             {[
               new Date(post.data.pubDate).getFullYear(),
               new Date(post.data.pubDate).toLocaleDateString([], { month: '2-digit' }),

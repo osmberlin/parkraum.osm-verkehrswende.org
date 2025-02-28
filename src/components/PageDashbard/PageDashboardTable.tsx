@@ -18,7 +18,7 @@ export const PageDashboardTable: React.FC<Props> = ({ apiUrl }) => {
 
 const ApiUrl = ({ apiUrl }: { apiUrl: string }) => {
   return (
-    <div className="py-2 pl-4 pr-3 text-left text-sm text-gray-500 sm:pl-6">
+    <div className="py-2 pr-3 pl-4 text-left text-sm text-gray-500 sm:pl-6">
       API URL{' '}
       <Link to={apiUrl} blank>
         <code>{apiUrl}</code>
@@ -180,13 +180,13 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
         const [_tableLevel, tableHead] = key.split('--')
         return (
           <div key={key} className="mb-10 flex flex-col">
-            <div className="overflow-hidden shadow ring-1 ring-black/5 md:rounded-lg">
-              <table className="!my-0 min-w-full divide-y divide-gray-300">
+            <div className="overflow-hidden shadow-sm ring-1 ring-black/5 md:rounded-lg">
+              <table className="my-0! min-w-full divide-y divide-gray-300">
                 <thead className="bg-gray-50">
                   <tr>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 pr-3 text-left text-sm text-gray-900 sm:pl-6"
+                      className="py-3.5 pr-3 pl-4 text-left text-sm text-gray-900 sm:pl-6"
                     >
                       <strong className="font-semibold">{tableHead}</strong>{' '}
                       <span className="font-normal text-gray-500">– Stadt/Bezirk/Stadtteil</span>
@@ -207,13 +207,13 @@ const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
                   {values.map((value) => {
                     return (
                       <tr key={value.id}>
-                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                        <td className="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6">
                           {value.name}
                         </td>
-                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-500 sm:pl-6">
+                        <td className="py-4 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 sm:pl-6">
                           {value.parent_name}
                         </td>
-                        <td className="relative w-52 whitespace-nowrap px-3 py-4 text-xl text-gray-500">
+                        <td className="relative w-52 px-3 py-4 text-xl whitespace-nowrap text-gray-500">
                           {value.done_percent.toLocaleString('de-DE', {
                             minimumFractionDigits: 1,
                           })}

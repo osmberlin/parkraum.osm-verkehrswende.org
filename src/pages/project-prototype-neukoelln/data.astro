@@ -18,7 +18,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="not-prose mt-14">
     <a
       href="/project-prototype-neukoelln"
-      class="group flex flex-row items-center gap-4 rounded bg-gradient-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
+      class="group flex flex-row items-center gap-4 rounded-sm bg-linear-to-br from-teal-500 to-emerald-400 p-10 text-center shadow-md transition-all hover:from-teal-500 hover:to-emerald-300 hover:shadow-xl"
     >
       <img src={SvgMap.src} class="h-20 w-20" alt="" />
       <div>
@@ -52,21 +52,21 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_parking_way.jpg"
         alt="thumbnail parking lanes"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="parkstreifen" class="!mt-0">Parkstreifen</h3>
-      <p class="!my-1">
+      <h3 id="parkstreifen" class="mt-0!">Parkstreifen</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> Parkstreifen (Linien) im Straßenraum/am Straßenrand
       </p>
-      <p class="!my-1">
+      <p class="my-1!">
         <em>Bezugsraum:</em> Berliner Ortsteil Neukölln und Puffer von 500m außerhalb der Ortsteilgrenze
       </p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> © OpenStreetMap und Mitwirkende, OpenData gemäß ODbL
       </p>
       <ul class="px-3">
@@ -95,21 +95,21 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_parking_area.jpg"
         alt="thumbnail parking areas"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="park-stellplaetze" class="!mt-0">Park- und Stellplätze</h3>
-      <p class="!my-1">
+      <h3 id="park-stellplaetze" class="mt-0!">Park- und Stellplätze</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> Stellplatzflächen (Polygone) abseits des Straßenraums
       </p>
-      <p class="!my-1">
+      <p class="my-1!">
         <em>Bezugsraum:</em> Berliner Ortsteil Neukölln und Puffer von 500m außerhalb der Ortsteilgrenze
       </p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> © OpenStreetMap und Mitwirkende, OpenData gemäß ODbL, eigene Ergänzungen
       </p>
       <ul class="px-3">
@@ -136,22 +136,22 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_lane_area.jpg"
         alt="thumbnail lane areas"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="fahrbahnflaechen" class="!mt-0">Fahrbahnflächen</h3>
-      <p class="!my-1">
+      <h3 id="fahrbahnflaechen" class="mt-0!">Fahrbahnflächen</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> Fahrbahnflächen (Polygon), also der Raum zwischen den Bordsteinkanten
         (wie sie die Straßenraumkarte strukturieren)
       </p>
-      <p class="!my-1">
+      <p class="my-1!">
         <em>Bezugsraum:</em> Weitläufiges Rechteck um den Berliner Ortsteil Neukölln
       </p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> bearbeitet nach Geoportal Berlin / ALKIS (Bauwerke) und OpenStreetMap-Daten
       </p>
       <ul class="px-3">
@@ -172,22 +172,22 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_traffic_area.jpg"
         alt="thumbnail traffic areas"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="verkehrsflaechen" class="!mt-0">Verkehrsflächen</h3>
-      <p class="!my-1">
+      <h3 id="verkehrsflaechen" class="mt-0!">Verkehrsflächen</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> Verkehrsflächen (Polygon), also der (öffentliche) Raum zwischen den Gebäudefassaden
         bzw. Grundstücksgrenzen
       </p>
-      <p class="!my-1">
+      <p class="my-1!">
         <em>Bezugsraum:</em> Wohnquartiere (LOR-Planungsräume) des Berliner Ortsteils Neukölln
       </p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> bearbeitet nach Geoportal Berlin / Blockkarte und OpenStreetMap-Daten
       </p>
       <ul class="px-3">
@@ -209,21 +209,21 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_kfz_points.jpg"
         alt="thumbnail kfz points"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="zugelassene-kfz-punktwolke" class="!mt-0">zugelassene Kfz (Punktwolke)</h3>
-      <p class="!my-1">
+      <h3 id="zugelassene-kfz-punktwolke" class="mt-0!">zugelassene Kfz (Punktwolke)</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> Punktwolke zugelassener Kraftfahrzeuge (interpoliert)
       </p>
-      <p class="!my-1">
+      <p class="my-1!">
         <em>Bezugsraum:</em> Berliner Ortsteil Neukölln und Puffer von 500m außerhalb der Ortsteilgrenze
       </p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> Berechnet auf Grundlage von © Amt für Statistik Berlin-Brandenburg, Potsdam,
         2020 (siehe unten)
       </p>
@@ -252,19 +252,19 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   <div class="mb-6 flex flex-col gap-5 leading-snug md:flex-row">
     <div class="md:w-72">
       <img
-        class="img-thumbnail !m-0 object-cover md:!mt-2"
+        class="img-thumbnail m-0! object-cover md:mt-2!"
         src="/images/data/thumb_kfz_lor.jpg"
         alt="thumbnail kfz LOR"
       />
     </div>
 
     <div class="flex-1">
-      <h3 id="kfz-bestand-lor-ebene" class="!mt-0">Kfz-Bestand auf LOR-Ebene</h3>
-      <p class="!my-1">
+      <h3 id="kfz-bestand-lor-ebene" class="mt-0!">Kfz-Bestand auf LOR-Ebene</h3>
+      <p class="my-1!">
         <em>Beschreibung:</em> LOR-Planungsräume (Polygone) mit Quote zugelassener Kfz und Pkw
       </p>
-      <p class="!my-1"><em>Bezugsraum:</em> Berlin</p>
-      <p class="!my-1 text-gray-400">
+      <p class="my-1!"><em>Bezugsraum:</em> Berlin</p>
+      <p class="my-1! text-gray-400">
         <em>Quelle:</em> nach © Amt für Statistik Berlin-Brandenburg, Potsdam, 2020: „Melderechtlich
         registrierte Einwohnerinnen und Einwohner am Ort der Hauptwohnung in Berlin am 30.06.2020 nach
         Planungsräumen und KfZ-Bestand“ – Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellenangabe
@@ -294,7 +294,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
   </div>
 
   <div class="mb-3">
-    <h3 id="melderechtlich-reg-einwohner-berlin-mit-kfz" class="!mt-0">
+    <h3 id="melderechtlich-reg-einwohner-berlin-mit-kfz" class="mt-0!">
       Melderechtlich registrierte Einwohnerinnen und Einwohner am Ort der Hauptwohnung in Berlin am
       30.06.2020 nach Planungsräumen und KfZ-Bestand
     </h3>

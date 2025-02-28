@@ -19,12 +19,12 @@ const { layoutType, menuHighlight } = Astro.props
   class={clsx(
     { 'overflow-y-scroll bg-white': layoutType === 'app' },
     { 'mb-10': layoutType !== 'app' },
-    'relative z-[1001] w-full flex-none px-3 py-3 shadow-xl sm:mb-0 lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none',
+    'relative z-1001 w-full flex-none px-3 py-3 shadow-xl sm:mb-0 lg:z-auto lg:h-full lg:w-64 lg:py-6 lg:shadow-none',
   )}
   lang="de"
 >
   <a href="/"
-    ><h1 class="text-xl font-semibold !leading-[1.8rem] lg:text-2xl">
+    ><h1 class="text-xl leading-[1.8rem]! font-semibold lg:text-2xl">
       <span class="hidden lg:inline">OpenStreetMap</span>
       <span class="lg:hidden">OSM</span> Parkraum Projekt
     </h1>
@@ -38,7 +38,7 @@ const { layoutType, menuHighlight } = Astro.props
   <button
     type="button"
     data-show-hide-trigger="navi"
-    class="absolute right-5 top-5 block rounded-sm border border-blue-500 bg-blue-200 text-blue-500 lg:hidden print:hidden"
+    class="absolute top-5 right-5 block rounded-xs border border-blue-500 bg-blue-200 text-blue-500 lg:hidden print:hidden"
   >
     <!-- https://fontawesome.com/v5.15/icons/bars?style=solid -->
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8" viewBox="0 0 16 16">
@@ -49,7 +49,7 @@ const { layoutType, menuHighlight } = Astro.props
     </svg>
   </button>
 
-  <div data-show-hide-target="navi" class="z-[2000] hidden transition-all duration-150 lg:block">
+  <div data-show-hide-target="navi" class="z-2000 hidden transition-all duration-150 lg:block">
     <NavigationGeneral menuHighlight={menuHighlight} />
     <NavigationRegions menuHighlight={menuHighlight} />
     <NavigationNews menuHighlight={menuHighlight} />

@@ -16,13 +16,13 @@ const { pathname: currentPathname } = Astro.url
 ---
 
 <h2 class="my-2 text-xl font-semibold">Regionen</h2>
-<div class="mb-7 flex flex-col overflow-hidden rounded border border-b-0 border-gray-200">
+<div class="mb-7 flex flex-col overflow-hidden rounded-sm border border-b-0 border-gray-200">
   <div class="flex items-stretch border-b border-gray-200 bg-gray-50 font-semibold">
     <a
       href={`/regions/berlin`}
       class={clsx(
         currentPathname === `/regions/berlin` ? 'menu-active' : 'hover:bg-blue-50',
-        'flex-grow px-4 py-2',
+        'grow px-4 py-2',
       )}
     >
       Berlin
@@ -32,7 +32,7 @@ const { pathname: currentPathname } = Astro.url
       target="_blank"
       rel="noopener noreferrer"
       class={clsx(
-        currentPathname === `/regions/berlin` && 'menu-active cursor-pointer hover:!bg-blue-50',
+        currentPathname === `/regions/berlin` && 'menu-active cursor-pointer hover:bg-blue-50!',
         'flex items-center p-2 hover:bg-blue-50',
       )}
       title="Karte im Radverkehrsatlas öffnen"
@@ -46,7 +46,7 @@ const { pathname: currentPathname } = Astro.url
       href="/project-prototype-neukoelln/data"
       class={clsx(
         menuHighlight === 'project_prototype_map_data' ? 'menu-active' : 'hover:bg-blue-50',
-        'flex-grow px-4 py-2',
+        'grow px-4 py-2',
       )}
     >
       Prototype Neukölln
@@ -56,7 +56,7 @@ const { pathname: currentPathname } = Astro.url
       class={clsx(
         menuHighlight === 'project_prototype_map' && 'menu-active',
         menuHighlight === 'project_prototype_map_data' &&
-          'menu-active cursor-pointer hover:!bg-blue-50',
+          'menu-active cursor-pointer hover:bg-blue-50!',
         menuHighlight !== 'project_prototype_map' && 'hover:bg-blue-50',
         'flex items-center p-2',
       )}
@@ -77,7 +77,7 @@ const { pathname: currentPathname } = Astro.url
             class={clsx(
               currentPathname === `/regions/${region.slug}` ? 'menu-active' : 'hover:bg-blue-50',
               region.slug === 'berlin' ? 'font-bold' : '',
-              'flex-grow truncate px-4 py-2',
+              'grow truncate px-4 py-2',
             )}
             title={region.name}
           >
@@ -89,7 +89,7 @@ const { pathname: currentPathname } = Astro.url
             rel="noopener noreferrer"
             class={clsx(
               currentPathname === `/regions/${region.slug}` &&
-                'menu-active cursor-pointer hover:!bg-blue-50',
+                'menu-active cursor-pointer hover:bg-blue-50!',
               'flex items-center p-2 hover:bg-blue-50',
             )}
             title="Karte im Radverkehrsatlas öffnen"

@@ -8,19 +8,20 @@ export interface Props {
 const { menuHighlight } = Astro.props
 ---
 
-<ul
-  class="prose prose-sm grid grid-cols-3 gap-3 leading-snug lg:mb-4 lg:ml-4 lg:block lg:gap-0 lg:space-y-3"
->
+<ul class="prose prose-sm leading-snug lg:mb-4 lg:ml-4 lg:block">
   <li>
     <a
-      class={(clsx(menuHighlight === 'contact' ? 'text-bold text-black' : 'hover:text-gray-500'),
-      'underline')}
+      class={clsx(
+        'block pb-3',
+        menuHighlight === 'contact' ? 'text-bold text-black' : 'hover:text-gray-500',
+        'underline',
+      )}
       href="/contact"
     >
       Kontakt & <br />Datenschutz & <br />Impressum
     </a>
   </li>
   <li>
-    <a class="underline hover:text-gray-500" href="/github"> Code auf GitHub</a>
+    <a class="block pb-3 underline hover:text-gray-500" href="/github"> Code auf GitHub</a>
   </li>
 </ul>
