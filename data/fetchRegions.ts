@@ -1,5 +1,4 @@
 import { bbox, centerOfMass } from '@turf/turf'
-import axios from 'axios'
 import fs from 'fs'
 
 type TRawRegionExport = {
@@ -21,7 +20,11 @@ type TRawRegionsResult = {
 
 export const fetchRegions = async () => {
   const apiUrl = 'https://vts.mapwebbing.eu/export/exports.json'
-  const { data: rawRegionsResult } = await axios.get<TRawRegionsResult>(apiUrl)
+  const response = await fetch(apiUrl)
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`)
+  }
+  const rawRegionsResult = (await response.json()) as TRawRegionsResult
 
   const exportUrlTemplate = `${rawRegionsResult.export_url_prefix}%REGION%/%DATASET%_%REGION%.%FILETYPE%`
 
@@ -78,7 +81,11 @@ export const fetchRegionWithGeodata = async () => {
   for (const region of regions) {
     const regionDataset = region.region
     if (regionDataset) {
-      const { data: regionGeoJSON } = await axios.get<GeoJSON.FeatureCollection>(regionDataset)
+      const response = await fetch(regionDataset)
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const regionGeoJSON = (await response.json()) as GeoJSON.FeatureCollection
 
       if (regionGeoJSON.features) {
         regionsWithGeoJSON.push({

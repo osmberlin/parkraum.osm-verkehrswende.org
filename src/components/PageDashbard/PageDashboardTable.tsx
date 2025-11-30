@@ -1,6 +1,5 @@
 import { Link } from '@components/Link'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 
 const queryClient = new QueryClient()
 
@@ -46,7 +45,13 @@ type Feature = GeoJSON.Feature<GeoJSON.MultiPolygon, Properties>
 const PageDashboardTableContent: React.FC<Props> = ({ apiUrl }) => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
-    queryFn: () => axios.get(apiUrl).then((res) => res.data),
+    queryFn: async () => {
+      const response = await fetch(apiUrl)
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      return response.json()
+    },
   })
 
   if (isLoading || isFetching) return <i>Lade Daten…</i>

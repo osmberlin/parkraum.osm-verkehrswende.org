@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 
 const queryClient = new QueryClient()
 
@@ -14,10 +13,13 @@ export const PageDashboardDate = () => {
 const PageDashboardDateContent: React.FC = () => {
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['date'],
-    queryFn: () =>
-      axios
-        .get('https://vts.mapwebbing.eu/processing.parking_segments.json')
-        .then((res) => res.data),
+    queryFn: async () => {
+      const response = await fetch('https://vts.mapwebbing.eu/processing.parking_segments.json')
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      return response.json()
+    },
   })
 
   if (isLoading || isFetching) return <i>Lade Daten…</i>
