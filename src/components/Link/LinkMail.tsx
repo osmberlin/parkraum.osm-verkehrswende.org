@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 import { buttonStyles, linkStyles } from './Link'
 
 type Props = {
@@ -14,7 +14,7 @@ export const LinkMail: React.FC<Props> = ({ className, mailto, button, children,
   return (
     <a
       href={`mailto:${mailto || children}`}
-      className={classNames(button ? buttonStyles : linkStyles, className)}
+      className={clsx(button ? buttonStyles : linkStyles, className)}
       rel="noopener noreferrer"
       {...props}
     >
