@@ -7,10 +7,11 @@
 - We use [Astro JS](https://astro.build) to generate the pages
 - We use [Tailwind CSS](https://tailwindcss.com) to generate the css file
 
+Dependencies and scripts run with [Bun](https://bun.sh/):
+
 ```
-npm use
-npm install
-npm run start
+bun install
+bun start
 ```
 
 ## Useful links
