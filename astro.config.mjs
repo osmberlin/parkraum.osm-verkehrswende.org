@@ -9,7 +9,11 @@ import remarkToc from 'remark-toc'
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    react(),
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler', { target: '19' }]],
+      },
+    }),
     mdx(),
     alpinejs(),
     sitemap({

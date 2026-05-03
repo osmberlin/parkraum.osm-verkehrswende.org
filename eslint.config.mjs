@@ -1,6 +1,7 @@
 import eslintPluginAstro from 'eslint-plugin-astro'
 import tseslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
+import reactCompiler from 'eslint-plugin-react-compiler'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
@@ -39,6 +40,7 @@ export default [
     plugins: {
       '@typescript-eslint': tseslint,
       react,
+      'react-compiler': reactCompiler,
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
       prettier,
@@ -64,6 +66,7 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...jsxA11y.configs.recommended.rules,
       ...prettierConfig.rules,
+      'react-compiler/react-compiler': 'error',
       'prettier/prettier': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
       'react/prop-types': 'off',
