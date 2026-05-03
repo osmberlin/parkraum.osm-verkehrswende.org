@@ -1,6 +1,6 @@
 ---
-import clsx from 'clsx'
 import { getCollection } from 'astro:content'
+import clsx from 'clsx'
 
 const allPosts = await getCollection('posts')
 const sortedPosts = allPosts.sort(
@@ -24,9 +24,9 @@ const pathname = new URL(Astro.request.url).pathname
     relevantPosts.map((post) => {
       return (
         <a
-          href={`/posts/${post.slug}`}
+          href={`/posts/${post.id}`}
           class={clsx(
-            pathname == `/posts/${post.slug}` ? 'menu-active' : 'hover:bg-blue-50',
+            pathname == `/posts/${post.id}` ? 'menu-active' : 'hover:bg-blue-50',
             'flex items-center border-b border-gray-200 py-2 pl-4 leading-tight',
           )}
         >

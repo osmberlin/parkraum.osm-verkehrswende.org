@@ -141,7 +141,7 @@ export default defineConfig({
         'react-hooks/exhaustive-deps': 'warn',
       },
       jsPlugins: ['eslint-plugin-react-compiler'],
-      plugins: ['typescript', 'react', 'react-hooks', 'jsx-a11y'],
+      plugins: ['typescript', 'react', 'jsx-a11y'],
     },
   ],
 })

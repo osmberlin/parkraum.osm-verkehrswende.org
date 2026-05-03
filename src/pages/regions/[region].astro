@@ -26,7 +26,7 @@ const { data } = Astro.props
   // Those params are set in `/pages/project-vector-tiles/index.astro`.
   // We could make this a React component, but for now this works…
 
-  document.addEventListener('DOMContentLoaded', function (event) {
+  document.addEventListener('DOMContentLoaded', function () {
     const mapLink = document.getElementById('map')
     const params = new URLSearchParams(window.location.search)
     const lat = params.get('lat')

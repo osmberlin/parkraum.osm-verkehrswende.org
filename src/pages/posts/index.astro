@@ -30,7 +30,7 @@ const sortedPosts = allPosts.sort(
                 {new Date(post.data.pubDate).toLocaleDateString('en-CA')}
               </td>
               <td>
-                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                <a href={`/posts/${post.id}`}>{post.data.title}</a>
               </td>
               <td>{post.data.author}</td>
             </tr>

@@ -6,8 +6,9 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
 import remarkToc from 'remark-toc'
 
-// https://astro.build/config
+// CONFIG: https://astro.build/config (aligned with www.osm-verkehrswende.org; no Keystatic / Netlify adapter here)
 export default defineConfig({
+  site: 'https://parkraum.osm-verkehrswende.org/',
   integrations: [
     react({
       babel: {
@@ -20,13 +21,10 @@ export default defineConfig({
       filter: (page) => !page.endsWith('README/'),
     }),
   ],
-  markdown: {
-    remarkPlugins: [remarkToc],
-  },
+  markdown: { remarkPlugins: [remarkToc] },
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://parkraum.osm-verkehrswende.org/',
   redirects: {
     '/project-vector-tiles/dashboard': '/regions/berlin',
     '/project-vector-tiles/data': '/regions/berlin',
