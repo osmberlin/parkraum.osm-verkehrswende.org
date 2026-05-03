@@ -1,5 +1,5 @@
-import { defineCollection } from 'astro:content'
 import { z } from 'astro/zod'
+import { defineCollection } from 'astro:content'
 
 const postCollection = defineCollection({
   schema: z.object({
