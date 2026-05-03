@@ -15,7 +15,7 @@
     "astro": "astro",
     "fetchRegions": "vite-node ./data/fetchRegions.ts && prettier ./data/regions.json --write",
     "type-check": "astro check && tsc --skipLibCheck --noEmit",
-    "lint": "oxlint --fix --disable-typescript-plugin src",
+    "lint": "oxlint --fix src",
     "format": "prettier --ignore-path .gitignore '{src,data}/**/*.+(ts|js|tsx|astro|mdx)' --write",
     "check": "bun run type-check && bun run format && bun run lint",
     "updatePackages:major": "bunx taze major --write && bun install",
