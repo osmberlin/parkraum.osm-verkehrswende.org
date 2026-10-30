@@ -1,4 +1,5 @@
 import alpinejs from '@astrojs/alpinejs'
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
@@ -10,18 +11,14 @@ import remarkToc from 'remark-toc'
 export default defineConfig({
   site: 'https://parkraum.osm-verkehrswende.org/',
   integrations: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler', { target: '19' }]],
-      },
-    }),
+    react({ compiler: true }),
     mdx(),
     alpinejs(),
     sitemap({
       filter: (page) => !page.endsWith('README/'),
     }),
   ],
-  markdown: { remarkPlugins: [remarkToc] },
+  markdown: { processor: unified({ remarkPlugins: [remarkToc] }) },
   vite: {
     plugins: [tailwindcss()],
   },
