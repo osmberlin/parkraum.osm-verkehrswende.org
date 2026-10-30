@@ -47,6 +47,9 @@
       },
     },
   },
+  "trustedDependencies": [
+    "@astrojs/language-server",
+  ],
   "packages": {
     "@alpinejs/collapse": ["@alpinejs/collapse@3.15.12", "", {}, "sha512-BKNANLtNXuWYOSAnajSKLPjTsmHRNrv0ALFTbpmqt2/klHFooPhctSwkhFVPQb7rZ8BjEKHmNaBwnSbgtpk6xg=="],
 
