@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=24 <25",
+    "node": ">=26 <27",
     "bun": ">=1.3"
   },
   "scripts": {
@@ -18,8 +18,8 @@
     "lint": "oxlint --fix src",
     "format": "prettier --ignore-path .gitignore '{src,data}/**/*.+(ts|js|tsx|astro|mdx)' --write",
     "check": "bun run type-check && bun run format && bun run lint",
-    "updatePackages:major": "bunx taze major --maturity-period 5 --write && bun install",
-    "updatePackages:minor": "bunx taze minor --maturity-period 5 --write && bun install",
+    "updatePackages:major": "bunx taze major --includeLocked --maturity-period 5 --write && bun install",
+    "updatePackages:minor": "bunx taze minor --includeLocked --maturity-period 5 --write && bun install",
     "prepare": "husky"
   },
   "dependencies": {
