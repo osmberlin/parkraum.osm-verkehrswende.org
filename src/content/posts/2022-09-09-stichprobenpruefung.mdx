@@ -10,6 +10,7 @@ show_toc: true
 
 import ImageWrapper from '../../components/ImageWrapper.astro'
 import Notice from '../../components/Notice.astro'
+import HeadingAnchor from '../../components/HeadingAnchor/HeadingAnchor.astro'
 
 Kürzlich haben wir [mit einer theoretischen Herleitung gezeigt](/posts/2022-07-15-einflussfaktoren-datenqualitaet), welchen Einfluss die Genauigkeit der erfassten Parkstreifen und die Vollständigkeit der kartierten räumlichen Features auf die Gesamtqualität der berechneten Parkraumdaten hat. Das Fazit war, dass eine grobe Basisdatenerhebung die Berechnung von Parkraumdaten mit einer Genauigkeit von etwa 80 Prozent ermöglicht. Aufbauend auf dieser noch eher geringen Datenqualität ist eine differenziertere Erfassung der Parkstreifen sowie eine Kartierung der wichtigsten Features wie Einfahrten und Parkbuchten aber bereits ausreichend, um gute Daten mit einer Genauigkeit von 90 Prozent und mehr berechnen zu können.
 
@@ -86,6 +87,7 @@ Wir konnten mit dieser Stichprobenanalyse mehrere Annahmen bestätigen und unser
   <h2 id="tabelle">
     Tabelle: Parkraumanalyse Berlin Friedrichshain-Kreuzberg: Prüfung der Datenqualität an einer
     Stichprobe
+    <HeadingAnchor id="tabelle" />
   </h2>
   <iframe
     style="border: 2px solid silver"

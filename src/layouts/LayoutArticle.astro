@@ -1,6 +1,5 @@
 ---
 import Navigation from '@components/Layout/Navigation.astro'
-import ScriptLinkifyHeadlines from '@components/scripts/ScriptLinkifyHeadlines.astro'
 import Layout from './Layout.astro'
 
 type Props = {
@@ -21,5 +20,3 @@ const pathname = new URL(Astro.request.url).pathname
     </main>
   </div>
 </Layout>
-
-<ScriptLinkifyHeadlines />

@@ -1,5 +1,5 @@
 import alpinejs from '@astrojs/alpinejs'
-import { unified } from '@astrojs/markdown-remark'
+import { rehypeHeadingIds, unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
@@ -8,13 +8,18 @@ import { defineConfig } from 'astro/config'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkToc from 'remark-toc'
+import { headingAnchorClass, headingAnchorIcon } from './src/components/HeadingAnchor/headingAnchor.mjs'
 
 const appRoot = fileURLToPath(new URL('.', import.meta.url))
 
 // CONFIG: https://astro.build/config (aligned with www.osm-verkehrswende.org; no Keystatic / Netlify adapter here)
 export default defineConfig({
   site: 'https://parkraum.osm-verkehrswende.org/',
+  // Astro 7 defaults to 'jsx', which drops the space before a link that starts on a new line. Keep the HTML-aware v6 behavior for our prose.
+  // @see https://docs.astro.build/en/guides/upgrade-to/v7/#new-default-whitespace-handling-compresshtml-jsx
+  compressHTML: true,
   integrations: [
     react({ compiler: true }),
     mdx(),
@@ -23,7 +28,24 @@ export default defineConfig({
       filter: (page) => !page.endsWith('README/'),
     }),
   ],
-  markdown: { processor: unified({ remarkPlugins: [remarkToc] }) },
+  markdown: {
+    processor: unified({
+      remarkPlugins: [remarkToc],
+      // Link icon after each heading. `rehypeHeadingIds` runs first so the IDs (and old #links) stay the same.
+      rehypePlugins: [
+        rehypeHeadingIds,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: 'append',
+            test: ['h2', 'h3', 'h4', 'h5', 'h6'],
+            properties: { className: headingAnchorClass, ariaHidden: 'true', tabIndex: -1 },
+            content: headingAnchorIcon,
+          },
+        ],
+      ],
+    }),
+  },
   vite: {
     plugins: [tailwindcss()],
     server: {

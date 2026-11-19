@@ -3,6 +3,7 @@ import SvgArrowSmall from '@assets/icons/ArrowSmall.svg'
 import SvgCommandLine from '@assets/icons/CommandLine.svg'
 import SvgMap from '@assets/icons/Map.svg'
 import SvgTableCells from '@assets/icons/TableCells.svg'
+import HeadingAnchor from '@components/HeadingAnchor/HeadingAnchor.astro'
 import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
 ---
 
@@ -59,7 +60,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="parkstreifen" class="mt-0!">Parkstreifen</h3>
+      <h3 id="parkstreifen" class="mt-0!">Parkstreifen<HeadingAnchor id="parkstreifen" /></h3>
       <p class="my-1!">
         <em>Beschreibung:</em> Parkstreifen (Linien) im Straßenraum/am Straßenrand
       </p>
@@ -102,7 +103,9 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="park-stellplaetze" class="mt-0!">Park- und Stellplätze</h3>
+      <h3 id="park-stellplaetze" class="mt-0!">
+        Park- und Stellplätze<HeadingAnchor id="park-stellplaetze" />
+      </h3>
       <p class="my-1!">
         <em>Beschreibung:</em> Stellplatzflächen (Polygone) abseits des Straßenraums
       </p>
@@ -143,7 +146,9 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="fahrbahnflaechen" class="mt-0!">Fahrbahnflächen</h3>
+      <h3 id="fahrbahnflaechen" class="mt-0!">
+        Fahrbahnflächen<HeadingAnchor id="fahrbahnflaechen" />
+      </h3>
       <p class="my-1!">
         <em>Beschreibung:</em> Fahrbahnflächen (Polygon), also der Raum zwischen den Bordsteinkanten (wie
         sie die Straßenraumkarte strukturieren)
@@ -179,7 +184,9 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="verkehrsflaechen" class="mt-0!">Verkehrsflächen</h3>
+      <h3 id="verkehrsflaechen" class="mt-0!">
+        Verkehrsflächen<HeadingAnchor id="verkehrsflaechen" />
+      </h3>
       <p class="my-1!">
         <em>Beschreibung:</em> Verkehrsflächen (Polygon), also der (öffentliche) Raum zwischen den Gebäudefassaden
         bzw. Grundstücksgrenzen
@@ -216,7 +223,9 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="zugelassene-kfz-punktwolke" class="mt-0!">zugelassene Kfz (Punktwolke)</h3>
+      <h3 id="zugelassene-kfz-punktwolke" class="mt-0!">
+        zugelassene Kfz (Punktwolke)<HeadingAnchor id="zugelassene-kfz-punktwolke" />
+      </h3>
       <p class="my-1!">
         <em>Beschreibung:</em> Punktwolke zugelassener Kraftfahrzeuge (interpoliert)
       </p>
@@ -259,7 +268,9 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     </div>
 
     <div class="flex-1">
-      <h3 id="kfz-bestand-lor-ebene" class="mt-0!">Kfz-Bestand auf LOR-Ebene</h3>
+      <h3 id="kfz-bestand-lor-ebene" class="mt-0!">
+        Kfz-Bestand auf LOR-Ebene<HeadingAnchor id="kfz-bestand-lor-ebene" />
+      </h3>
       <p class="my-1!">
         <em>Beschreibung:</em> LOR-Planungsräume (Polygone) mit Quote zugelassener Kfz und Pkw
       </p>
@@ -296,6 +307,7 @@ import LayoutArticlePage from '@layouts/LayoutArticlePage.astro'
     <h3 id="melderechtlich-reg-einwohner-berlin-mit-kfz" class="mt-0!">
       Melderechtlich registrierte Einwohnerinnen und Einwohner am Ort der Hauptwohnung in Berlin am
       30.06.2020 nach Planungsräumen und KfZ-Bestand
+      <HeadingAnchor id="melderechtlich-reg-einwohner-berlin-mit-kfz" />
     </h3>
     <p class="text-gray-400"><em>Quelle:</em> Amt für Statistik Berlin-Brandenburg</p>
     <iframe

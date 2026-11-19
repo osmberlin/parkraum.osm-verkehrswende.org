@@ -1,0 +1,15 @@
+---
+// Link icon for hand-written headings in `.astro` pages; Markdown/MDX headings get it from rehype-autolink-headings.
+import { headingAnchorClass, headingAnchorSvg } from './headingAnchor.mjs'
+
+type Props = { id: string }
+const { id } = Astro.props
+---
+
+<a
+  href={`#${id}`}
+  class={headingAnchorClass}
+  aria-hidden="true"
+  tabindex="-1"
+  set:html={headingAnchorSvg}
+/>

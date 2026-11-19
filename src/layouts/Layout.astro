@@ -28,6 +28,12 @@ const { title, noindex, canonicalUrl, language, description, imagePath, imageAlt
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/images/osm-parkraum-logo-2025.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Parkraum Projekt — OpenStreetMap Verkehrswende"
+      href="/feed.xml"
+    />
 
     <slot name="meta" />
 
@@ -88,7 +94,7 @@ const { title, noindex, canonicalUrl, language, description, imagePath, imageAlt
       })
     </script>
   </head>
-  <body class="h-full text-base">
+  <body class="h-full bg-white text-base">
     <slot />
   </body>
 </html>

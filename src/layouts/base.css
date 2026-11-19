@@ -1,6 +1,21 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+/* Phones: long URLs, e-mail addresses, JSON in `code` and long words must wrap instead of widening the page. */
+@layer base {
+  .prose a,
+  .prose code {
+    overflow-wrap: anywhere;
+  }
+  /* Long German compounds like „Datenschutzerklärung“ in large headings */
+  .prose :is(h1, h2, h3) {
+    hyphens: auto;
+    /* Only words of 14+ characters, so place names like „Bietigheim“ stay whole */
+    hyphenate-limit-chars: 14 6 6;
+    overflow-wrap: break-word;
+  }
+}
+
 @theme {
   --z-index-1000: 1000;
 }
